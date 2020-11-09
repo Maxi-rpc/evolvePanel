@@ -248,7 +248,7 @@
               </li>
               <li class="nav-item">
                 <!-- Redes -->
-                <a href="redes.html" class="nav-link">
+                <a href="#Redes" class="nav-link">
                   <i class="nav-icon fas fa-share-alt"></i>
                   <p>
                     Redes Sociales
