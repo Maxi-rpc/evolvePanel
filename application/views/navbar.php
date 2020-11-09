@@ -47,7 +47,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="/img/user1-128x128.jpg"
+                    src="assets/img/user1-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 mr-3 img-circle"
                   />
@@ -71,7 +71,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="/img/user8-128x128.jpg"
+                    src="assets/img/user8-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -95,7 +95,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="/img/user3-128x128.jpg"
+                    src="assets/img/user3-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -169,7 +169,7 @@
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
           <img
-            src="/img/evolvelogo.png"
+            src="assets/img/evolvelogo.png"
             alt="AdminLTE Logo"
             class="brand-image img-circle elevation-1"
             style="opacity: 0.8"
@@ -183,7 +183,7 @@
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
               <img
-                src="/img/user2-160x160.jpg"
+                src="assets/img/user2-160x160.jpg"
                 class="img-circle elevation-2"
                 alt="User Image"
               />
