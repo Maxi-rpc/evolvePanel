@@ -6,6 +6,6 @@ class Recoverpassword extends CI_Controller {
 	public function index()
 	{
         $this->load->view('header');
-        $this->load->view('main/recoverpassword');
+        $this->load->view('auth/recoverpassword');
 	}
 }
