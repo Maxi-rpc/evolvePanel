@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Recoverpassword extends CI_Controller {
+class Recoverpass extends CI_Controller {
 
 	public function index()
 	{
         $this->load->view('header');
-        $this->load->view('auth/recoverpassword');
+        $this->load->view('auth/Recoverpass');
 	}
 }
