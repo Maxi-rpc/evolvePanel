@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
+	'hostname' => 'https://admin.teamevolve.gg/',
+	'username' => 'root',
 	'password' => '',
-	'database' => '',
+	'database' => 'teamevolve_adminPanel',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
