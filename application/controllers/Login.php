@@ -8,8 +8,8 @@ class Login extends CI_Controller {
         $this->load->view('includes/header');
         $this->load->view('auth/login');
 	}
-	public function nuevo()
+	public function login()
 	{
-		$this->Login_model->updateUser();
+		print_r($_POST);
 	}
 }
