@@ -8,7 +8,7 @@ class Login extends CI_Controller {
 		$this->load->view('includes/header');
         $this->load->view('auth/login');
 	}
-	public function login()
+	public function loginIn()
 	{
 		if($_POST['email'] && $_POST['password']){
 			$login=$this->Login_model->loginUser($_POST);
