@@ -1,12 +1,15 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login_model extends CI_Model {
     
-    public function login(){
+    public function login()
+    {
 
     }
 
-    public function crearUser(){
+    public function crearUser()
+    {
         $array=array(
             "name"=>"admin",
             "email"=>"maxirpc2607@gmail.com",
