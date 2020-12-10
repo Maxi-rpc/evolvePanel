@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '190.210.176.21',
+	'hostname' => 'cpanel.113.wnpservers.net',
 	'username' => 'teamevolve',
 	'password' => 'Teamevolve01#',
 	'database' => 'teamevolve_adminPanel',
