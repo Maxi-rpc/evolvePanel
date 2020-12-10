@@ -30,4 +30,15 @@ class Login_model extends CI_Model {
             return NULL;
         }
     }
+
+    public function updateUser()
+    {
+        $array=array(
+            "name"=>"adminEvolve",
+            "email"=>"maxirpc2607@gmail.com",
+            "password"=>"admin1234"
+        );
+        $this->db->where("id",1);
+        $this->db->update("users",$array);
+    }
 }

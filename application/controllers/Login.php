@@ -10,7 +10,6 @@ class Login extends CI_Controller {
 	}
 	public function nuevo()
 	{
-		$resultado=$this->Login_model->getUser();
-		print_r($resultado);
+		$this->Login_model->updateUser();
 	}
 }
