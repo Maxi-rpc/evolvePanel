@@ -8,7 +8,7 @@ class Login extends CI_Controller {
 		$this->load->view('includes/header');
         $this->load->view('auth/login');
 	}
-	
+
 	public function loginIn()
 	{
 		if($_POST['email'] && $_POST['password']){
@@ -19,6 +19,7 @@ class Login extends CI_Controller {
 					"email"=>$login[0]->email,
 					"password"=>$login[0]->password,
 					"name"=>$login[0]->name,
+					"perfil"=>$login[0]->perfil,
 				);
 
 				$this->session->userdata($array);
