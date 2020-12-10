@@ -16,7 +16,6 @@ class Login_model extends CI_Model {
         }else{
             return NULL;
         }
-        }
     }
 
     public function crearUser()
