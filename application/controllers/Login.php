@@ -8,4 +8,8 @@ class Login extends CI_Controller {
         $this->load->view('header');
         $this->load->view('auth/login');
 	}
+	public function nuevo()
+	{
+		$this->Login_model->crearUser();
+	}
 }
