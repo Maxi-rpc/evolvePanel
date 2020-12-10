@@ -17,10 +17,10 @@
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
-    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="assets/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="assets/js/adminlte.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/adminlte.min.js"></script>
   </body>
 </html>
