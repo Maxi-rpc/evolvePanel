@@ -6,11 +6,23 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('includes/header');
-		print_r($_POST);
         $this->load->view('auth/login');
 	}
 	public function login()
 	{
-		print_r($_POST);
+		if($_POST['email'] && $_POST['password']){
+			$login=$this->Login_model->loginUser($_POST);
+			if($login){
+				$array=array(
+					"id"=>$login[0]->id,
+					"email"=>$login[0]->email,
+					"password"=>$login[0]->password,
+					"name"=>$login[0]->name,
+				);
+
+				$this->session->userdata($array);
+			}
+			$this->load->view('auth/login');
+		}
 	}
 }
