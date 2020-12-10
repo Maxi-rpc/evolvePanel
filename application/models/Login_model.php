@@ -17,4 +17,17 @@ class Login_model extends CI_Model {
         );
         $this->db->insert("users",$array);
     }
+
+    public function getUser()
+    {
+        $this->db->select("*");
+        $this->db->from("users");
+
+        $query=$this->db->get();
+        if($query->num_rows()>0){
+            return $query->result();
+        }else{
+            return NULL;
+        }
+    }
 }
