@@ -7,7 +7,7 @@ class Login_model extends CI_Model
     public function loginUser($data)
     {
         $this->db->select("*");
-        $this->db->from("users");
+        $this->db->from("usuarios");
         $this->db->where("email",$data['email']);
         $this->db->where("password",$data['password']);
 
@@ -33,7 +33,7 @@ class Login_model extends CI_Model
     public function getUser()
     {
         $this->db->select("*");
-        $this->db->from("users");
+        $this->db->from("usuarios");
 
         $query=$this->db->get();
         if($query->num_rows()>0){
