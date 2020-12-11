@@ -21,10 +21,26 @@ class Login extends CI_Controller {
 					"name"=>$login[0]->name,
 					"perfil"=>$login[0]->perfil,
 				);
-
 				$this->session->userdata($array);
 			}
-			$this->load->view('auth/login');
+			$this->load->loadViews('login');
+		}
+	}
+
+	function loadViews($view,$data=null)
+	{
+		if($_SESSION){ //SI HAY SESION CREADA
+			if($view=="login"){ //SI LA VISTA ES LOGIN REDIRIGE A HOME
+				redirect(base_url()."home","location");
+			}
+			//SI ES UNA VISTA CUALQUIERA SE CARGA
+			redirect(base_url()."home","location");
+		}else{ //NO HAY SESION
+			if($view=="login"){ //REDIRECCIONA A LOGIN
+				redirect(base_url()."login","location");
+			}else{ //CUALQUIER VISTA A LOGIN
+			redirect(base_url()."login","location");
+			}
 		}
 	}
 }
