@@ -1,3 +1,9 @@
+<?php
+if($this->session->userdata('is_logged')){
+	redirect('home');
+}
+?>
+
 <body class="hold-transition login-page">
 <div class="login-box ">
     <div class="login-logo"> 
@@ -8,7 +14,7 @@
         <div class="card-body login-card-body">
         <p class="login-box-msg">Iniciar Sesión</p>
 
-        <form action="" method="post">
+        <form action="<?= base_url('login/validate'); ?>" method="post" id="frm_login">
             <div class="input-group mb-3">
             <input name="email" type="email" class="form-control" placeholder="Email">
             <div class="input-group-append">

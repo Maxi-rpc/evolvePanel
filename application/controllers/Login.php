@@ -1,46 +1,60 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Login extends CI_Controller
+{
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->library(['form_validation']);
+		$this->load->helper(['auth/login_rules']);
+		$this->load->model('Auth');
+	}
 
 	public function index()
 	{
-		$this->load->loadViews('login');
+		$this->load->view('login');
 	}
 
-	public function loginIn()
+	public function validate()
 	{
-		if($_POST['email'] && $_POST['password']){
-			$login=$this->Login_model->loginUser($_POST);
-			if($login){
-				$array=array(
-					"id"=>$login[0]->id,
-					"email"=>$login[0]->email,
-					"password"=>$login[0]->password,
-					"name"=>$login[0]->name,
-					"perfil"=>$login[0]->perfil,
-				);
-				$this->session->userdata($array);
+		$this->form_validation->set_error_delimiters('', '');
+		$rules = getLoginRules();
+		$this->form_validation->set_rules($rules);
+		if ($this->form_validation->run() === false) {
+			$errors = [
+				'email' => form_error('email'),
+				'password' => form_error('password'),
+			];
+			echo json_encode($errors);
+			$this->output->set_status_header(400);
+		} else {
+			$email = $this->input->post('email');
+			$pass = $this->input->post('password');
+			if (!($res = $this->Auth->login($email, $pass))) {
+				echo json_encode(['msg' => 'Verifique sus credenciales']);
+				$this->output->set_status_header(401);
+				exit();
 			}
-			$this->load->loadViews('login');
+			$data = [
+				'id' => $res->id,
+				'nombre' => $res->nombre,
+				'apellido' => $res->apellido,
+				'email' => $res->email,
+				'perfil' => $res->perfil,				
+				'is_logged' => true,
+			];
+			$this->session->set_userdata($data);
+
+			echo json_encode(["url" => base_url('dashboard')]);
 		}
 	}
-
-	function loadViews($view,$data=null)
+	public function logout()
 	{
-		if($_SESSION){ //SI HAY SESION CREADA
-			if($view=="login"){ //SI LA VISTA ES LOGIN REDIRIGE A HOME
-				redirect(base_url()."Home","location");
-			}
-			//SI ES UNA VISTA CUALQUIERA SE CARGA
-			redirect(base_url()."Home","location");
-		}else{ //NO HAY SESION
-			if($view=="login"){ //REDIRECCIONA A LOGIN
-				redirect(base_url()."login","location");
-			}else{ //CUALQUIER VISTA A LOGIN
-			$this->load->view('includes/header');
-			$this->load->view('auth/login');
-			}
-		}
+		$data = ['id', 'nombre', 'apellido', 'email', 'perfil', 'is_logged'];
+		$this->session->unset_userdata($data);
+		$this->session->sess_destroy();
+
+		redirect('login');
 	}
 }
