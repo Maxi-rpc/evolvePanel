@@ -31,10 +31,10 @@ class Login extends CI_Controller {
 	{
 		if($_SESSION){ //SI HAY SESION CREADA
 			if($view=="login"){ //SI LA VISTA ES LOGIN REDIRIGE A HOME
-				redirect(base_url()."home","location");
+				redirect(base_url()."Home","location");
 			}
 			//SI ES UNA VISTA CUALQUIERA SE CARGA
-			redirect(base_url()."home","location");
+			redirect(base_url()."Home","location");
 		}else{ //NO HAY SESION
 			if($view=="login"){ //REDIRECCIONA A LOGIN
 				redirect(base_url()."login","location");
