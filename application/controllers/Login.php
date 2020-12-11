@@ -5,8 +5,7 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('includes/header');
-        $this->load->view('auth/login');
+		$this->load->loadViews('login');
 	}
 
 	public function loginIn()
@@ -39,7 +38,8 @@ class Login extends CI_Controller {
 			if($view=="login"){ //REDIRECCIONA A LOGIN
 				redirect(base_url()."login","location");
 			}else{ //CUALQUIER VISTA A LOGIN
-			redirect(base_url()."login","location");
+			$this->load->view('includes/header');
+			$this->load->view('auth/login');
 			}
 		}
 	}
