@@ -22,7 +22,8 @@ class Login_model extends CI_Model
     public function crearUser()
     {
         $array=array(
-            "name"=>"admin",
+            "nombre"=>"Maximiliano",
+            "apellido"=>"Miranda",
             "email"=>"maxirpc2607@gmail.com",
             "password"=>"admin1234"
         );
