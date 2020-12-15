@@ -7,22 +7,21 @@ class Register extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Users');
-		$this->load->library(['form_validation', 'email', 'ciqrcode']);
+		$this->load->library(['form_validation', 'email']);
 	}
 
 	public function index()
 	{
 		$this->load->view('register');
-		$query = $this->db->get('clientes');
+		$query = $this->db->get('usuarios');
 	}
 
 	public function create()
 	{
 		$nombre = $this->input->post('firstname');
 		$apellido = $this->input->post('lastname');
-		$dni = $this->input->post('dni');
 		$email = $this->input->post('email');
-		$telefono = $this->input->post('tel');
+		$perfil = $this->input->post('perfil');
 		$password = $this->input->post('password');
 		$password_c = $this->input->post('password_c');
 
@@ -44,18 +43,6 @@ class Register extends CI_Controller
 				],
 			],
 			[
-				'field' => 'dni',
-				'label' => 'DNI',
-				'rules' =>
-					'required|numeric|is_unique[clientes.dni]|exact_length[8]',
-				'errors' => [
-					'required' => 'El campo %s no puede ir vacío',
-					'numeric' => 'Ingrese solo números',
-					'is_unique' => 'El %s ingresado ya se encuentra registrado',
-					'exact_length' => 'Ingrese los 8 dígitos del %s',
-				],
-			],
-			[
 				'field' => 'email',
 				'label' => 'email',
 				'rules' => 'required|valid_email|is_unique[usuarios.email]',
@@ -66,8 +53,8 @@ class Register extends CI_Controller
 				],
 			],
 			[
-				'field' => 'tel',
-				'label' => 'teléfono',
+				'field' => 'perfil',
+				'label' => 'Perfil',
 				'rules' => 'required|numeric',
 				'errors' => [
 					'required' => 'El campo %s no puede ir vacío',
@@ -107,39 +94,31 @@ class Register extends CI_Controller
 				'apellido' => $apellido,
 				'email' => $email,				
 				'password' => $password_segura, ///Enviamos la contraseña encripatada a la BD
-				'perfil' => 'cliente',
+				'perfil' => $perfil,
 				'estado' => 1,
 			];
-
-			$user_info = [
-				'nombre' => $nombre,
-				'apellido' => $apellido,
-				'dni' => $dni,
-				'telefono' => $telefono,
-				'puntos' => 0,
-			];
-
+            /*
 			///Array de datos para el email
 			$datos = [
 				'nombre' => $nombre,
 				'apellido' => $apellido,
 				'pass' => $password,
 				'email' => $email,
-			];
+			];*/
 
-			if (!$this->Users->create($user, $user_info)) {
+			if (!$this->Users->create($user)) {
 				$data['msg'] =
 					'Ocurrio un error al ingresar los datos, intente nuevamente';
 				$this->load->view('register', $data);
 			}
-
-			///Envio el email con los datos de login y la imagen qr
+            /*
+			///Envio el email con los datos de login
 			$this->sendEmail($datos);
 			$data['msg'] = 'Registrado correctamente';
-			$this->load->view('register', $data);
+			$this->load->view('register', $data);*/
 		}
 	}
-
+    /*
 	public function sendEmail($datos)
 	{
 		$this->email->from('registro@reddecomercios.com', 'Red de comercios');
@@ -150,5 +129,29 @@ class Register extends CI_Controller
 		$this->email->message($vista);
 
 		$this->email->send(); 
-	}
+    }*/
+    public function createAdmin()
+	{
+		$nombre = $this->input->post('firstname');
+		$apellido = $this->input->post('lastname');
+		$email = $this->input->post('email');
+		$perfil = $this->input->post('perfil');
+		$password = $this->input->post('password');
+        $password_c = $this->input->post('password_c');
+        ///Encriptamos la contrsaeña
+		$password_segura = password_hash($password, PASSWORD_BCRYPT, [
+			'cost' => 4,
+        ]);
+        
+        $user = [
+            'nombre' => $nombre,
+            'apellido' => $apellido,
+            'email' => $email,				
+            'password' => $password_segura, ///Enviamos la contraseña encripatada a la BD
+            'perfil' => $perfil,
+            'estado' => 1,
+        ];
+
+        $this->Users->create($user));
+    }
 }

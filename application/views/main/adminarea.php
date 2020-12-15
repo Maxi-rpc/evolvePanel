@@ -118,16 +118,44 @@
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body bg-dark">
+                  <?= form_open('register/create',array('method'=>'POST'));?>
                     <form role="form">
                       <div class="row">
                         <div class="col-sm-6">
                           <!-- text input -->
                           <div class="form-group">
-                            <label>Usuario</label>
+                            <label>Nombre</label>
                             <input
                               type="text"
+                              name="firstname"
                               class="form-control"
-                              placeholder="Enter ..."
+                              placeholder="Nombre"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <!-- text input -->
+                          <div class="form-group">
+                            <label>Apellido</label>
+                            <input
+                              type="text"
+                              name="lastname"
+                              class="form-control"
+                              placeholder="Apellido"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <!-- text input -->
+                          <div class="form-group">
+                            <label>Nombre</label>
+                            <input
+                              type="text"
+                              name="firstname"
+                              class="form-control"
+                              placeholder="Nombre"
                             />
                           </div>
                         </div>
