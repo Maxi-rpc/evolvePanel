@@ -151,7 +151,7 @@
           </li>
           <!-- Icono Salir  -->
           <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="<?= base_url('login/logout'); ?>">
+            <a class="nav-link" href="<?= base_url('login/logout'); ?>">
             <i class="fas fa-sign-out-alt"></i>
             </a>
           </li>
