@@ -47,7 +47,7 @@ class Login extends CI_Controller
 			];
 			$this->session->set_userdata($data);
 
-			echo json_encode(["url" => base_url('home')]);
+			redirect('home');
 		}
 	}
 	public function logout()
