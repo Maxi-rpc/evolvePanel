@@ -58,4 +58,7 @@ class Login extends CI_Controller
 
 		redirect('auth/login');
 	}
+	public function newUser(){
+		
+	}
 }
