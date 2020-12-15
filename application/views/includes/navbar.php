@@ -168,7 +168,7 @@
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
           <img
-            src="<?= base_url(); ?>assets/img/evolvelogo.png"
+            src="<?= base_url(); ?>assets/img/logo/evolvelogo.png"
             alt="AdminLTE Logo"
             class="brand-image img-circle elevation-1"
             style="opacity: 0.8"
