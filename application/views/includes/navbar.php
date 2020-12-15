@@ -149,6 +149,12 @@
               >
             </div>
           </li>
+          <!-- Icono Salir  -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="fas fa-sign-out-alt"></i>
+            </a>
+          </li>
           <!-- Personalizacion Menu -->
           <li class="nav-item">
             <a
