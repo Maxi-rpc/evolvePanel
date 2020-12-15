@@ -163,13 +163,12 @@
         </ul>
       </nav>
       <!-- /.navbar -->
-
       <!-- Main Sidebar Container -->
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
           <img
-            src="assets/img/evolvelogo.png"
+            src="<?= base_url(); ?>assets/img/evolvelogo.png"
             alt="AdminLTE Logo"
             class="brand-image img-circle elevation-1"
             style="opacity: 0.8"

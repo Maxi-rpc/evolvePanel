@@ -21,9 +21,8 @@
           <!-- /.container-fluid -->
         </div>
         <!-- /.content-header -->
-
         <!-- Main content -->
-            <div class="content">
+        <div class="content">
                 <div class="container-fluid">
                     <div class="row"> <!-- Mensaje de bienvenida--> 
                     <div class="col-md-12">
@@ -142,7 +141,7 @@
                     <!-- =========================================================== -->
                 </div>
                 <!-- /.container-fluid -->
-            </div>
-        <!-- /.content -->
         </div>
-        <!-- /.content-wrapper -->
+        <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
