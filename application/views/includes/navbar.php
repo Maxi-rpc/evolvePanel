@@ -194,7 +194,13 @@
               />
             </div>
             <div class="info">
-              <a href="#" class="d-block">Admin - Max</a>
+              <a href="#" class="d-block">
+              <?php
+                if(isset($_SESSION['nombre'])){
+                  echo $_SESSION['nombre'];
+                }
+              ?>
+              </a>
             </div>
           </div>
 
