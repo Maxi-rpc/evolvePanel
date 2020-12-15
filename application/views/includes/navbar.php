@@ -10,7 +10,7 @@
             ></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" class="nav-link">Home</a>
+            <a href="<?= base_url() ?>home" class="nav-link">Home</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Soporte</a>
@@ -36,90 +36,6 @@
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
-          <!-- Messages Dropdown Menu -->
-          <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#">
-              <i class="far fa-bell"></i>
-              <span class="badge badge-danger navbar-badge">3</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-              <a href="#" class="dropdown-item">
-                <!-- Message Start -->
-                <div class="media">
-                  <img
-                    src="assets/img/user1-128x128.jpg"
-                    alt="User Avatar"
-                    class="img-size-50 mr-3 img-circle"
-                  />
-                  <div class="media-body">
-                    <h3 class="dropdown-item-title">
-                      Brad Diesel
-                      <span class="float-right text-sm text-danger"
-                        ><i class="fas fa-star"></i
-                      ></span>
-                    </h3>
-                    <p class="text-sm">Instagram feed</p>
-                    <p class="text-sm text-muted">
-                      <i class="far fa-clock mr-1"></i> 4 Hours Ago
-                    </p>
-                  </div>
-                </div>
-                <!-- Message End -->
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">
-                <!-- Message Start -->
-                <div class="media">
-                  <img
-                    src="assets/img/user8-128x128.jpg"
-                    alt="User Avatar"
-                    class="img-size-50 img-circle mr-3"
-                  />
-                  <div class="media-body">
-                    <h3 class="dropdown-item-title">
-                      John Pierce
-                      <span class="float-right text-sm text-muted"
-                        ><i class="fas fa-star"></i
-                      ></span>
-                    </h3>
-                    <p class="text-sm">Twitter retweet</p>
-                    <p class="text-sm text-muted">
-                      <i class="far fa-clock mr-1"></i> 4 Hours Ago
-                    </p>
-                  </div>
-                </div>
-                <!-- Message End -->
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">
-                <!-- Message Start -->
-                <div class="media">
-                  <img
-                    src="assets/img/user3-128x128.jpg"
-                    alt="User Avatar"
-                    class="img-size-50 img-circle mr-3"
-                  />
-                  <div class="media-body">
-                    <h3 class="dropdown-item-title">
-                      Nora Silvester
-                      <span class="float-right text-sm text-warning"
-                        ><i class="fas fa-star"></i
-                      ></span>
-                    </h3>
-                    <p class="text-sm">Instagram history</p>
-                    <p class="text-sm text-muted">
-                      <i class="far fa-clock mr-1"></i> 4 Hours Ago
-                    </p>
-                  </div>
-                </div>
-                <!-- Message End -->
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item dropdown-footer"
-                >See All Messages</a
-              >
-            </div>
-          </li>
           <!-- Notifications Dropdown Menu -->
           <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
@@ -154,17 +70,6 @@
             <a class="nav-link" href="<?= base_url('login/logout'); ?>">
             <i class="fas fa-sign-out-alt"></i>
             </a>
-          </li>
-          <!-- Personalizacion Menu -->
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              data-widget="control-sidebar"
-              data-slide="true"
-              href="#"
-              role="button"
-              ><i class="fas fa-palette"></i
-            ></a>
           </li>
         </ul>
       </nav>
@@ -212,13 +117,31 @@
               role="menu"
               data-accordion="false"
             >
-              <!-- Add icons to the links using the .nav-icon class
-                                    with font-awesome or any other icon font library -->
               <li class="nav-item">
                 <!-- Home -->
-                <a href="home.html" class="nav-link bg-red">
+                <a href="<?= base_url() ?>home" class="nav-link bg-red">
                   <i class="nav-icon fas fa-home"></i>
                   <p>Home</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <!-- Redes -->
+                <a href="<?= base_url() ?>home" class="nav-link">
+                  <i class="nav-icon fas fa-share-alt"></i>
+                  <p>
+                    Redes Sociales
+                    <span class="right badge badge-info">New</span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <!-- Calendario -->
+                <a href="<?= base_url() ?>home" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>
+                    Calendario
+                    <span class="right badge badge-info">New</span>
+                  </p>
                 </a>
               </li>
               <li class="nav-item has-treeview">
@@ -232,51 +155,37 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="statsgeneral.html" class="nav-link">
+                    <a href="<?= base_url() ?>home" class="nav-link">
                       <i class="fas fa-chart-bar nav-icon"></i>
                       <p>Stats General</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url() ?>home" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Counter Strike</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="rsix.html" class="nav-link">
+                    <a href="<?= base_url() ?>home" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Rainbox Six</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url() ?>home" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Free Fire</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url() ?>home" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>League of Legends</p>
+                    </a>
+                  </li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <!-- Redes -->
-                <a href="#Redes" class="nav-link">
-                  <i class="nav-icon fas fa-share-alt"></i>
-                  <p>
-                    Redes Sociales
-                    <span class="right badge badge-info">New</span>
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <!-- Calendario -->
-                <a href="calendar.html" class="nav-link">
-                  <i class="nav-icon far fa-calendar-alt"></i>
-                  <p>
-                    Calendario
-                    <span class="right badge badge-info">New</span>
-                  </p>
-                </a>
-              </li>
+              </li><!-- / Menu desplegable -->
             </ul>
           </nav>
           <!-- /.sidebar-menu -->
