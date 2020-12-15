@@ -77,7 +77,7 @@
       <!-- Main Sidebar Container -->
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="index3.html" class="brand-link">
+        <a href="<?=base_url()?>home" class="brand-link">
           <img
             src="<?= base_url(); ?>assets/img/logo/evolvelogo.png"
             alt="AdminLTE Logo"
@@ -99,7 +99,7 @@
               />
             </div>
             <div class="info">
-              <a href="#" class="d-block">
+              <a href="<?=base_url()?>perfil" class="d-block">
               <?php
                 if(isset($_SESSION['nombre'])){
                   echo $_SESSION['nombre'];
