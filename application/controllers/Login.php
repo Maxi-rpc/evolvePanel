@@ -38,7 +38,7 @@ class Login extends CI_Controller
 				exit();
 			}
 			$data = [
-				'id' => $res->id,
+				'id_usuario' => $res->id_usuario,
 				'nombre' => $res->nombre,
 				'apellido' => $res->apellido,
 				'email' => $res->email,
@@ -59,6 +59,6 @@ class Login extends CI_Controller
 		redirect('auth/login');
 	}
 	public function newUser(){
-		
+
 	}
 }
