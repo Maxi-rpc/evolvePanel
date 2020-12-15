@@ -13,7 +13,7 @@ class Login extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('auth/header');
+		$this->load->view('auth/headerlogin');
 		$this->load->view('auth/login');
 	}
 
