@@ -20,4 +20,31 @@ class Users extends CI_Model
 			return true;
 		}
 	}
+
+	public function getuserall()
+	{
+		$this->db->select("*");
+		$this->db->from("usuarios");
+
+		$query=$this->get();
+		if($query->num_rows()>0){
+			return $query->result();
+		} else {
+			return NULL;
+		}
+	}
+
+	public function getuser($email)
+	{
+		$this->db->select("*");
+		$this->db->from("usuarios");
+		$this->db->where("email",$email);
+		
+		$query=$this->get();
+		if($query->num_rows()>0){
+			return $query->result();
+		} else {
+			return NULL;
+		}
+	}
 }
