@@ -118,7 +118,7 @@
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body bg-dark">
-                  <?= form_open('register/create',array('method'=>'POST'));?>
+                  
                     <form role="form">
                       <div class="row">
                         <div class="col-sm-6">
