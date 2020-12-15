@@ -1,6 +1,7 @@
 <?php
 if($this->session->userdata('is_logged')){
-	redirect('home');
+    redirect('home');
+    print_r($_SESSION['is_logged']);
 }
 ?>
 
