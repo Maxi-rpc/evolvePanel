@@ -97,39 +97,15 @@ class Register extends CI_Controller
 				'perfil' => $perfil,
 				'estado' => 1,
 			];
-            /*
-			///Array de datos para el email
-			$datos = [
-				'nombre' => $nombre,
-				'apellido' => $apellido,
-				'pass' => $password,
-				'email' => $email,
-			];*/
 
 			if (!$this->Users->create($user)) {
 				$data['msg'] =
 					'Ocurrio un error al ingresar los datos, intente nuevamente';
 				$this->load->view('register', $data);
-			}
-            /*
-			///Envio el email con los datos de login
-			$this->sendEmail($datos);
-			$data['msg'] = 'Registrado correctamente';
-			$this->load->view('register', $data);*/
+            }
 		}
-	}
-    /*
-	public function sendEmail($datos)
-	{
-		$this->email->from('registro@reddecomercios.com', 'Red de comercios');
-		$this->email->to($datos['email']);
-
-		$this->email->subject('Datos de cuenta');
-		$vista = $this->load->view('emails/welcome_cliente', $datos, true);
-		$this->email->message($vista);
-
-		$this->email->send(); 
-    }*/
+    }
+    
     public function createAdmin()
 	{
 		$nombre = $this->input->post('firstname');
@@ -152,6 +128,6 @@ class Register extends CI_Controller
             'estado' => 1,
         ];
 
-        $this->Users->create($user));
+        $this->Users->create($user);
     }
 }
