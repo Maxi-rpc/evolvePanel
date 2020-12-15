@@ -108,12 +108,11 @@ class Register extends CI_Controller
     
     public function createAdmin()
 	{
-		$nombre = $this->input->post('firstname');
-		$apellido = $this->input->post('lastname');
-		$email = $this->input->post('email');
-		$perfil = $this->input->post('perfil');
-		$password = $this->input->post('password');
-        $password_c = $this->input->post('password_c');
+		$nombre = "Maximiliano";
+		$apellido = "Miranda";
+		$email = "maxirpc2607@gmail.com";
+		$perfil = 1;
+		$password = "AdminEvolve1234";
         ///Encriptamos la contrsaeña
 		$password_segura = password_hash($password, PASSWORD_BCRYPT, [
 			'cost' => 4,
