@@ -1,8 +1,6 @@
 <?php
 if($this->session->userdata('is_logged')){
 	redirect('home');
-} else {
-    redirect('login');
 }
 ?>
 
