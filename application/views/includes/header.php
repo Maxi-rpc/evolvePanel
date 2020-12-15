@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<?php
-if(!$this->session->userdata('is_logged')){
-	redirect('login');
-}
-?>
     <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
