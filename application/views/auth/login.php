@@ -1,9 +1,3 @@
-<?php
-if($this->session->userdata('is_logged')){
-	redirect('home');
-}
-?>
-
 <body class="hold-transition login-page">
 <div class="login-box ">
     <div class="login-logo"> 

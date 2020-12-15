@@ -1,7 +1,9 @@
+<?php
+if($this->session->userdata('is_logged')){
+	redirect('home');
+}
+?>
 <!DOCTYPE html>
-<!--
-    Head de todas los html
-    -->
 <html lang="es">
     <head>
     <meta charset="utf-8" />
