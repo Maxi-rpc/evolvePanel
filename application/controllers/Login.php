@@ -56,6 +56,6 @@ class Login extends CI_Controller
 		$this->session->unset_userdata($data);
 		$this->session->sess_destroy();
 
-		redirect('auth/login');
+		redirect('login');
 	}
 }
