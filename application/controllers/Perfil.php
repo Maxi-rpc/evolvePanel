@@ -5,7 +5,8 @@ class Perfil extends CI_Controller {
     public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Users');
+        $this->load->model('Users');
+        $this->load->helper(['view']);
     }
     
 	public function index()
@@ -19,5 +20,7 @@ class Perfil extends CI_Controller {
     public function mostrarPerfil(){
         $email = $_SESSION['email'];
         $data = $this->Users->getuser($email);
+        $view = $this->load->view('main/perfil');
+        getTemplate($view,$data);
     }
 }
