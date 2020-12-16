@@ -34,7 +34,7 @@
 
                 <h3 class="profile-username text-center">
                 <?php
-                  $data->nombre;
+                  echo $data ("nombre");
                 ?>
                 </h3>
 
