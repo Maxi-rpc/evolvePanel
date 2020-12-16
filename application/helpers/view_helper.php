@@ -9,8 +9,8 @@ function getTemplate($view,$data){
 
     //$this->load->view($view,$data);
     
-    $this->load->view('includes/header','',TRUE),
-	$this->load->view('includes/navbar','',TRUE),
-	$this->load->view($view,$data,TRUE),
-    $this->load->view('includes/footer','',TRUE),	
+    $this->load->view('includes/header','',TRUE);
+	$this->load->view('includes/navbar','',TRUE);
+	$this->load->view($view,$data,TRUE);
+    $this->load->view('includes/footer','',TRUE);	
 }
