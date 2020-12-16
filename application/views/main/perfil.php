@@ -34,7 +34,7 @@
 
                 <h3 class="profile-username text-center">
                 <?php
-                  echo $nombre;
+                  echo $_SESSION['nombre'];
                 ?>
                 </h3>
 
