@@ -12,11 +12,13 @@ class Perfil extends CI_Controller {
 	{
         $this->load->view('includes/header');
         $this->load->view('includes/navbar');
-        $this->load->view('main/perfil');
+        $this->load->view('main/perfil',$data);
         $this->load->view('includes/footer');
     }
     
     public function mostrarPerfil(){
-        
+        $email = $_SESSION['email'];
+        $data = $this->Users->getuser($email);
+		$this->load->view('main/perfil',$data]);
     }
 }
