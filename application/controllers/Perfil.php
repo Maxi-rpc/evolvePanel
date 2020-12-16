@@ -12,7 +12,7 @@ class Perfil extends CI_Controller {
 	{
         $this->load->view('includes/header');
         $this->load->view('includes/navbar');
-        $this->load->view('main/perfil','data');
+        $this->load->view('main/perfil',$data);
         $this->load->view('includes/footer');
     }
     
