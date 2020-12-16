@@ -36,8 +36,7 @@
             </div>
             <!-- /.col -->
             <div class="col-4">
-                <button type="submit" class="btn btn-primary btn-block">Ingresar
-                <span class="fas fa-sign-in-alt"></span>
+                <button type="submit" class="btn btn-primary btn-block">Ingresar<span class="fas fa-sign-in-alt"></span>
                 </button>
             </div>
             <!-- /.col -->
