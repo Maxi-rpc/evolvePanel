@@ -19,6 +19,6 @@ class Perfil extends CI_Controller {
     public function mostrarPerfil(){
         $email = $_SESSION['email'];
         $data = $this->Users->getuser($email);
-		$this->load->view('main/perfil',$data]);
+		$this->load->view('main/perfil',$data);
     }
 }
