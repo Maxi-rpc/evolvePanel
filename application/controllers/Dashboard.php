@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Dashboard extends CI_Controller {
 	public function __construct(){
         parent::__construct();
-        $this->load->helper(['view']);
+        $this->load->helper(['vistas']);
 	}
 	public function index(){
 		if($this->session->userdata('is_logged')){
 			$vista = $this->load->view('home','',TRUE);
-			$this->getTemplate($vista);	
+			$this->vistas->getTemplate($vista);	
 		}else{
 			redirect('login');
 		}
