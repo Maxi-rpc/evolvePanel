@@ -109,7 +109,15 @@
                     </a>
                   </li>
                 </ul>
-              </li><!-- / Menu desplegable -->
+              </li>
+              <li class="nav-item">
+                <!-- STAFF -->
+                <a href="<?= base_url() ?>staff" class="nav-link bg-blue">
+                  <i class="nav-icon fas fa-users"></i>
+                  <p>Staff</p>
+                </a>
+              </li>
+              <!-- / Menu desplegable -->
             </ul>
           </nav>
           <!-- /.sidebar-menu -->
