@@ -1,5 +1,5 @@
-<?= $head ?>
-    <?= $nav ?> 
+<?= $header ?>
+    <?= $navbar ?> 
 	<?= $aside ?>
 	<!-- CONTENT -->
 	<?= $content ?>
