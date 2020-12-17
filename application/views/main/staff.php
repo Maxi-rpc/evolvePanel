@@ -38,8 +38,8 @@
                     <th>ID USUARIO</th>
                     <th>NOMBRE</th>
                     <th>APELLIDO</th>
-                    <th>NICKNAME</th>
                     <th>E-MAIL</th>
+                    <th>ESTADO</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -53,8 +53,8 @@
                             <td><?= $a->id_usuario ?></td>
                             <td><?= $a->nombre ?></td>
                             <td><?= $a->apellido ?></td>
-                            <td><?= $a->nickname ?></td>
                             <td><?= $a->email ?></td>
+                            <td><?= $a->estado ?></td>
                         </tr>
                     <?php
                     }
@@ -66,8 +66,8 @@
                   <th>ID USUARIO</th>
                     <th>NOMBRE</th>
                     <th>APELLIDO</th>
-                    <th>NICKNAME</th>
                     <th>E-MAIL</th>
+                    <th>ESTADO</th>
                   </tr>
                   </tfoot>
                 </table>
