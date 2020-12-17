@@ -11,8 +11,8 @@ class Staff extends CI_Controller {
     
 	public function index()
 	{
-        $vista = $this->load->view('main/staff', '', true);
+        $data = $this->Users->getuserall();
+        $vista = $this->load->view('main/staff', ['data' => $data], true);
         getTemplate($vista);
-        
     }
 }
