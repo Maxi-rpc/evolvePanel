@@ -117,6 +117,19 @@
                   <p>Staff</p>
                 </a>
               </li>
+              <?php
+                if(isset($_SESSION['perfil'])==1){
+                  ?>
+                  <li class="nav-item">
+                    <!-- ADMIN AREA -->
+                    <a href="<?= base_url() ?>adminarea" class="nav-link">
+                    <i class="nav-icon fas fa-users"></i>
+                    <p>Admin Area</p>
+                    </a>
+                </li>
+                <?php
+                }
+              ?>
               <!-- / Menu desplegable -->
             </ul>
           </nav>

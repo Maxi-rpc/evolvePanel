@@ -1,11 +1,11 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper bg-dark">
+<div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0 text-white">Admin Area</h1>
+                <h1 class="m-0 text-dark">Admin Area</h1>
               </div>
               <!-- /.col -->
               <div class="col-sm-6">
@@ -117,7 +117,7 @@
                       </div>
                   </div>
                   <!-- /.card-header -->
-                  <div class="card-body bg-dark">
+                  <div class="card-body">
                   
                     <form role="form">
                       <div class="row">
@@ -232,13 +232,3 @@
         <!-- /.content -->
       </div>
       <!-- /.content-wrapper -->
-
-      <!-- Control Sidebar -->
-      <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-        <div class="p-3">
-          <h5>Personalizacion</h5>
-          <p>Panel de menu color:</p>
-        </div>
-      </aside>
-      <!-- /.control-sidebar -->

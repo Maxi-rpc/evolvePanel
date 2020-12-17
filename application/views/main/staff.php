@@ -47,7 +47,6 @@
                       <?php
                         foreach($data as $a){
                             
-                        
                       ?>
                         <tr>
                             <td><?= $a->id_usuario ?></td>
