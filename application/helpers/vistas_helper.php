@@ -11,7 +11,7 @@ function getTemplate($view){
 		'footer' => $CI->load->view('includes/footer','',TRUE),			
     );
 
-    return $CI->load->view('dashboard',$data);
+    return $CI->load->view('main/dashboard',$data);
 }
 
 /*
