@@ -135,10 +135,10 @@
                 <!-- /.card-tools -->
               </div>
               <!-- /.card-header -->
-              <!-- <div class="card-body"> -->
+              <div class="card-body">
                 <!-- form start -->
                 <form role="form">
-                  <div class="card-body">
+                  
                     <div class="form-group">
                       <label for="exampleInputEmail1">Email address</label>
                       <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
@@ -163,14 +163,14 @@
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                  </div>
-                  <!-- /.card-body -->
+                  
+                  
 
                   <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </form>
-              <!-- </div> -->
+              </div>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
