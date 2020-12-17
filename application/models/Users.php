@@ -23,31 +23,13 @@ class Users extends CI_Model
 
 	public function getuserall()
 	{
-		$this->db->select("*");
-		$this->db->from("usuarios");
-
-		$query=$this->get();
-		if($query->num_rows()>0){
-			return $query->result();
-		} else {
-			return NULL;
-		}
+		$sql = $this->db->get_where('usuarios');
+		return $sql->result();
 	}
 
 	public function getuser($email)
 	{
-		/*$this->db->select("*");
-		$this->db->from("usuarios");
-		$this->db->where("email",$email);
-		*/
 		$sql = $this->db->get_where('usuarios',array('email',$email));
 		return $sql->row_array();
-		/*
-		$query=$this->get();
-		if($query->num_rows()>0){
-			return $query->result();
-		} else {
-			return NULL;
-		}*/
 	}
 }

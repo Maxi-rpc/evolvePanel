@@ -65,7 +65,7 @@
             <!-- About Me Box -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">About Me</h3>
+                <h3 class="card-title">Info de Mí</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -328,7 +328,7 @@
                   <div class="tab-pane" id="settings">
                     <form class="form-horizontal">
                       <div class="form-group row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
                         <div class="col-sm-10">
                           <input type="email" class="form-control" id="inputName" placeholder="Name">
                         </div>
