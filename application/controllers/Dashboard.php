@@ -3,17 +3,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
 	public function __construct(){
-        parent::__construct();
+		parent::__construct();
+		$this->load->helper('vistas');
 	}
 	public function index(){
 		if($this->session->userdata('is_logged')){
 			$vista = $this->load->view('main/home','',TRUE);
-			$this->getTemplate($vista);	
+			getTemplate($vista);	
 		}else{
 			redirect('login');
 		}
 	}
-	public function getTemplate($view){
+	/*public function getTemplate($view){
 		$data = array(
 			'header' => $this->load->view('includes/header','',TRUE),
 			'navbar' => $this->load->view('includes/navbar','',TRUE),
@@ -23,5 +24,5 @@ class Dashboard extends CI_Controller {
 		);
 					
 		$this->load->view('dashboard',$data);
-	}
+	}*/
 }

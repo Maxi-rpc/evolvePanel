@@ -6,6 +6,7 @@ class Perfil extends CI_Controller {
 	{
 		parent::__construct();
         $this->load->model('Users');
+        $this->load->helper('vistas');
     }
     
 	public function index()
@@ -20,9 +21,9 @@ class Perfil extends CI_Controller {
         $email = $_SESSION['email'];
         $data = $this->Users->getuser($email);
         $vista = $this->load->view('main/perfil', ['data' => $data], true);
-        $this->getTemplate($vista);	
+        getTemplate($vista);	
     }
-    public function getTemplate($view){
+    /*public function getTemplate($view){
 		$data = array(
 			'header' => $this->load->view('includes/header','',TRUE),
 			'navbar' => $this->load->view('includes/navbar','',TRUE),
@@ -32,5 +33,5 @@ class Perfil extends CI_Controller {
 		);
 					
 		$this->load->view('dashboard',$data);
-	}
+	}*/
 }
