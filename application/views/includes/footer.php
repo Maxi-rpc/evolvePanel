@@ -22,5 +22,12 @@
     <script src="<?= base_url() ?>assets/js/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="<?= base_url() ?>assets/js/adminlte.min.js"></script>
+
+    <!-- DataTables -->
+    <script src="<?= base_url() ?>assets/js/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
   </body>
 </html>
