@@ -30,7 +30,7 @@
               <!--Stats-->
               <div class="col-md-3 col-sm-6 col-12">
                 <!--Usuarios-->
-                <div class="info-box bg-transparent border">
+                <div class="info-box bg-blue">
                   <span class="info-box-icon"
                     ><i class="fas fa-users"></i
                   ></span>
@@ -53,7 +53,7 @@
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <!--Equipos-->
-                <div class="info-box bg-transparent border">
+                <div class="info-box bg-blue">
                   <span class="info-box-icon"
                     ><i class="fas fa-gamepad"></i
                   ></span>
@@ -76,13 +76,35 @@
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <!--Equipos-->
-                <div class="info-box bg-transparent border">
+                <div class="info-box bg-blue">
                   <span class="info-box-icon"
                     ><i class="fas fa-restroom"></i
                   ></span>
 
                   <div class="info-box-content">
                     <span class="info-box-text">Players</span>
+                    <span class="info-box-number">20</span>
+
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 70%"></div>
+                    </div>
+                    <span class="progress-description">
+                      70% Increase in 30 Days
+                    </span>
+                  </div>
+                  <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+              </div>
+              <!-- /.col -->
+              <div class="col-md-3 col-sm-6 col-12">
+                <!--Staff-->
+                <div class="info-box bg-blue">
+                  <span class="info-box-icon"
+                    ><i class="fas fa-restroom"></i
+                  ></span>
+                  <div class="info-box-content">
+                    <span class="info-box-text">Staff</span>
                     <span class="info-box-number">20</span>
 
                     <div class="progress">
