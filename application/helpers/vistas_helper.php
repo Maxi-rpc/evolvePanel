@@ -4,11 +4,11 @@ function getTemplate($view){
     $CI = &get_instance();
 
 	$data = array(
-		'header' => ('includes/header','',TRUE),
-        'navbar' => ('includes/navbar','',TRUE),
-        'aside' => ('includes/aside','',TRUE),
+		'header' => 'includes/header','',TRUE,
+        'navbar' => 'includes/navbar','',TRUE,
+        'aside' => 'includes/aside','',TRUE,
 		'content' => $view,
-		'footer' => ('includes/footer','',TRUE),				
+		'footer' => 'includes/footer','',TRUE,				
     );
 
     return $CI->load->view('dashboard',$data);
