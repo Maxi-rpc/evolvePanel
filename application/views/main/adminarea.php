@@ -137,8 +137,7 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <!-- form start -->
-                <?= form_open('register/create',array('method'=>'POST'));?>
-                <form role="form">
+                <form role="form" action="<?= base_url('register/create'); ?>" method="post" id="frm_login">
                     <div class="form-group">
                       <label>Nombre</label>
                       <input type="text" name="firstname" value="" class="form-control" placeholder="Nombre">
@@ -171,7 +170,6 @@
                     <button type="submit" class="btn btn-primary">Crear</button>
                   </div>
                 </form>
-                <?= form_close(); ?>
               </div>
               <!-- /.card-body -->
             </div>
