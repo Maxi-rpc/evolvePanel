@@ -135,7 +135,7 @@
                 <!-- /.card-tools -->
               </div>
               <!-- /.card-header -->
-              <div class="card-body">
+              <!-- <div class="card-body"> -->
                 <!-- form start -->
                 <form role="form">
                   <div class="card-body">
@@ -170,7 +170,7 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </form>
-              </div>
+              <!-- </div> -->
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
