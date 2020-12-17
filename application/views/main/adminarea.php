@@ -124,120 +124,23 @@
             <div class="row">
               <!-- left column -->
               <div class="col-md-6">
-                <!-- general form elements disabled -->
-                <div class="card card-danger border collapse-card">
-                  <div class="card-header">
-                    <h3 class="card-title">Agregar Usuario</h3>
-                    <div class="card-tools">
-                        <button
-                          type="button"
-                          class="btn btn-tool"
-                          data-card-widget="collapse"
-                        >
-                          <i class="fas fa-minus"></i>
-                        </button>
-                      </div>
-                  </div>
-                  <!-- /.card-header -->
-                  <div class="card-body">
-                  
-                    <form role="form">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <!-- text input -->
-                          <div class="form-group">
-                            <label>Nombre</label>
-                            <input
-                              type="text"
-                              name="firstname"
-                              class="form-control"
-                              placeholder="Nombre"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <!-- text input -->
-                          <div class="form-group">
-                            <label>Apellido</label>
-                            <input
-                              type="text"
-                              name="lastname"
-                              class="form-control"
-                              placeholder="Apellido"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <!-- text input -->
-                          <div class="form-group">
-                            <label>Nombre</label>
-                            <input
-                              type="text"
-                              name="firstname"
-                              class="form-control"
-                              placeholder="Nombre"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <!-- text input -->
-                          <div class="form-group">
-                            <label>Password</label>
-                            <input
-                              type="password"
-                              class="form-control"
-                              placeholder="Enter ..."
-                            />
-                          </div>
-                        </div>
-                      </div>
+              <div class="card card-primary collapsed-card">
+              <div class="card-header">
+                <h3 class="card-title">Expandable</h3>
 
-                      <!-- input states -->
-                        <div class="row">
-                            <div class="col-sm-6">
-                            <!-- select -->
-                            <div class="form-group">
-                                <label>Seleccionar Perfil</label>
-                                <select class="form-control">
-                                <option>Usuario</option>
-                                <option>Admin</option>
-                                </select>
-                            </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <!-- select -->
-                                <div class="form-group">
-                                    <label>Grupo Laboral</label>
-                                    <select class="form-control">
-                                    <option>Redes</option>
-                                    <option>Team</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <!-- select -->
-                                <div class="form-group">
-                                    <label>Team</label>
-                                    <select class="form-control">
-                                    <option>No</option>
-                                    <option>Rainbow</option>
-                                    <option>Counter</option>
-                                    <option>Free</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">
-                                Crear
-                            </button>
-                        </div>
-                    </form>
-                  </div>
-                  <!-- /.card-body -->
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                  </button>
                 </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
                 <!-- /.card -->
               </div>
               <!--/.col (left) -->
