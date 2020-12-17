@@ -1,5 +1,5 @@
 <?php
-function getTemplate($view,$data){
+function getTemplate($view){
 	$data = array(
 		'header' => $this->load->view('includes/header','',TRUE),
         'navbar' => $this->load->view('includes/navbar','',TRUE),

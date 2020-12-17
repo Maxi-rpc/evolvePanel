@@ -47,7 +47,7 @@ class Login extends CI_Controller
 			];
 			$this->session->set_userdata($data);
 
-			redirect('home');
+			redirect('dashboard');
 		}
 	}
 	public function logout()

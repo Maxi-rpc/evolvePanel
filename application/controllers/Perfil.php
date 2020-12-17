@@ -20,7 +20,7 @@ class Perfil extends CI_Controller {
     public function mostrarPerfil(){
         $email = $_SESSION['email'];
         $data = $this->Users->getuser($email);
-        $view = $this->load->view('main/perfil');
-        getTemplate($view,$data);
+        $view = $this->load->view('main/perfil', ['data' => $data], true);
+        getTemplate($view);
     }
 }
