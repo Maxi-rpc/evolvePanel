@@ -54,7 +54,7 @@
                             <td><?= $a->nombre ?></td>
                             <td><?= $a->apellido ?></td>
                             <td><?= $a->email ?></td>
-                            <td><?= if($a->estado){echo "Activo"} ?></td>
+                            <td><?= $a->estado ?></td>
                         </tr>
                     <?php
                     }
