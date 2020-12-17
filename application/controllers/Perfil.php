@@ -11,9 +11,9 @@ class Perfil extends CI_Controller {
     
 	public function index()
 	{
-        //$vista = $this->load->view('main/perfil', '', true);
-        //getTemplate($vista);
-        $this->mostrarPerfil();
+        $vista = $this->load->view('main/perfil', '', true);
+        getTemplate($vista);
+        
     }
     
     public function mostrarPerfil(){

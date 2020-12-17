@@ -1,3 +1,9 @@
+<?php 
+		$id = $this->session->id_usuario;
+		$query = $this->db->get_where('usuarios', array('id_usuario' => $id), 1);
+		$usuario = $query->row();	
+?>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -5,7 +11,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Profile</h1>
+            <h1>Perfil</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -33,9 +39,7 @@
                 </div>
 
                 <h3 class="profile-username text-center">
-                <?php
-                  echo $nombre;
-                ?>
+                <?= $usuario->nombre ?>
                 </h3>
 
                 <p class="text-muted text-center">Software Engineer</p>
