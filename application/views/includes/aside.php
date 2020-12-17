@@ -43,7 +43,7 @@
             >
               <li class="nav-item">
                 <!-- Home -->
-                <a href="<?= base_url() ?>home" class="nav-link bg-red">
+                <a href="<?= base_url() ?>" class="nav-link bg-red">
                   <i class="nav-icon fas fa-home"></i>
                   <p>Home</p>
                 </a>
