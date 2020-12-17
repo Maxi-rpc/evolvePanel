@@ -137,6 +137,7 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <!-- form start -->
+                <?= form_open('register/create',array('method'=>'POST'));?>
                 <form role="form">
                     <div class="form-group">
                       <label>Nombre</label>
@@ -152,19 +153,25 @@
                     </div>
                     <!-- select -->
                     <div class="form-group">
-                        <label>Select</label>
+                        <label>Perfil</label>
                         <select class="form-control">
                           <option>option 1</option>
                           <option>option 2</option>
-                          <option>option 3</option>
-                          <option>option 4</option>
-                          <option>option 5</option>
                         </select>
-                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Contraseña</label>
+                      <input type="password" name="password" class="form-control" placeholder="Contraseña">
+                    </div>
+                    <div class="form-group">
+                      <label>Confirmar contraseña</label>
+                      <input type="password" name="password_c" class="form-control" placeholder="Reescribir contraseña">
+                    </div>
                   <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Crear</button>
                   </div>
                 </form>
+                <?= form_close(); ?>
               </div>
               <!-- /.card-body -->
             </div>
