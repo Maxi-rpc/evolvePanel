@@ -7,14 +7,19 @@ class Login extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library(['form_validation']);
-		$this->load->helper(['auth/login_rules']);
+		$this->load->helper(['auth/login_rules','vistas']);
 		$this->load->model('Auth');
 	}
 
 	public function index()
 	{
-		$this->load->view('auth/headerlogin');
-		$this->load->view('auth/login');
+		if($this->session->userdata('is_logged')){
+			$vista = $this->load->view('main/home','',TRUE);
+			getTemplate($vista);
+		}else{
+			$this->load->view('auth/headerlogin');
+			$this->load->view('auth/login');
+		}
 	}
 
 	public function validate()
