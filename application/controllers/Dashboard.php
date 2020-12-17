@@ -15,11 +15,11 @@ class Dashboard extends CI_Controller {
 	}
 	public function getTemplate($view){
 		$data = array(
-			'head' => $this->load->view('includes/head','',TRUE),
-			'nav' => $this->load->view('includes/nav','',TRUE),
+			'header' => $this->load->view('includes/header','',TRUE),
+			'navbar' => $this->load->view('includes/navbar','',TRUE),
 			'aside' => $this->load->view('includes/aside','',TRUE),
 			'content' => $view,
-			'footer' => $this->load->view('includes/footer','',TRUE),				
+			'footer' => $this->load->view('includes/footer','',TRUE),					
 		);
 					
 		$this->load->view('dashboard',$data);
