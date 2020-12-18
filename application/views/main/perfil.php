@@ -1,8 +1,4 @@
-<?php 
-		$id = $this->session->id_usuario;
-		$query = $this->db->get_where('usuarios', array('id_usuario' => $id), 1);
-		$usuario = $query->row();	
-?>
+
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -39,7 +35,7 @@
                 </div>
 
                 <h3 class="profile-username text-center">
-                <?= $usuario->nombre ?>
+                <?= $data->nombre ?>
                 </h3>
 
                 <p class="text-muted text-center">Software Engineer</p>

@@ -7,11 +7,11 @@ class UsersInfo extends CI_Model
 		$this->load->database();
 	}
 
-	public function create($user)
+	public function create($user,$id)
 	{
 		$this->db->trans_start();
 		$this->db->insert('usuario_info', $user);
-		$user_info['id_usuario'] = $this->db->insert_id();
+		$user_info['id_usuario'] = $id;
 		$this->db->trans_complete();
 
 		if ($this->db->trans_status() === false) {
@@ -27,15 +27,15 @@ class UsersInfo extends CI_Model
 		$this->db->update('usuario_info',$data);
 	}
 
-	public function getuserall()
+	public function getuserInfoall()
 	{
 		$sql = $this->db->get_where('usuario_info');
 		return $sql->result();
 	}
 
-	public function getuser($email)
+	public function getuserInfo($id)
 	{
-		$sql = $this->db->get_where('usuarios',array('email',$email));
+		$sql = $this->db->get_where('usuario_info',array('id_usuario',$id));
 		return $sql->row_array();
 	}
 }
