@@ -35,7 +35,7 @@ function getDatos(){
   $numero = mysql_num_rows($result);		
 
   $datos = array(
-      'cantUser' = $numero,
+      'cantUser' => $numero,
   );
 
   return $datos;
