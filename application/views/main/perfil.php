@@ -51,7 +51,13 @@
                     <b>Email</b> <a class="float-right"><?= $data['email'] ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>Sector</b> <a class="float-right"><?= $data['sector'] ?></a>
+                    <b>Sector</b> <a class="float-right"><?= 
+                    foreach($sector as $sec){
+                      if($sec['id_sector']==$data['sector']){
+                        echo $sec['nombre']
+                      }
+                    }
+                    $data['sector'] ?></a>
                   </li>
                 </ul>
 
