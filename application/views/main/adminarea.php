@@ -224,7 +224,7 @@
                       <!-- form start -->
                       <form role="form" action="<?= base_url('register/crearSector'); ?>" method="post" id="frm_login">
                           <div class="form-group">
-                            <label>Perfil</label>
+                            <label>Sector</label>
                             <input type="text" name="sector" value="" class="form-control" placeholder="Sector">
                           </div>
                         <div class="card-footer">
