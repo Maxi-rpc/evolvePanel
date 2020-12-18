@@ -50,6 +50,12 @@
                   <li class="list-group-item">
                     <b>Email</b> <a class="float-right"><?= $data['email'] ?></a>
                   </li>
+                  <li class="list-group-item">
+                    <b>Sector</b> <a class="float-right"><?= $data['sector'] ?></a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>Puesto</b> <a class="float-right"><?= $data['puesto'] ?></a>
+                  </li>
                 </ul>
 
               </div>
