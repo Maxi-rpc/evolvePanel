@@ -37,7 +37,7 @@
 
                   <div class="info-box-content">
                     <span class="info-box-text">Users</span>
-                    <span class="info-box-number"><?= $datos->cantUser ?></span>
+                    <span class="info-box-number"><?= $datos['cantUser'] ?></span>
 
                     <div class="progress">
                       <div class="progress-bar" style="width: 70%"></div>
