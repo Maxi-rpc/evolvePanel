@@ -153,6 +153,6 @@ class Register extends CI_Controller
 			'sector' => $nombre,
 		];
 
-		$this->Perfiles->create($sector);
+		$this->Sector->create($sector);
 	}
 }
