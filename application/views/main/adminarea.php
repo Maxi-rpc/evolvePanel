@@ -174,6 +174,36 @@
               <!-- /.card-body -->
             </div>
             <!-- /.Crear Usuario -->
+            <!-- Crear Usuario -->
+            <div class="row">
+              <!-- left column -->
+              <div class="col-md-6">
+              <div class="card card-primary collapsed-card">
+              <div class="card-header">
+                <h3 class="card-title">Crear Perfil</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <!-- form start -->
+                <form role="form" action="<?= base_url('register/crearPerfil'); ?>" method="post" id="frm_login">
+                    <div class="form-group">
+                      <label>Perfil</label>
+                      <input type="text" name="profile" value="" class="form-control" placeholder="Perfil">
+                    </div>
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Crear</button>
+                  </div>
+                </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.Crear Usuario -->
                 <!-- /.card -->
               </div>
               <!--/.col (left) -->
