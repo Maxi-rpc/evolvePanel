@@ -21,13 +21,13 @@ class Sector extends CI_Model
 		}
 	}
 
-	public function getPerfilAll()
+	public function getSectorAll()
 	{
 		$sql = $this->db->get_where('sector');
 		return $sql->result();
 	}
 
-	public function getPerfil($id)
+	public function getSector($id)
 	{
 		$sql = $this->db->get_where('sector',array('id_sector',$id));
 		return $sql->row_array();
