@@ -14,7 +14,6 @@ class Perfil extends CI_Controller {
         $id = $this->session->id_usuario;
         $per = $this->session->perfil;
         $data = $this->UserInfo->getuserInfo($id);
-        $data['perfil'] = $this->Perfiles->getPerfil($per);
         $perfiles = $this->Perfiles->getPerfilAll();
         $datos = getDatos();
 
