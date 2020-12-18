@@ -172,7 +172,7 @@
                       <input type="password" name="password_c" class="form-control" placeholder="Reescribir contraseña">
                     </div>
                   <div class="card-footer">
-                    <button type="submit" class="btn btn-primary toastrDefaultSuccess">Crear</button>
+                    <button type="submit" class="btn btn-primary">Crear</button>
                   </div>
                 </form>
               </div>
