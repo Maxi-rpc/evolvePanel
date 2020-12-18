@@ -60,7 +60,7 @@
 
                   <div class="info-box-content">
                     <span class="info-box-text">Teams</span>
-                    <span class="info-box-number">10</span>
+                    <span class="info-box-number"><?= $datos['cantTeams'] ?></span>
 
                     <div class="progress">
                       <div class="progress-bar" style="width: 70%"></div>
@@ -83,7 +83,7 @@
 
                   <div class="info-box-content">
                     <span class="info-box-text">Players</span>
-                    <span class="info-box-number">20</span>
+                    <span class="info-box-number"><?= $datos['cantPlayers'] ?></span>
 
                     <div class="progress">
                       <div class="progress-bar" style="width: 70%"></div>
@@ -105,7 +105,7 @@
                   ></span>
                   <div class="info-box-content">
                     <span class="info-box-text">Staff</span>
-                    <span class="info-box-number">20</span>
+                    <span class="info-box-number"><?= $datos['cantStaff'] ?></span>
 
                     <div class="progress">
                       <div class="progress-bar" style="width: 70%"></div>
