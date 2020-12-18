@@ -32,7 +32,7 @@
                 <!--Usuarios-->
                 <div class="info-box bg-blue">
                   <span class="info-box-icon"
-                    ><i class="fas fa-users"></i
+                    ><i class="fas fa-user"></i
                   ></span>
 
                   <div class="info-box-content">
@@ -78,7 +78,7 @@
                 <!--Equipos-->
                 <div class="info-box bg-blue">
                   <span class="info-box-icon"
-                    ><i class="fas fa-restroom"></i
+                    ><i class="fas fa-users"></i
                   ></span>
 
                   <div class="info-box-content">
@@ -101,7 +101,7 @@
                 <!--Staff-->
                 <div class="info-box bg-blue">
                   <span class="info-box-icon"
-                    ><i class="fas fa-restroom"></i
+                    ><i class="fas fa-user-friends"></i
                   ></span>
                   <div class="info-box-content">
                     <span class="info-box-text">Staff</span>
