@@ -47,5 +47,19 @@
   });
 </script>
 
+<script>
+  $(function() {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    });
+  $('.toastrDefaultSuccess').click(function() {
+      toastr.success('ESTE')
+    });
+  });
+</script>
+
   </body>
 </html>
