@@ -35,7 +35,7 @@
                 </div>
 
                 <h3 class="profile-username text-center">
-                <?= $data->nombre ?>
+                <?= $data['nombre'] ?>
                 </h3>
 
                 <p class="text-muted text-center">Software Engineer</p>
