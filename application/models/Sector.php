@@ -10,7 +10,7 @@ class Sector extends CI_Model
 	public function create($sector)
 	{
 		$this->db->trans_start();
-		$this->db->insert('nombre', $sector);
+		$this->db->insert('sector', $sector);
 		$perfil_info['id_sector'] = $this->db->insert_id();
 		$this->db->trans_complete();
 
