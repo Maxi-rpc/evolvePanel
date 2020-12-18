@@ -21,13 +21,13 @@ class Perfiles extends CI_Model
 		}
 	}
 
-	public function getperfilall()
+	public function getPerfilAll()
 	{
 		$sql = $this->db->get_where('perfiles');
 		return $sql->result();
 	}
 
-	public function getperfil($id)
+	public function getPerfil($id)
 	{
 		$sql = $this->db->get_where('perfiles',array('id_perfil',$id));
 		return $sql->row_array();
