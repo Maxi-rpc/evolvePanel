@@ -129,6 +129,7 @@ class Register extends CI_Controller
 
         $this->Users->create($user);
 	}
+
 	public function crearPerfil()
 	{
 		$this->load->model('Perfiles');
@@ -140,5 +141,18 @@ class Register extends CI_Controller
 		];
 
 		$this->Perfiles->create($profile);
+	}
+
+	public function crearSector()
+	{
+		$this->load->model('Sector');
+
+		$nombre = $this->input->post('sector');
+
+		$sector = [
+			'nombre' => $nombre,
+		];
+
+		$this->Perfiles->create($sector);
 	}
 }
