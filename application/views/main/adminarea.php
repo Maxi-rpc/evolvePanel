@@ -23,7 +23,7 @@
         <!-- /.content-header -->
 
         <!-- Main content -->
-        <div class="content">
+        <section class="content">
           <div class="container-fluid">
             <!-- =========================================================== -->
             <div class="row">
@@ -235,7 +235,8 @@
             <!-- /.row -->
           </div>
           <!-- /.container-fluid -->
-        </div>
+        </section>
         <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
