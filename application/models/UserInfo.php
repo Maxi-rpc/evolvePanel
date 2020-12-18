@@ -1,6 +1,6 @@
 <?php
 
-class UsersInfo extends CI_Model
+class Usersinfo extends CI_Model
 {
 	function __construct()
 	{
