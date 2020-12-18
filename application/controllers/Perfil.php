@@ -5,14 +5,14 @@ class Perfil extends CI_Controller {
     public function __construct()
 	{
 		parent::__construct();
-        $this->load->model(['Users','UsersInfo']);
+        $this->load->model(['Users','Usersinfo']);
         $this->load->helper('vistas');
     }
     
 	public function index()
 	{
         $id = $this->session->id_usuario;
-        $data = $this->UsersInfo->getuserInfo($id);
+        $data = $this->Usersinfo->getuserInfo($id);
         $perfiles = $this->Perfiles->getPerfilAll();
         $datos = getDatos();
 
