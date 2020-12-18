@@ -30,7 +30,7 @@ function getDatos(){
 
   $CI = &get_instance();
 
-  $sql = $this->db->get_where('usuarios');
+  $sql = $CI->db->get_where('usuarios');
   $numero = $sql->num_rows();
 
   $datos = array(
