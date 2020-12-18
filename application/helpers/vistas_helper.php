@@ -31,10 +31,22 @@ function getDatos(){
   $CI = &get_instance();
 
   $sql = $CI->db->get_where('usuarios');
-  $numero = $sql->num_rows();
+  $cUser = $sql->num_rows();
+
+  $sql2 = $CI->db->get_where('teams');
+  $cTeams = $sql2->num_rows();
+
+  $sql3 = $CI->db->get_where('usuario_info',array('sector' => 'player'));
+  $cPlayer = $sql3->num_rows();
+
+  $sql4 = $CI->db->get_where('usuario_info',array('sector' => 'staff'));
+  $cStaff = $sql4->num_rows();
 
   $datos = array(
-      'cantUser' => $numero,
+      'cantUser' => $cUser,
+      'cantTeams' => $cTeams,
+      'cantPlayers' => $cPlayer,
+      'cantStaff' => $cStaff,
   );
 
   return $datos;
