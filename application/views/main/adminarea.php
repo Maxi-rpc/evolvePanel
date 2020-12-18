@@ -176,7 +176,6 @@
             <!-- /.Crear Usuario -->
             <!-- Crear Perfil -->
             <div class="row">
-              <!-- left column -->
                 <div class="col-md-6">
                   <div class="card card-primary collapsed-card">
                     <div class="card-header">
@@ -231,9 +230,6 @@
                   </div>
                 </div>
                 <!-- /.Crear Perfil -->
-                <div class="col-md-6">
-                  <!-- general form elements -->
-                </div>
             </div>
             <!-- /.row -->
           </div>
