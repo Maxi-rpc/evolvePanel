@@ -5,7 +5,7 @@ class Perfil extends CI_Controller {
     public function __construct()
 	{
 		parent::__construct();
-        $this->load->model(['Users', 'UserInfo']);
+        $this->load->model(['Users', 'Perfiles' , 'UserInfo']);
         $this->load->helper('vistas');
     }
     
