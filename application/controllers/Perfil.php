@@ -13,7 +13,8 @@ class Perfil extends CI_Controller {
 	{
         $id = $this->session->id_usuario;
         $data = $this->UserInfo->getuserInfo($id);
-        $perfiles = $this->Perfiles->getPerfilAll();
+        $data['perfil'] = $this->Perfiles->getPerfil($_SESSION['perfil']);
+        //$perfiles = $this->Perfiles->getPerfilAll();
         $datos = getDatos();
 
         $vista = $this->load->view('main/perfil', ['data' => $data, 'perfiles' => $perfiles, 'datos' => $datos], true);
