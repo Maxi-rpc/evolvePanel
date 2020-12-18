@@ -153,10 +153,16 @@
                     <!-- select -->
                     <div class="form-group">
                         <label>Perfil</label>
-                        <select class="form-control">
-                          <option>option 1</option>
-                          <option>option 2</option>
+                        <select class="form-control" name="perfil">
+                        <?php
+                        foreach($perfiles as $p){
+                            
+                      ?>
+                          <option value="<?= $p->id_perfil ?>"> <?= $p->nombre ?> </option>
                         </select>
+                        <?php
+                    }
+                      ?>
                     </div>
                     <div class="form-group">
                       <label>Contraseña</label>
@@ -239,4 +245,3 @@
         <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
