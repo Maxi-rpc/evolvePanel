@@ -230,15 +230,10 @@
                     <!-- /.card-body -->
                   </div>
                 </div>
-              <!-- /.Crear Perfil -->
-                  <!-- /.card -->
-              </div>
-              <!--/.col (left) -->
-              <!-- right column -->
-              <div class="col-md-6">
-                <!-- general form elements -->
-              </div>
-              <!--/.col (right) -->
+                <!-- /.Crear Perfil -->
+                <div class="col-md-6">
+                  <!-- general form elements -->
+                </div>
             </div>
             <!-- /.row -->
           </div>
