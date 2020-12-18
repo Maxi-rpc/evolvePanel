@@ -150,7 +150,7 @@ class Register extends CI_Controller
 		$nombre = $this->input->post('sector');
 
 		$sector = [
-			'sector' => $nombre,
+			'nombre' => $nombre,
 		];
 
 		$this->Sector->create($sector);
