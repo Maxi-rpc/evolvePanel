@@ -20,10 +20,39 @@ class Perfil extends CI_Controller {
         getTemplate($vista);
     }
     
-    public function mostrarPerfil(){
-        $email = $_SESSION['email'];
-        $data = $this->Users->getuser($email);
-        $vista = $this->load->view('main/perfil', ['data' => $data], true);
-        getTemplate($vista);	
+    public function updatePerfil(){
+        
+        $nombre = $this->input->post('firstname');
+        $apellido = $this->input->post('lastname');
+        $nickname = $this->input->post('nickname');
+        $email = $this->input->post('email');
+        $sector = $this->input->post('sector');
+        $puesto = $this->input->post('puesto');
+		
+        $id = $_SESSION['id_usuario'];
+
+        $userInfo = [
+            'nombre' => $nombre,
+            'apellido' => $apellido,
+            'nickname' => $nickname,
+            'email' => $email,	
+            'sector' => $sector,
+            'puesto' => $puesto,			
+        ];
+
+        $user = [
+            'nombre' => $nombre,
+            'apellido' => $apellido,
+            'email' => $email,	
+        ];
+
+        $this->Users->update($id,$user);
+
+
+        $this->UserInfo->update($id,$userInfo);
+
+
+        $vista = $this->load->view('main/perfil', '', true);
+        getTemplate($vista);
     }
 }
