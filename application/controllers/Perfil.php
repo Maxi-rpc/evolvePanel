@@ -12,7 +12,6 @@ class Perfil extends CI_Controller {
 	public function index()
 	{
         $id = $this->session->id_usuario;
-        $per = $this->session->perfil;
         $data = $this->UserInfo->getuserInfo($id);
         $perfiles = $this->Perfiles->getPerfilAll();
         $datos = getDatos();
