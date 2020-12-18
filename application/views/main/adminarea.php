@@ -157,12 +157,12 @@
                         <?php
                         foreach($perfiles as $p){
                             
-                      ?>
+                        ?>
                           <option value="<?= $p->id_perfil ?>"> <?= $p->nombre ?> </option>
-                        </select>
                         <?php
-                    }
-                      ?>
+                        }
+                        ?>
+                      </select>
                     </div>
                     <div class="form-group">
                       <label>Contraseña</label>
