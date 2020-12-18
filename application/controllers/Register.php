@@ -133,7 +133,7 @@ class Register extends CI_Controller
 	{
 		$this->load->model('Perfiles');
 
-		$nombre = "Admin";
+		$nombre = "Usuario";
 
 		$profile = [
 			'nombre' => $nombre,
