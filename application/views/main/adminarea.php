@@ -174,6 +174,16 @@
               <!-- /.card-body -->
             </div>
             <!-- /.Crear Usuario -->
+                <!-- /.card -->
+              </div>
+              <!--/.col (left) -->
+              <!-- right column -->
+              <div class="col-md-6">
+                <!-- general form elements -->
+              </div>
+              <!--/.col (right) -->
+            </div>
+            <!-- /.row -->
           </div>
           <!-- /.container-fluid -->
         </div>
