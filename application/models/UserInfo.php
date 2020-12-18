@@ -31,6 +31,7 @@ class UsersInfo extends CI_Model
 	{
 		$sql = $this->db->get_where('usuario_info');
 		return $sql->result();
+		
 	}
 
 	public function getuserInfo($id)
