@@ -30,9 +30,8 @@ function getDatos(){
 
   $CI = &get_instance();
 
-  $sql = "SELECT * FROM usuarios";
-  $result = mysql_query($sql);
-  $numero = mysql_num_rows($result);		
+  $sql = $this->db->get_where('usuarios');
+  $numero = $sql->num_rows();
 
   $datos = array(
       'cantUser' => $numero,
