@@ -42,13 +42,13 @@
 
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                    <b>Followers</b> <a class="float-right"><?= $data['nombre'] ?></a>
+                    <b>Nombre</b> <a class="float-right"><?= $data['nombre'] ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>Following</b> <a class="float-right"><?= $data['apellido'] ?></a>
+                    <b>Apellido</b> <a class="float-right"><?= $data['apellido'] ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>Friends</b> <a class="float-right"><?= $data['email'] ?></a>
+                    <b>Email</b> <a class="float-right"><?= $data['email'] ?></a>
                   </li>
                 </ul>
 
