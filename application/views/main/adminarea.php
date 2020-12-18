@@ -37,7 +37,7 @@
 
                   <div class="info-box-content">
                     <span class="info-box-text">Users</span>
-                    <span class="info-box-number">10</span>
+                    <span class="info-box-number"><?= $datos->cantUser ?></span>
 
                     <div class="progress">
                       <div class="progress-bar" style="width: 70%"></div>
@@ -154,15 +154,14 @@
                     <div class="form-group">
                         <label>Perfil</label>
                         <select class="form-control" name="perfil">
-                        <?php
-                        foreach($perfiles as $p){
-                            
-                        ?>
-                          <option value="<?= $p->id_perfil ?>"> <?= $p->nombre ?> </option>
-                        <?php
-                        }
-                        ?>
-                      </select>
+                          <?php
+                            foreach($perfiles as $p){ 
+                          ?>
+                            <option value="<?= $p->id_perfil ?>"> <?= $p->nombre ?> </option>
+                          <?php
+                            }
+                          ?>
+                        </select>
                     </div>
                     <div class="form-group">
                       <label>Contraseña</label>

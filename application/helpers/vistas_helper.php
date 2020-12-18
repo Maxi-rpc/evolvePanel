@@ -5,8 +5,8 @@ function getTemplate($view){
 
 	$data = array(
 		'header' => $CI->load->view('includes/header','',TRUE),
-        'navbar' => $CI->load->view('includes/navbar','',TRUE),
-        'aside' => $CI->load->view('includes/aside','',TRUE),
+    'navbar' => $CI->load->view('includes/navbar','',TRUE),
+    'aside' => $CI->load->view('includes/aside','',TRUE),
 		'content' => $view,
 		'footer' => $CI->load->view('includes/footer','',TRUE),			
     );
@@ -26,3 +26,18 @@ if(!function_exists('view_loader')){
 }
 
 */
+function getDatos(){
+
+  $CI = &get_instance();
+
+  $sql = "SELECT * FROM usuarios";
+  $result = mysql_query($sql);
+  $numero = mysql_num_rows($result);		
+
+  $datos = array(
+      'cantUser' = $numero,
+  );
+
+  return $datos;
+}
+

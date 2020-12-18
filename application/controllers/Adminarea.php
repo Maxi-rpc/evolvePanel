@@ -13,8 +13,9 @@ class Adminarea extends CI_Controller {
 	{
         $data = $this->Users->getuserall();
         $perfiles = $this->Perfiles->getPerfilAll();
+        $datos = getDatos();
 
-        $vista = $this->load->view('main/adminarea', ['data' => $data, 'perfiles' => $perfiles], true);
+        $vista = $this->load->view('main/adminarea', ['data' => $data, 'perfiles' => $perfiles, 'datos' => $datos], true);
         getTemplate($vista);
     }
 }
