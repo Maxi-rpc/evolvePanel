@@ -128,5 +128,17 @@ class Register extends CI_Controller
         ];
 
         $this->Users->create($user);
-    }
+	}
+	public function crearPerfil()
+	{
+		$this->load->model('Perfiles');
+
+		$nombre = "Admin";
+
+		$profile = [
+			'nombre' => $nombre,
+		];
+
+		$this->Perfiles->create($profile);
+	}
 }
