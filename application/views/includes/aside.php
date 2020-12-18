@@ -50,7 +50,7 @@
               </li>
               <li class="nav-item">
                 <!-- Redes -->
-                <a href="<?= base_url() ?>home" class="nav-link">
+                <a href="<?= base_url() ?>" class="nav-link">
                   <i class="nav-icon fas fa-share-alt"></i>
                   <p>
                     Redes Sociales
@@ -60,7 +60,7 @@
               </li>
               <li class="nav-item">
                 <!-- Calendario -->
-                <a href="<?= base_url() ?>home" class="nav-link">
+                <a href="<?= base_url() ?>" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>
                     Calendario
