@@ -125,7 +125,7 @@
             <div class="row">
               <!-- left column -->
               <div class="col-md-6">
-                <div class="card card-primary collapsed-card card-tabs">
+                <div class="card card-primary collapsed-card">
                   <div class="card-header">
                     <h3 class="card-title">Crear Usuario</h3>
 
