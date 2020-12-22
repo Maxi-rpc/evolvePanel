@@ -124,59 +124,61 @@
             <div class="row">
               <!-- left column -->
               <div class="col-md-6">
-              <div class="card card-primary collapsed-card">
-              <div class="card-header">
-                <h3 class="card-title">Crear Usuario</h3>
+                <div class="card card-primary collapsed-card">
+                  <div class="card-header">
+                    <h3 class="card-title">Crear Usuario</h3>
 
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <!-- form start -->
-                <form role="form" action="<?= base_url('register/create'); ?>" method="post" id="frm_login">
-                    <div class="form-group">
-                      <label>Nombre</label>
-                      <input type="text" name="firstname" value="" class="form-control" placeholder="Nombre">
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                      </button>
                     </div>
-                    <div class="form-group">
-                      <label>Apellido</label>
-                      <input type="text" name="lastname" value="" class="form-control" placeholder="Apellido">
-                    </div>
-                    <div class="form-group">
-                      <label>Email</label>
-                      <input type="email" name="email" value="" class="form-control" placeholder="Email">
-                    </div>
-                    <!-- select -->
-                    <div class="form-group">
-                        <label>Perfil</label>
-                        <select class="form-control" name="perfil">
-                          <?php
-                            foreach($perfiles as $p){ 
-                          ?>
-                            <option value="<?= $p->id_perfil ?>"> <?= $p->nombre ?> </option>
-                          <?php
-                            }
-                          ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                      <label>Contraseña</label>
-                      <input type="password" name="password" class="form-control" placeholder="Contraseña">
-                    </div>
-                    <div class="form-group">
-                      <label>Confirmar contraseña</label>
-                      <input type="password" name="password_c" class="form-control" placeholder="Reescribir contraseña">
-                    </div>
-                  <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Crear</button>
+                    <!-- /.card-tools -->
                   </div>
-                </form>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <!-- form start -->
+                    <form role="form" action="<?= base_url('register/create'); ?>" method="post" id="frm_login">
+                        <div class="form-group">
+                          <label>Nombre</label>
+                          <input type="text" name="firstname" value="" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                          <label>Apellido</label>
+                          <input type="text" name="lastname" value="" class="form-control" placeholder="Apellido">
+                        </div>
+                        <div class="form-group">
+                          <label>Email</label>
+                          <input type="email" name="email" value="" class="form-control" placeholder="Email">
+                        </div>
+                        <!-- select -->
+                        <div class="form-group">
+                            <label>Perfil</label>
+                            <select class="form-control" name="perfil">
+                              <?php
+                                foreach($perfiles as $p){ 
+                              ?>
+                                <option value="<?= $p->id_perfil ?>"> <?= $p->nombre ?> </option>
+                              <?php
+                                }
+                              ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Contraseña</label>
+                          <input type="password" name="password" class="form-control" placeholder="Contraseña">
+                        </div>
+                        <div class="form-group">
+                          <label>Confirmar contraseña</label>
+                          <input type="password" name="password_c" class="form-control" placeholder="Reescribir contraseña">
+                        </div>
+                      <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Crear</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
               </div>
-              <!-- /.card-body -->
             </div>
             <!-- /.Crear Usuario -->
             <!-- Crear Perfil -->
