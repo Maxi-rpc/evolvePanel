@@ -124,9 +124,9 @@
             <!-- Crear Usuario -->
             <div class="row">
             <div class="col-12 col-sm-6">
-                  <div class="card card-primary card-tabs collapsed-card">
+                  <div class="card card-primary card-tabs">
                     <div class="card-header p-0 pt-1">
-                      <ul class="nav nav-tabs card-tools" id="custom-tabs-two-tab" role="tablist">
+                      <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
                         <li class="pt-2 px-3"><h3 class="card-title">Card Title</h3></li>
                         <li class="nav-item">
                           <a class="nav-link active" id="custom-tabs-two-home-tab" data-toggle="pill" href="#custom-tabs-two-home" role="tab" aria-controls="custom-tabs-two-home" aria-selected="true">Home</a>
@@ -141,14 +141,6 @@
                           <a class="nav-link" id="custom-tabs-two-settings-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-settings" aria-selected="false">Settings</a>
                         </li>
                       </ul>
-                      <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                        </button>
-                      <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                        </button>
-                      </div>
-                    <!-- /.card-tools -->
-
                     </div>
                     <div class="card-body">
                       <div class="tab-content" id="custom-tabs-two-tabContent">
