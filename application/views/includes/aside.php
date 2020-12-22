@@ -50,7 +50,7 @@
               </li>
               <li class="nav-item">
                 <!-- Redes -->
-                <a href="<?= base_url() ?>" class="nav-link">
+                <a href="<?= base_url() ?>redes" class="nav-link">
                   <i class="nav-icon fas fa-share-alt"></i>
                   <p>
                     Redes Sociales
