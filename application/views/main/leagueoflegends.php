@@ -37,44 +37,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>ID USUARIO</th>
-                    <th>NOMBRE</th>
-                    <th>APELLIDO</th>
-                    <th>E-MAIL</th>
-                    <th>ESTADO</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-
-                      <?php
-                        foreach($data as $a){
-                            
-                      ?>
-                        <tr>
-                            <td><?= $a->id_usuario ?></td>
-                            <td><?= $a->nombre ?></td>
-                            <td><?= $a->apellido ?></td>
-                            <td><?= $a->email ?></td>
-                            <td><?= $a->estado ?></td>
-                        </tr>
-                    <?php
-                    }
-                      ?>
-
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                  <th>ID USUARIO</th>
-                    <th>NOMBRE</th>
-                    <th>APELLIDO</th>
-                    <th>E-MAIL</th>
-                    <th>ESTADO</th>
-                  </tr>
-                  </tfoot>
-                </table>
+                
               </div>
               <!-- /.card-body -->
             </div>
