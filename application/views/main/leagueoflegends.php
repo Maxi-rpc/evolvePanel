@@ -39,8 +39,8 @@
                         <div class="card-body">
                             <form action="" class="form-horizontal" >
                                 <div class="form-group row">
-                                    <label for="inputEmail3" class="col-sm-2 col-form-label">ID Partida Personalizada</label>
-                                    <div class="col-sm-2">
+                                    <label for="inputEmail3" class="col-sm-3 col-form-label">ID Partida Personalizada</label>
+                                    <div class="col-sm-3">
                                         <input type="num" class="form-control" id="inputEmail3" placeholder="ID">
                                     </div>
                                     <button type="submit" class="btn btn-info">Buscar</button>
