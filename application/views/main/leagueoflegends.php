@@ -37,7 +37,15 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-
+                            <form action="" class="form-horizontal" >
+                                <div class="form-group row">
+                                    <label for="inputEmail3" class="col-sm-2 col-form-label">ID Partida Personalizada</label>
+                                    <div class="col-sm-10">
+                                        <input type="num" class="form-control" id="inputEmail3" placeholder="ID">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-info">Buscar</button>
+                            </form>
                         </div>
                         <!-- /.card-body -->
                     </div>
