@@ -7,10 +7,22 @@ class UserInfo extends CI_Model
 		$this->load->database();
 	}
 
-	public function create($user,$id)
+	public function create($user,$id=0)
 	{
+		
+		if($id==0){
+			$sql = $this->getuserID($user['email']);
+			$id = $sql['id_usuario'];
+		}		
+
+		$userInfo = [
+			'nombre' => $user['nombre'],
+			'apellido' => $user['apellido'],
+			'email' => $user['email'],	
+		];
+
 		$this->db->trans_start();
-		$this->db->insert('usuario_info', $user);
+		$this->db->insert('usuario_info', $userInfo);
 		$user_info['id_usuario'] = $id;
 		$this->db->trans_complete();
 
@@ -36,6 +48,12 @@ class UserInfo extends CI_Model
 	public function getuserInfo($id)
 	{
 		$sql = $this->db->get_where('usuario_info',array('id_usuario',$id));
+		return $sql->row_array();
+	}
+
+	public function getuserID($email)
+	{
+		$sql = $this->db->get_where('usuarios',array('email',$email));
 		return $sql->row_array();
 	}
 }

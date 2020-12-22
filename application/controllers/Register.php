@@ -6,7 +6,7 @@ class Register extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Users');
+		$this->load->model(['Users','UserInfo']);
 		$this->load->library(['form_validation', 'email']);
 	}
 
@@ -102,7 +102,8 @@ class Register extends CI_Controller
 				$data['msg'] =
 					'Ocurrio un error al ingresar los datos, intente nuevamente';
 				$this->load->view('register', $data);
-            }
+			}
+			$this->UserInfo->create($user);
 		}
     }
     
