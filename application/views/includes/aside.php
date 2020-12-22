@@ -79,31 +79,31 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?= base_url() ?>home" class="nav-link">
+                    <a href="<?= base_url() ?>" class="nav-link">
                       <i class="fas fa-chart-bar nav-icon"></i>
                       <p>Stats General</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url() ?>home" class="nav-link">
+                    <a href="<?= base_url() ?>" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Counter Strike</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url() ?>home" class="nav-link">
+                    <a href="<?= base_url() ?>" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Rainbox Six</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url() ?>home" class="nav-link">
+                    <a href="<?= base_url() ?>" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Free Fire</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url() ?>home" class="nav-link">
+                    <a href="<?= base_url() ?>leagueoflegends" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>League of Legends</p>
                     </a>
