@@ -43,8 +43,8 @@
                                     <div class="col-sm-2">
                                         <input type="num" class="form-control" id="inputEmail3" placeholder="ID">
                                     </div>
+                                    <button type="submit" class="btn btn-info">Buscar</button>
                                 </div>
-                                <button type="submit" class="btn btn-info">Buscar</button>
                             </form>
                         </div>
                         <!-- /.card-body -->
