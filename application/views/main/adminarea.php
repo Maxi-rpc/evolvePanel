@@ -228,7 +228,6 @@
                   <!-- /.card-header -->
                   <div class="card-body">
                     <!-- form start -->
-
                     <div class="card card-primary card-tabs">
                       <div class="card-header p-0 pt-1">
                         <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
@@ -246,15 +245,15 @@
                       <div class="card-body">
                         <div class="tab-content" id="custom-tabs-one-tabContent">
                           <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
-                          <form role="form" action="<?= base_url('register/crearPerfil'); ?>" method="post" id="frm_login">
-                          <div class="form-group">
-                            <label>Perfil</label>
-                            <input type="text" name="profile" value="" class="form-control" placeholder="Perfil">
-                          </div>
-                        <div class="card-footer">
-                          <button type="submit" class="btn btn-primary">Crear</button>
-                        </div>
-                      </form> 
+                            <form role="form" action="<?= base_url('register/crearPerfil'); ?>" method="post" id="frm_login">
+                                <div class="form-group">
+                                  <label>Perfil</label>
+                                  <input type="text" name="profile" value="" class="form-control" placeholder="Perfil">
+                                </div>
+                                <div class="card-footer">
+                                  <button type="submit" class="btn btn-primary">Crear</button>
+                                </div>
+                            </form> 
                           </div>
                           <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
                             ACA VA CODIGO DE Editar
@@ -266,9 +265,6 @@
                       </div>
                       <!-- /.card -->
                     </div>
-
-
-                    
                   </div>
                   <!-- /.card-body -->
                 </div>
@@ -372,14 +368,14 @@
                         <div class="tab-content" id="custom-tabs-one-tabContent">
                           <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
                           <form role="form" action="<?= base_url('register/crearTeam'); ?>" method="post" id="frm_login">
-                          <div class="form-group">
-                            <label>Perfil</label>
-                            <input type="text" name="profile" value="" class="form-control" placeholder="Perfil">
-                          </div>
-                        <div class="card-footer">
-                          <button type="submit" class="btn btn-primary">Crear</button>
-                        </div>
-                      </form> 
+                              <div class="form-group">
+                                <label>Team</label>
+                                <input type="text" name="team" value="" class="form-control" placeholder="Team">
+                              </div>
+                              <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Crear</button>
+                              </div>
+                          </form> 
                           </div>
                           <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
                             ACA VA CODIGO DE Editar
@@ -392,8 +388,6 @@
                       <!-- /.card -->
                     </div>
 
-
-                    
                   </div>
                   <!-- /.card-body -->
                 </div>
