@@ -121,7 +121,6 @@
               <!-- /.col -->
             </div>
             <!--/Stats-->
-
             <div class="row">
               <!-- left column -->
               <!-- Usuario -->
@@ -278,11 +277,11 @@
             
             <div class="row">
               <!-- left column -->
-              <!-- Usuario -->
+              <!-- Sector -->
               <div class="col-md-6">
                 <div class="card card-primary collapsed-card">
                   <div class="card-header">
-                    <h3 class="card-title">Usuario</h3>
+                    <h3 class="card-title">Sector</h3>
 
                     <div class="card-tools">
                       <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
@@ -311,43 +310,14 @@
                       <div class="card-body">
                         <div class="tab-content" id="custom-tabs-one-tabContent">
                           <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
-                            <form role="form" action="<?= base_url('register/create'); ?>" method="post" id="frm_login">
-                              <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" name="firstname" value="" class="form-control" placeholder="Nombre">
-                              </div>
-                              <div class="form-group">
-                                <label>Apellido</label>
-                                <input type="text" name="lastname" value="" class="form-control" placeholder="Apellido">
-                              </div>
-                              <div class="form-group">
-                                <label>Email</label>
-                                <input type="email" name="email" value="" class="form-control" placeholder="Email">
-                              </div>
-                              <!-- select -->
-                              <div class="form-group">
-                                  <label>Perfil</label>
-                                  <select class="form-control" name="perfil">
-                                    <?php
-                                      foreach($perfiles as $p){ 
-                                    ?>
-                                      <option value="<?= $p->id_perfil ?>"> <?= $p->nombre ?> </option>
-                                    <?php
-                                      }
-                                    ?>
-                                  </select>
-                              </div>
-                              <div class="form-group">
-                                <label>Contraseña</label>
-                                <input type="password" name="password" class="form-control" placeholder="Contraseña">
-                              </div>
-                              <div class="form-group">
-                                <label>Confirmar contraseña</label>
-                                <input type="password" name="password_c" class="form-control" placeholder="Reescribir contraseña">
-                              </div>
-                              <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Crear</button>
-                              </div>
+                            <form role="form" action="<?= base_url('register/crearSector'); ?>" method="post" id="frm_login">
+                                <div class="form-group">
+                                  <label>Sector</label>
+                                  <input type="text" name="sector" value="" class="form-control" placeholder="Sector">
+                                </div>
+                                <div class="card-footer">
+                                  <button type="submit" class="btn btn-primary">Crear</button>
+                                </div>
                             </form> 
                           </div>
                           <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
@@ -368,11 +338,11 @@
                 </div>
               </div>
                 <!-- right column -->
-                <!-- Perfil -->
+                <!-- Team -->
               <div class="col-md-6">
                 <div class="card card-primary collapsed-card">
                   <div class="card-header">
-                    <h3 class="card-title">Perfil</h3>
+                    <h3 class="card-title">Team</h3>
 
                     <div class="card-tools">
                       <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
@@ -401,7 +371,7 @@
                       <div class="card-body">
                         <div class="tab-content" id="custom-tabs-one-tabContent">
                           <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
-                          <form role="form" action="<?= base_url('register/crearPerfil'); ?>" method="post" id="frm_login">
+                          <form role="form" action="<?= base_url('register/crearTeam'); ?>" method="post" id="frm_login">
                           <div class="form-group">
                             <label>Perfil</label>
                             <input type="text" name="profile" value="" class="form-control" placeholder="Perfil">
@@ -429,65 +399,6 @@
                 </div>
               </div>
             </div>
-            <!-- Crear Perfil -->
-            <div class="row">
-                <div class="col-md-6">
-                  <div class="card card-primary collapsed-card">
-                    <div class="card-header">
-                      <h3 class="card-title">Crear Perfil</h3>
-
-                      <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                        </button>
-                      </div>
-                      <!-- /.card-tools -->
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                      <!-- form start -->
-                      <form role="form" action="<?= base_url('register/crearPerfil'); ?>" method="post" id="frm_login">
-                          <div class="form-group">
-                            <label>Perfil</label>
-                            <input type="text" name="profile" value="" class="form-control" placeholder="Perfil">
-                          </div>
-                        <div class="card-footer">
-                          <button type="submit" class="btn btn-primary">Crear</button>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- /.card-body -->
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card card-primary collapsed-card">
-                    <div class="card-header">
-                      <h3 class="card-title">Crear Sector</h3>
-
-                      <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                        </button>
-                      </div>
-                      <!-- /.card-tools -->
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                      <!-- form start -->
-                      <form role="form" action="<?= base_url('register/crearSector'); ?>" method="post" id="frm_login">
-                          <div class="form-group">
-                            <label>Sector</label>
-                            <input type="text" name="sector" value="" class="form-control" placeholder="Sector">
-                          </div>
-                        <div class="card-footer">
-                          <button type="submit" class="btn btn-primary">Crear</button>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- /.card-body -->
-                  </div>
-                </div>
-                <!-- /.Crear Perfil -->
-            </div>
-            <!-- /.row -->
           </div>
           <!-- /.container-fluid -->
         </section>
