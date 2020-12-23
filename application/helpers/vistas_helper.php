@@ -14,18 +14,6 @@ function getTemplate($view){
     return $CI->load->view('main/dashboard',$data);
 }
 
-/*
-FUNCION ORIGINAL
-
-if(!function_exists('view_loader')){
-
-  function view_loader($view, $vars=array(), $output = false){
-    $CI = &get_instance();
-    return $CI->load->view($view, $vars, $output);
-  }
-}
-
-*/
 function getDatos(){
 
   $CI = &get_instance();
@@ -52,3 +40,32 @@ function getDatos(){
   return $datos;
 }
 
+function msj(){
+
+  /*
+  if ( condición ) {
+    echo "<script>
+    $('.toastrDefaultSuccess')(function() {
+      toastr.success('Se creo con exito.')
+    });
+    </script>";
+  }
+  */
+  
+  echo "<script>
+  $(function() {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    });
+
+    $('.toastrDefaultSuccess')(function() {
+      toastr.success('Se creo con exito.')
+    });
+
+  });
+</script>";
+
+}

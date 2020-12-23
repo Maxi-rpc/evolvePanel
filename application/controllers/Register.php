@@ -8,6 +8,7 @@ class Register extends CI_Controller
 		parent::__construct();
 		$this->load->model(['Users','UserInfo']);
 		$this->load->library(['form_validation', 'email']);
+		$this->load->helper('vistas');
 	}
 
 	public function index()
@@ -87,7 +88,7 @@ class Register extends CI_Controller
 		$this->form_validation->set_rules($config);
 
 		if ($this->form_validation->run() == false) {
-			$this->load->view('register');
+			$this->load->view('dashboard');
 		} else {
 			$user = [
 				'nombre' => $nombre,
@@ -101,7 +102,7 @@ class Register extends CI_Controller
 			if (!$this->Users->create($user)) {
 				$data['msg'] =
 					'Ocurrio un error al ingresar los datos, intente nuevamente';
-				$this->load->view('register', $data);
+				$this->load->view('dashboard', $data);
 			}
 			$this->UserInfo->create($user);
 		}
@@ -155,5 +156,20 @@ class Register extends CI_Controller
 		];
 
 		$this->Sector->create($sector);
+	}
+
+	public function crearTeam()
+	{
+		$this->load->model('Teams');
+
+		$nombre = $this->input->post('team');
+
+		$team = [
+			'nombre' => $nombre,
+		];
+
+		if($this->Teams->create($team)){
+			msj();
+		}
 	}
 }
