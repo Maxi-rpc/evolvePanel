@@ -170,7 +170,7 @@ class Register extends CI_Controller
 
 		if($this->Teams->create($team)){
 			$view = $this->load->view('main/adminarea');
-			getTemplate($view);
+			redirect('adminarea');
 		}
 	}
 }
