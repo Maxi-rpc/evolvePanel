@@ -121,10 +121,10 @@
               <!-- /.col -->
             </div>
             <!--/Stats-->
-            <!-- Crear Usuario -->
 
             <div class="row">
               <!-- left column -->
+              <!-- Usuario -->
               <div class="col-md-6">
                 <div class="card card-primary collapsed-card">
                   <div class="card-header">
@@ -213,11 +213,76 @@
                   <!-- /.card-body -->
                 </div>
               </div>
-                <!-- /.Crear Usuario -->
+                <!-- right column -->
+                <!-- Perfil -->
               <div class="col-md-6">
                 <div class="card card-primary collapsed-card">
                   <div class="card-header">
                     <h3 class="card-title">Perfil</h3>
+
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                    <!-- /.card-tools -->
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <!-- form start -->
+
+                    <div class="card card-primary card-tabs">
+                      <div class="card-header p-0 pt-1">
+                        <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Crear</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Editar</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">Eliminar</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-body">
+                        <div class="tab-content" id="custom-tabs-one-tabContent">
+                          <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                          <form role="form" action="<?= base_url('register/crearPerfil'); ?>" method="post" id="frm_login">
+                          <div class="form-group">
+                            <label>Perfil</label>
+                            <input type="text" name="profile" value="" class="form-control" placeholder="Perfil">
+                          </div>
+                        <div class="card-footer">
+                          <button type="submit" class="btn btn-primary">Crear</button>
+                        </div>
+                      </form> 
+                          </div>
+                          <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                            ACA VA CODIGO DE Editar
+                          </div>
+                          <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
+                            Aca va codigo de eliminar
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.card -->
+                    </div>
+
+
+                    
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <!-- left column -->
+              <!-- Usuario -->
+              <div class="col-md-6">
+                <div class="card card-primary collapsed-card">
+                  <div class="card-header">
+                    <h3 class="card-title">Usuario</h3>
 
                     <div class="card-tools">
                       <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
@@ -302,8 +367,68 @@
                   <!-- /.card-body -->
                 </div>
               </div>
+                <!-- right column -->
+                <!-- Perfil -->
+              <div class="col-md-6">
+                <div class="card card-primary collapsed-card">
+                  <div class="card-header">
+                    <h3 class="card-title">Perfil</h3>
+
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                    <!-- /.card-tools -->
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <!-- form start -->
+
+                    <div class="card card-primary card-tabs">
+                      <div class="card-header p-0 pt-1">
+                        <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Crear</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Editar</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">Eliminar</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-body">
+                        <div class="tab-content" id="custom-tabs-one-tabContent">
+                          <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                          <form role="form" action="<?= base_url('register/crearPerfil'); ?>" method="post" id="frm_login">
+                          <div class="form-group">
+                            <label>Perfil</label>
+                            <input type="text" name="profile" value="" class="form-control" placeholder="Perfil">
+                          </div>
+                        <div class="card-footer">
+                          <button type="submit" class="btn btn-primary">Crear</button>
+                        </div>
+                      </form> 
+                          </div>
+                          <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                            ACA VA CODIGO DE Editar
+                          </div>
+                          <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
+                            Aca va codigo de eliminar
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.card -->
+                    </div>
+
+
+                    
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+              </div>
             </div>
-            
             <!-- Crear Perfil -->
             <div class="row">
                 <div class="col-md-6">

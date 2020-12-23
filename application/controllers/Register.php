@@ -102,7 +102,7 @@ class Register extends CI_Controller
 			if (!$this->Users->create($user)) {
 				$data['msg'] =
 					'Ocurrio un error al ingresar los datos, intente nuevamente';
-				$this->load->view('dashboard', $data);
+				$this->load->view('adminarea', $data);
 			}
 			$this->UserInfo->create($user);
 		}
@@ -170,6 +170,8 @@ class Register extends CI_Controller
 
 		if($this->Teams->create($team)){
 			msj();
+			$view = $this->load->view('adminarea');
+			getTemplate($view);
 		}
 	}
 }
