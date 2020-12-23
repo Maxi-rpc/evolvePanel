@@ -29,6 +29,11 @@
     <script src="<?= base_url() ?>assets/js/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="<?= base_url() ?>assets/js/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 
+    <!-- Toastr -->
+    <script src="<?= base_url() ?>assets/js/toastr/toastr.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="<?= base_url() ?>assets/js/sweetalert2/sweetalert2.min.js"></script>
+
     <script>
   $(function () {
     $("#example1").DataTable({
