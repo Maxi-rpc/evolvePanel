@@ -169,7 +169,7 @@ class Register extends CI_Controller
 		];
 
 		if($this->Teams->create($team)){
-			msj();
+			mensaje();
 			$view = $this->load->view('adminarea');
 			getTemplate($view);
 		}

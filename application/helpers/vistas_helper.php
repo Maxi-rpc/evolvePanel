@@ -40,7 +40,7 @@ function getDatos(){
   return $datos;
 }
 
-function msj(){
+function mensaje(){
 
   /*
   if ( condición ) {
