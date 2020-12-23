@@ -47,5 +47,21 @@
   });
 </script>
 
+<script type="text/javascript">
+  $(function() {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    });
+
+    $('.toastrDefaultSuccess').onClick(function() {
+      toastr.success('Se creo con exito.')
+    });
+
+  });
+</script>
+
   </body>
 </html>

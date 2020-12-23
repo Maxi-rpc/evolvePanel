@@ -373,7 +373,7 @@
                                 <input type="text" name="team" value="" class="form-control" placeholder="Team">
                               </div>
                               <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Crear</button>
+                                <button type="submit" class="btn btn-primary toastrDefaultSuccess">Crear</button>
                               </div>
                           </form> 
                           </div>
