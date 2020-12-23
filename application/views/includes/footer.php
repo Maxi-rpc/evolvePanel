@@ -56,7 +56,7 @@
       timer: 3000
     });
 
-    $('.toastrDefaultSuccess').onClick(function() {
+    $('.toastrDefaultSuccess').click(function() {
       toastr.success('Se creo con exito.')
     });
 
