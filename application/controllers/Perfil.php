@@ -5,23 +5,26 @@ class Perfil extends CI_Controller {
     public function __construct()
 	{
 		parent::__construct();
-        $this->load->model(['Users', 'Perfiles' , 'UserInfo','Sector']);
-        $this->load->helper('vistas');
+        $this->load->model(['Users', 'Perfiles' , 'UserInfo','Sector','Teams']);
+        $this->load->helper(['vistas','rules_general']);
     }
-    
+
 	public function index()
 	{
         $id = $this->session->id_usuario;
         $data = $this->UserInfo->getuserInfo($id);
-        $perfiles = $this->Perfiles->getPerfilAll();
-        $sector = $this->Sector->getSectorAll();
-        $datos = getDatos();
+        $sector = $this->Sector->getSector($data['sector']);
+        $team = $this->Teams->getTeam($data['team'])
 
         $info = [
-            'data' => $data,
-            'perfiles' => $perfiles,
+            'nombre' => $data['nombre'],
+            'apellido' => $data['apellido'],
+            'nickname' => $data['nickname'],
+            'email' => $data['email'],
             'sector' => $sector,
-            'datos' => $datos,
+            'team' => $team,
+            'puesto' => '',
+            'redes' => '',
         ];
 
         $vista = $this->load->view('main/perfil', $info, true);
@@ -29,6 +32,8 @@ class Perfil extends CI_Controller {
     }
     
     public function updatePerfil(){
+        
+        $rules = get_UserInfo_Rules();
         
         $nombre = $this->input->post('firstname');
         $apellido = $this->input->post('lastname');

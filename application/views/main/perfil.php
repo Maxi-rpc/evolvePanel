@@ -1,5 +1,3 @@
-
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -25,38 +23,46 @@
         <div class="row">
           <div class="col-md-4">
 
-            <!-- Profile Image -->
-            <div class="card card-primary card-outline">
-              <div class="card-body box-profile">
-                <div class="text-center">
-                  <img class="profile-user-img img-fluid img-circle"
-                        src="../../dist/img/user4-128x128.jpg"
-                        alt="User profile picture">
-                </div>
-
-                <h3 class="profile-username text-center">
-                <?= $data['nickname'] ?>
-                </h3>
-
-                <p class="text-muted text-center"><?= $data['puesto'] ?></p>
-
-                <ul class="list-group list-group-unbordered mb-3">
-                  <li class="list-group-item">
-                    <b>Nombre</b> <a class="float-right"><?= $data['nombre'] ?></a>
-                  </li>
-                  <li class="list-group-item">
-                    <b>Apellido</b> <a class="float-right"><?= $data['apellido'] ?></a>
-                  </li>
-                  <li class="list-group-item">
-                    <b>Email</b> <a class="float-right"><?= $data['email'] ?></a>
-                  </li>
-                  <li class="list-group-item">
-                    <b>Sector</b> <a class="float-right"><?= $data['sector'] ?></a>
-                  </li>
-                </ul>
-
+            <!-- Profile -->
+            <div class="card card-widget widget-user">
+              <!-- Add the bg color to the header using any of the bg-* classes -->
+              <div class="widget-user-header text-white"
+                   style="background: url('../dist/img/photo1.png') center center;">
+                <h3 class="widget-user-username">Elizabeth Pierce</h3>
+                <h5 class="widget-user-desc">Web Designer</h5>
               </div>
-              <!-- /.card-body -->
+              <div class="widget-user-image">
+                <img class="img-circle" src="../dist/img/user3-128x128.jpg" alt="User Avatar">
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                      <h5 class="description-header">3,200</h5>
+                      <span class="description-text">SALES</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                      <h5 class="description-header">13,000</h5>
+                      <span class="description-text">FOLLOWERS</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-4">
+                    <div class="description-block">
+                      <h5 class="description-header">35</h5>
+                      <span class="description-text">PRODUCTS</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
             </div>
             <!-- /.card -->
 
