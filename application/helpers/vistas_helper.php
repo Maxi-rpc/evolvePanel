@@ -4,7 +4,7 @@ function getTemplate($view){
     $CI = &get_instance();
 
 	$data = array(
-		'header' => $CI->load->view('includes/header','',TRUE),
+		'head' => $CI->load->view('includes/head','',TRUE),
     'navbar' => $CI->load->view('includes/navbar','',TRUE),
     'aside' => $CI->load->view('includes/aside','',TRUE),
 		'content' => $view,
