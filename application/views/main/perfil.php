@@ -30,8 +30,8 @@
                    style="background: url('../dist/img/photo1.png') center center;">
                 <h3 class="widget-user-username"><?php echo $user['nickname'] ?></h3>
                 <h5 class="widget-user-desc"> <?php foreach($sectores as $sec){
-                  if($sec['id_sector'] == $user['sector']){
-                    echo $sec['nombre'];
+                  if($sec->id_sector == $user['sector']){
+                    echo $sec->nombre;
                   };
                 } ?> </h5>
               </div>
