@@ -17,10 +17,10 @@ class Perfil extends CI_Controller {
         $team = $this->Teams->getTeam($data['team'])
 
         $info = [
-            'nombre' => $data['nombre'],
-            'apellido' => $data['apellido'],
-            'nickname' => $data['nickname'],
-            'email' => $data['email'],
+            'nombre' => $data->nombre,
+            'apellido' => $data->apellido,
+            'nickname' => $data->nickname,
+            'email' => $data->email,
             'sector' => $sector,
             'team' => $team,
             'puesto' => '',
