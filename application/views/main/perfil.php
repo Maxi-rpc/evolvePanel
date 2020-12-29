@@ -87,6 +87,12 @@
 
                 <hr>
 
+                <strong><i class="fas fa-map-marker-alt mr-1"></i> Dirección </strong>
+
+                <p class="text-muted">Dirección de la casa.</p>
+
+                <hr>
+
                 <strong><i class="far fa-file-alt mr-1"></i> Redes</strong>
 
                 <p class="text-muted">Acá van las redes.</p>
