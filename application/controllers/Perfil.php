@@ -6,7 +6,7 @@ class Perfil extends CI_Controller {
 	{
 		parent::__construct();
         $this->load->model(['Users', 'Perfiles' , 'UserInfo','Sector','Teams']);
-        $this->load->helper(['vistas','rules_general']);
+        $this->load->helper(['vistas','auth/rules_general']);
     }
 
 	public function index()
