@@ -112,33 +112,38 @@
               <div class="card-body">
               <form class="form-horizontal">
                       <div class="form-group row">
-                        <div class="col-sm-10">
+                        
+                        <div class="col-sm-12">
                           <input type="email" class="form-control" id="inputName" placeholder="Name">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <div class="col-sm-10">
+                        
+                        <div class="col-sm-12">
                           <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <div class="col-sm-10">
+                        
+                        <div class="col-sm-12">
                           <input type="text" class="form-control" id="inputName2" placeholder="Name">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <div class="col-sm-10">
+                        
+                        <div class="col-sm-12">
                           <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
                         </div>
                       </div>
                       <div class="form-group row">
-                        <div class="col-sm-10">
+                        
+                        <div class="col-sm-12">
                           <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <div class="offset-sm-2 col-sm-10">
-                          <button type="submit" class="btn btn-danger">Guardar</button>
+                        <div class="offset-sm-2 col-sm-12">
+                          <button type="submit" class="btn btn-danger">Submit</button>
                         </div>
                       </div>
                     </form>
