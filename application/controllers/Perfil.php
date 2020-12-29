@@ -12,19 +12,12 @@ class Perfil extends CI_Controller {
 	public function index()
 	{
         $id = $this->session->id_usuario;
-        $data = $this->UserInfo->getuserInfo($id);
+        $user = $this->UserInfo->getuserInfo($id);
         $sectores = $this->Sector->getSectorAll();
         $teams = $this->Teams->getTeam();
         $puestos = $this->Puestos->getPuesto();
 
-        $info = [
-            'user' => $data,
-            'sectores' => $sectores,
-            'teams' => $teams,
-            'puestos' => $puestos,
-        ];
-
-        $vista = $this->load->view('main/perfil', ['info'=> $info], TRUE);
+        $vista = $this->load->view('main/perfil', ['user'=> $user, 'sector' => $sectores, 'team' => $teams, 'puestos' => $puestos], TRUE);
         getTemplate($vista);
     }
     
