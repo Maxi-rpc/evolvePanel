@@ -28,7 +28,7 @@
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header"
                    style="background: url('../dist/img/photo1.png') center center;">
-                <h3 class="widget-user-username"><?php $info->$user->$data['nombre'] ?></h3>
+                <h3 class="widget-user-username"><?php $info['data']->'nombre' ?></h3>
                 <h5 class="widget-user-desc">Web Designer</h5>
               </div>
               <div class="widget-user-image">
@@ -106,18 +106,6 @@
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-8">
-            <div class="card">
-              <div class="card-header p-2">
-                <!-- CODE Titulo -->
-              </div><!-- /.card-header -->
-              <div class="card-body">
-                <!-- CODE Body -->
-              </div><!-- /.card-body -->
-            </div>
-            <!-- /.nav-tabs-custom -->
           </div>
           <!-- /.col -->
         </div>
