@@ -11,7 +11,7 @@ class Sector extends CI_Model
 	{
 		$this->db->trans_start();
 		$this->db->insert('sector', $sector);
-		$perfil_info['id_sector'] = $this->db->insert_id();
+		$sector_info['id_sector'] = $this->db->insert_id();
 		$this->db->trans_complete();
 
 		if ($this->db->trans_status() === false) {

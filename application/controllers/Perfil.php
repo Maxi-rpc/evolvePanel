@@ -5,7 +5,7 @@ class Perfil extends CI_Controller {
     public function __construct()
 	{
 		parent::__construct();
-        $this->load->model(['Users', 'Perfiles' , 'UserInfo','Sector','Teams']);
+        $this->load->model(['Users','UserInfo','Sector','Teams']);
         $this->load->helper(['vistas','auth/rules_general']);
     }
 
@@ -13,10 +13,17 @@ class Perfil extends CI_Controller {
 	{
         $id = $this->session->id_usuario;
         $data = $this->UserInfo->getuserInfo($id);
-        $sector = $this->Sector->getSector($data['sector']);
-        $team = $this->Teams->getTeam($data['team']);
+        $sectores = $this->Sector->getSectorAll();
+        $teams = $this->Teams->getTeam();
 
-        $vista = $this->load->view('main/perfil', '', TRUE);
+        $info = [
+            'user' => $data,
+            'sectores' => $sectores,
+            'teams' => $teams,
+            'puestos' => $puestos,
+        ];
+
+        $vista = $this->load->view('main/perfil', ['info'=> $info], TRUE);
         getTemplate($vista);
     }
     

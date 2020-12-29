@@ -11,7 +11,7 @@ class Teams extends CI_Model
 	{
 		$this->db->trans_start();
 		$this->db->insert('teams', $team);
-		$perfil_info['id_team'] = $this->db->insert_id();
+		$team_info['id_team'] = $this->db->insert_id();
 		$this->db->trans_complete();
 
 		if ($this->db->trans_status() === false) {
@@ -27,9 +27,15 @@ class Teams extends CI_Model
 		return $sql->result();
 	}
 
-	public function getTeam($id)
+	public function getTeam($id = NULL)
 	{
-		$sql = $this->db->get_where('teams',array('id_team',$id));
-		return $sql->row_array();
+		if($id != NULL){
+			$sql = $this->db->get_where('teams',array('id_team',$id));
+			$method = 'row_array';
+		} else {
+			$sql = $this->db->get_where('teams');
+			$method = 'result';
+		}
+		return $sql->$method();
 	}
 }
