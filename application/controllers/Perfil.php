@@ -16,18 +16,9 @@ class Perfil extends CI_Controller {
         $sector = $this->Sector->getSector($data['sector']);
         $team = $this->Teams->getTeam($data['team'])
 
-        $info = [
-            'nombre' => $data->nombre,
-            'apellido' => $data->apellido,
-            'nickname' => $data->nickname,
-            'email' => $data->email,
-            'sector' => $sector,
-            'team' => $team,
-            'puesto' => '',
-            'redes' => '',
-        ];
+        
 
-        $vista = $this->load->view('main/perfil', ['info' => $info], true);
+        $vista = $this->load->view('main/perfil', '', true);
         getTemplate($vista);
     }
     
