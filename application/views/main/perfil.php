@@ -21,7 +21,7 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
 
             <!-- Profile -->
             <div class="card card-widget widget-user">
