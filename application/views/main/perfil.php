@@ -31,7 +31,7 @@
                 <h3 class="widget-user-username"><?php echo $user['nickname'] ?></h3>
                 <h5 class="widget-user-desc"> <?php foreach($sector as $sec){
                   if($sec['id_sector'] == $user['sector']){
-                    echo $sec['nombre'] '-' $user['puesto'];
+                    echo $sec['nombre'];
                   };
                 } ?> </h5>
               </div>
