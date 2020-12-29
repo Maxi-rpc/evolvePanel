@@ -5,7 +5,7 @@ class Perfil extends CI_Controller {
     public function __construct()
 	{
 		parent::__construct();
-        $this->load->model(['Users','UserInfo','Sector','Teams']);
+        $this->load->model(['Users','UserInfo','Sector','Teams','Puestos']);
         $this->load->helper(['vistas','auth/rules_general']);
     }
 
@@ -15,6 +15,7 @@ class Perfil extends CI_Controller {
         $data = $this->UserInfo->getuserInfo($id);
         $sectores = $this->Sector->getSectorAll();
         $teams = $this->Teams->getTeam();
+        $puestos = $this->Puestos->getPuesto();
 
         $info = [
             'user' => $data,
