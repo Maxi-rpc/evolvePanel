@@ -81,7 +81,7 @@
 
                 <p class="text-muted">
                   <?php 
-                  echo $user['nombre']. "-" .$user['apellido']. "-" .$user['email'];
+                  echo $user['nombre']. " - " .$user['apellido']. " - " .$user['email'];
                   ?>
                 </p>
 
