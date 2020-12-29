@@ -28,8 +28,12 @@
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header"
                    style="background: url('../dist/img/photo1.png') center center;">
-                <h3 class="widget-user-username"><?php echo $user['nombre'] ?></h3>
-                <h5 class="widget-user-desc">Web Designer</h5>
+                <h3 class="widget-user-username"><?php echo $user['nickname'] ?></h3>
+                <h5 class="widget-user-desc"> <?php foreach($sector as $sec){
+                  if($sec['id_sector'] == $user['sector']){
+                    echo $sec['nombre'] "-" $user['puesto'];
+                  };
+                } ?> </h5>
               </div>
               <div class="widget-user-image">
                 <img class="img-circle" src="../dist/img/user3-128x128.jpg" alt="User Avatar">
