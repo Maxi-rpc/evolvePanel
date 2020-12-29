@@ -18,7 +18,7 @@ class Perfil extends CI_Controller {
 
         
 
-        $vista = $this->load->view('main/perfil', '', true);
+        $vista = $this->load->view('main/perfil', '', TRUE);
         getTemplate($vista);
     }
     
