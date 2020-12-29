@@ -6,6 +6,7 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1>Perfil</h1>
+            <?php print_r($info)  ?>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -28,7 +29,7 @@
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header"
                    style="background: url('../dist/img/photo1.png') center center;">
-                <h3 class="widget-user-username"><?php print_r($info)  ?></h3>
+                <h3 class="widget-user-username"><?php   ?></h3>
                 <h5 class="widget-user-desc">Web Designer</h5>
               </div>
               <div class="widget-user-image">
