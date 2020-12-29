@@ -77,10 +77,12 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <strong><i class="fas fa-book mr-1"></i> Education</strong>
+                <strong><i class="fas fa-book mr-1"></i> Datos Personales</strong>
 
                 <p class="text-muted">
-                  B.S. in Computer Science from the University of Tennessee at Knoxville
+                  <?php 
+                  echo $user['nombre']. " ".$user['apellido'];
+                  ?>
                 </p>
 
                 <hr>
