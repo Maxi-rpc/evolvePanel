@@ -173,7 +173,7 @@
                         <td><?= $u->email ?></td>
                         <td><?= $u->perfil ?></td>
                         <td><?= $u->estado ?></td>
-                        <td><?= $u->logueado ?></td>
+                        <td><?= $u->is_logged ?></td>
                       </tr>
                     <?php } ?>
 
