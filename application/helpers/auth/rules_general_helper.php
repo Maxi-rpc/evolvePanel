@@ -39,33 +39,6 @@ function get_UserInfo_Rules(){
 			],
 		],
 
-        [
-            'field' => 'sector',
-            'label' => 'Sector',
-            'rules' => 'required|trim',
-            'errors' => [
-                'required' => 'El %s es requerido',
-            ],
-        ],
-
-        [
-            'field' => 'team',
-            'label' => 'Team',
-            'rules' => 'required|trim',
-            'errors' => [
-                'required' => 'El %s es requerido',
-            ],
-        ],
-
-        [
-            'field' => 'puesto',
-            'label' => 'Puesto',
-            'rules' => 'required|trim',
-            'errors' => [
-                'required' => 'El %s es requerido',
-            ],
-        ],
-
     ];
 
 }

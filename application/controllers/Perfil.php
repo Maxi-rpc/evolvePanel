@@ -6,7 +6,8 @@ class Perfil extends CI_Controller {
 	{
 		parent::__construct();
         $this->load->model(['Users','UserInfo','Sector','Teams','Puestos']);
-        $this->load->helper(['vistas','auth/rules_general']);
+        $this->load->helper(['vistas','auth/rules_general','form']);
+        $this->load->library(['form_validation', 'email']);
     }
 
 	public function index()
@@ -29,25 +30,28 @@ class Perfil extends CI_Controller {
         $apellido = $this->input->post('lastname');
         $nickname = $this->input->post('nickname');
         $email = $this->input->post('email');
-        $sector = $this->input->post('sector');
-        $puesto = $this->input->post('puesto');
 		
         $id = $_SESSION['id_usuario'];
 
-        $userInfo = [
-            'nombre' => $nombre,
-            'apellido' => $apellido,
-            'nickname' => $nickname,
-            'email' => $email,	
-            'sector' => $sector,
-            'puesto' => $puesto,			
-        ];
+        $this->form_validation->set_rules($rules);
 
-        $user = [
-            'nombre' => $nombre,
-            'apellido' => $apellido,
-            'email' => $email,	
-        ];
+		if ($this->form_validation->run() == false) {
+			$this->load->view('dashboard');
+		} else {
+			$userInfo = [
+                'nombre' => $nombre,
+                'apellido' => $apellido,
+                'nickname' => $nickname,
+                'email' => $email,	
+                'sector' => $sector,
+                'puesto' => $puesto,			
+            ];
+    
+            $user = [
+                'nombre' => $nombre,
+                'apellido' => $apellido,
+                'email' => $email,	
+            ];
 
         $this->Users->update($id,$user);
 
@@ -55,7 +59,6 @@ class Perfil extends CI_Controller {
         $this->UserInfo->update($id,$userInfo);
 
 
-        $vista = $this->load->view('main/perfil', '', true);
-        getTemplate($vista);
+        redirect('perfil');
     }
 }
