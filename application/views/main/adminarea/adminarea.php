@@ -47,7 +47,7 @@
 
                   <div class="info-box-content">
                     <span class="info-box-text">User Info</span>
-                    <span class="info-box-number">5,200</span>
+                    <span class="info-box-number"><?php echo $datosSql['cantUserInfo'] ?></span>
                   </div>
                   <!-- /.info-box-content -->
                 </div>
@@ -60,7 +60,7 @@
 
                     <div class="info-box-content">
                       <span class="info-box-text">Teams</span>
-                      <span class="info-box-number">5,200</span>
+                      <span class="info-box-number"><?php echo $datosSql['cantTeams'] ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -73,7 +73,7 @@
 
                     <div class="info-box-content">
                       <span class="info-box-text">Sector</span>
-                      <span class="info-box-number">5,200</span>
+                      <span class="info-box-number"><?php echo $datosSql['cantSector'] ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -90,7 +90,7 @@
 
                     <div class="info-box-content">
                       <span class="info-box-text">Puesto</span>
-                      <span class="info-box-number">5,200</span>
+                      <span class="info-box-number"><?php echo $datosSql['cantPuesto'] ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -103,7 +103,7 @@
 
                   <div class="info-box-content">
                     <span class="info-box-text">Perfil</span>
-                    <span class="info-box-number">5,200</span>
+                    <span class="info-box-number"><?php echo $datosSql['cantPerfil'] ?></span>
                   </div>
                 </div>
               </div>
@@ -114,7 +114,7 @@
 
                     <div class="info-box-content">
                       <span class="info-box-text">Players</span>
-                      <span class="info-box-number">5,200</span>
+                      <span class="info-box-number"><?php echo $datosSql['cantPlayer'] ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -127,7 +127,7 @@
 
                     <div class="info-box-content">
                       <span class="info-box-text">Staff</span>
-                      <span class="info-box-number">5,200</span>
+                      <span class="info-box-number"><?php echo $datosSql['cantStaff'] ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
