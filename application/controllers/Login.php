@@ -48,7 +48,7 @@ class Login extends CI_Controller
 				'apellido' => $res->apellido,
 				'email' => $res->email,
 				'perfil' => $res->perfil,				
-				'is_logged' => true,
+				'is_logged' => TRUE,
 			];
 			$this->session->set_userdata($data);
 
