@@ -36,7 +36,7 @@
 
     <script>
   $(function () {
-    $("#example1").DataTable({
+    $("#dataTable").DataTable({
       "responsive": true,
       "autoWidth": false,
     });
