@@ -36,6 +36,9 @@
                     <span class="info-box-text">Users</span>
                     <span class="info-box-number"><?php echo $datosSql['cantUser'] ?></span>
                   </div>
+                  <a href="#" class="small-box-footer">
+                    More info <i class="fas fa-arrow-circle-right"></i>
+                  </a>
                   <!-- /.info-box-content -->
                 </div>
                   <!-- /.info-box -->
@@ -195,125 +198,6 @@
                         <th>Perfil</th>
                         <th>Estado</th>
                         <th>Logueado</th>
-                      </tr>
-                    </tfoot>
-                  </table>
-                  </div>
-                  <!-- /.card-body -->
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="card card-primary collapsed-card">
-                  <div class="card-header">
-                    <h3 class="card-title">Users Info</h3>
-
-                    <div class="card-tools">
-                      <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                      </button>
-                    </div>
-                    <!-- /.card-tools -->
-                  </div>
-                  <!-- /.card-header -->
-                  <div class="card-body">
-                  <table id="dataTable1" class="table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>ID</th>  
-                        <th>ID Usuario</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Nickname</th>
-                        <th>Email</th>
-                        <th>Sector</th>
-                        <th>Team</th>
-                        <th>Puesto</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-
-                      <?php if(count($userInfo)): ?>
-                        <?php foreach($userInfo as $uI): ?>
-                          <tr>
-                            <td><?= $uI->id ?></td>
-                            <td><?= $uI->id_usuario ?></td>
-                            <td><?= $uI->nombre ?></td>
-                            <td><?= $uI->apellido ?></td>
-                            <td><?= $uI->nickname ?></td>
-                            <td><?= $uI->email ?></td>
-                            <td><?= $uI->sector ?></td>
-                            <td><?= $uI->team ?></td>
-                            <td><?= $uI->puesto ?></td>
-                          </tr>
-                        <?php endforeach ?>
-                      <?php else: ?>
-                        <tr>
-                          <td class="text-center">No existen datos para mostrar.</td>
-                        </tr>
-                      <?php endif ?>
-
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>ID</th>  
-                        <th>ID Usuario</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Nickname</th>
-                        <th>Email</th>
-                        <th>Sector</th>
-                        <th>Team</th>
-                        <th>Puesto</th>
-                      </tr>
-                    </tfoot>
-                  </table>
-                  </div>
-                  <!-- /.card-body -->
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="card card-primary collapsed-card">
-                  <div class="card-header">
-                    <h3 class="card-title">Teams</h3>
-
-                    <div class="card-tools">
-                      <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                      </button>
-                    </div>
-                    <!-- /.card-tools -->
-                  </div>
-                  <!-- /.card-header -->
-                  <div class="card-body">
-                  <table id="dataTable1" class="table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>ID Team</th>  
-                        <th>Nombre</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-
-                      <?php if(count($teams)): ?>
-                        <?php foreach($teams as $team): ?>
-                          <tr>
-                            <td><?= $team->id_team ?></td>
-                            <td><?= $team->nombre ?></td>
-                          </tr>
-                        <?php endforeach ?>
-                      <?php else: ?>
-                        <tr>
-                          <td class="text-center">No existen datos para mostrar.</td>
-                        </tr>
-                      <?php endif ?>
-
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>ID Team</th>  
-                        <th>Nombre</th>
                       </tr>
                     </tfoot>
                   </table>
