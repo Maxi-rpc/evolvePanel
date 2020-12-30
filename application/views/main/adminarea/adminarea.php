@@ -273,6 +273,55 @@
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-primary collapsed-card">
+                  <div class="card-header">
+                    <h3 class="card-title">Teams</h3>
+
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                    <!-- /.card-tools -->
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                  <table id="dataTable1" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>ID Team</th>  
+                        <th>Nombre</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <?php if(count($teams)): ?>
+                        <?php foreach($teams as $team): ?>
+                          <tr>
+                            <td><?= $team->id_team ?></td>
+                            <td><?= $team->nombre ?></td>
+                          </tr>
+                        <?php endforeach ?>
+                      <?php else: ?>
+                        <tr>
+                          <td class="text-center">No existen datos para mostrar.</td>
+                        </tr>
+                      <?php endif ?>
+
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th>ID Team</th>  
+                        <th>Nombre</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+              </div>
+            </div>
 
             <!-- =========================================================== -->
           </div>

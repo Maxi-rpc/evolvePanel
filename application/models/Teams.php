@@ -21,12 +21,6 @@ class Teams extends CI_Model
 		}
 	}
 
-	public function getTeamsAll()
-	{
-		$sql = $this->db->get_where('teams');
-		return $sql->result();
-	}
-
 	public function getTeam($id = NULL)
 	{
 		if($id != NULL){
