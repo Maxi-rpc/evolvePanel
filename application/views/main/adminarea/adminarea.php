@@ -30,7 +30,7 @@
             <div class="row">
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box mb-3 bg-info">
-                  <span class="info-box-icon"><i class="fas fa-tag"></i></span>
+                  <span class="info-box-icon"><i class="fas fa-user"></i></span>
 
                   <div class="info-box-content">
                     <span class="info-box-text">Users</span>
@@ -43,7 +43,7 @@
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box mb-3 bg-info">
-                  <span class="info-box-icon"><i class="fas fa-tag"></i></span>
+                  <span class="info-box-icon"><i class="fas fa-id-card"></i></span>
 
                   <div class="info-box-content">
                     <span class="info-box-text">User Info</span>
@@ -56,7 +56,7 @@
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box mb-3 bg-info">
-                    <span class="info-box-icon"><i class="fas fa-tag"></i></span>
+                    <span class="info-box-icon"><i class="fas fa-gamepad"></i></span>
 
                     <div class="info-box-content">
                       <span class="info-box-text">Teams</span>
@@ -69,7 +69,7 @@
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box mb-3 bg-info">
-                    <span class="info-box-icon"><i class="fas fa-tag"></i></span>
+                    <span class="info-box-icon"><i class="fas fa-chalkboard-teacher"></i></span>
 
                     <div class="info-box-content">
                       <span class="info-box-text">Sector</span>
@@ -86,7 +86,7 @@
             <div class="row">
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box mb-3 bg-info">
-                    <span class="info-box-icon"><i class="fas fa-tag"></i></span>
+                    <span class="info-box-icon"><i class="fas fa-user-tie"></i></span>
 
                     <div class="info-box-content">
                       <span class="info-box-text">Puesto</span>
@@ -99,7 +99,7 @@
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box mb-3 bg-info">
-                  <span class="info-box-icon"><i class="fas fa-tag"></i></span>
+                  <span class="info-box-icon"><i class="fas fa-user-secret"></i></span>
 
                   <div class="info-box-content">
                     <span class="info-box-text">Perfil</span>
@@ -110,7 +110,7 @@
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box mb-3 bg-info">
-                    <span class="info-box-icon"><i class="fas fa-tag"></i></span>
+                    <span class="info-box-icon"><i class="fas fa-user-friends"></i></span>
 
                     <div class="info-box-content">
                       <span class="info-box-text">Players</span>
@@ -123,7 +123,7 @@
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box mb-3 bg-info">
-                    <span class="info-box-icon"><i class="fas fa-tag"></i></span>
+                    <span class="info-box-icon"><i class="fas fa-users"></i></span>
 
                     <div class="info-box-content">
                       <span class="info-box-text">Staff</span>
