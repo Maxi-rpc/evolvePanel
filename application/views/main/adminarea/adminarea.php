@@ -167,7 +167,7 @@
 
                     <?php foreach($user as $u){ ?>
                       <tr>
-                        <td><?= $u<->id_usuario ?></td>
+                        <td><?= $u->id_usuario ?></td>
                         <td><?= $u->nombre ?></td>
                         <td><?= $u->apellido ?></td>
                         <td><?= $u->email ?></td>
