@@ -151,7 +151,45 @@
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body">
-                    Tabla
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>ID Usuario</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Perfil</th>
+                        <th>Estado</th>
+                        <th>Logueado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                    <?php foreach($user as $u){ ?>
+                      <tr>
+                        <td><?= $u<->id_usuario ?></td>
+                        <td><?= $u->nombre ?></td>
+                        <td><?= $u->apellido ?></td>
+                        <td><?= $u->email ?></td>
+                        <td><?= $u->perfil ?></td>
+                        <td><?= $u->estado ?></td>
+                        <td><?= $u->logueado ?></td>
+                      </tr>
+                    <?php } ?>
+
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th>ID Usuario</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Perfil</th>
+                        <th>Estado</th>
+                        <th>Logueado</th>
+                      </tr>
+                    </tfoot>
+                  </table>
                   </div>
                   <!-- /.card-body -->
                 </div>
