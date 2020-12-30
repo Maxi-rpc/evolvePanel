@@ -52,9 +52,7 @@ class Perfil extends CI_Controller {
 
             $this->Users->update($id,$user);
 
-
             $this->UserInfo->update($id,$userInfo);
-
 
             redirect('perfil');
         }
