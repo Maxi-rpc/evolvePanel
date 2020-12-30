@@ -21,7 +21,7 @@ function getCantidadDatosSQL(){
   $sql_Usuario = $CI->db->get_where('usuarios');
   $cUser = $sql_Usuario->num_rows();
 
-  $sql_Uinfo = $CI->db->get_where('usuarios_info');
+  $sql_Uinfo = $CI->db->get_where('usuario_info');
   $cUserInfo = $sql_Uinfo->num_rows();
 
   $sql_teams = $CI->db->get_where('teams');
