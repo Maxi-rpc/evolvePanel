@@ -125,7 +125,7 @@
 
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <textarea type="text" class="form-control" id="inputExperience" placeholder="nickname"></textarea>
+                      <input type="text" class="form-control" id="inputExperience" placeholder="nickname">
                     </div>
                   </div>
 
@@ -136,7 +136,7 @@
                   </div>
 
                   <div class="form-group row">
-                    <div class="offset-sm-2 col-sm-12">
+                    <div class="col-sm-12">
                       <button type="submit" class="btn btn-danger">Guardar</button>
                     </div>
                   </div>
