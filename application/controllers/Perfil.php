@@ -36,16 +36,12 @@ class Perfil extends CI_Controller {
 
         $this->form_validation->set_rules($rules);
 
-		if ($this->form_validation->run() == false) {
-			$this->load->view('dashboard');
-		} else {
+		if ($this->form_validation->run() == TRUE) {
 			$userInfo = [
                 'nombre' => $nombre,
                 'apellido' => $apellido,
                 'nickname' => $nickname,
-                'email' => $email,	
-                'sector' => $sector,
-                'puesto' => $puesto,			
+                'email' => $email,			
             ];
     
             $user = [
