@@ -36,9 +36,6 @@
                     <span class="info-box-text">Users</span>
                     <span class="info-box-number"><?php echo $datosSql['cantUser'] ?></span>
                   </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                  </a>
                   <!-- /.info-box-content -->
                 </div>
                   <!-- /.info-box -->
