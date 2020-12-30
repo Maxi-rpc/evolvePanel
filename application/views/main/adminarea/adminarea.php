@@ -34,7 +34,7 @@
 
                   <div class="info-box-content">
                     <span class="info-box-text">Users</span>
-                    <span class="info-box-number">5,200</span>
+                    <span class="info-box-number"><?php echo $datosSql['cantUser'] ?></span>
                   </div>
                   <!-- /.info-box-content -->
                 </div>
@@ -63,9 +63,9 @@
                       <span class="info-box-number">5,200</span>
                     </div>
                     <!-- /.info-box-content -->
-                  </div>
-                  <!-- /.info-box -->
                 </div>
+                <!-- /.info-box -->
+              </div>
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box mb-3 bg-info">
@@ -76,9 +76,9 @@
                       <span class="info-box-number">5,200</span>
                     </div>
                     <!-- /.info-box-content -->
-                  </div>
-                  <!-- /.info-box -->
                 </div>
+                <!-- /.info-box -->
+              </div>
               <!-- /.col -->
             </div>
             <!-- /.info Box row -->
@@ -93,9 +93,9 @@
                       <span class="info-box-number">5,200</span>
                     </div>
                     <!-- /.info-box-content -->
-                  </div>
-                  <!-- /.info-box -->
                 </div>
+                <!-- /.info-box -->
+              </div>
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box mb-3 bg-info">
@@ -105,7 +105,6 @@
                     <span class="info-box-text">Perfil</span>
                     <span class="info-box-number">5,200</span>
                   </div>
-                  <!-- /.info-box-content -->
                 </div>
               </div>
               <!-- /.col -->
@@ -118,9 +117,9 @@
                       <span class="info-box-number">5,200</span>
                     </div>
                     <!-- /.info-box-content -->
-                  </div>
-                  <!-- /.info-box -->
                 </div>
+                <!-- /.info-box -->
+              </div>
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box mb-3 bg-info">
@@ -131,9 +130,9 @@
                       <span class="info-box-number">5,200</span>
                     </div>
                     <!-- /.info-box-content -->
-                  </div>
-                  <!-- /.info-box -->
                 </div>
+                <!-- /.info-box -->
+              </div>
               <!-- /.col -->
             </div>
             <!-- /.info Box row -->
