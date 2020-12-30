@@ -40,7 +40,7 @@
       "responsive": true,
       "autoWidth": false,
     });
-    $('#example2').DataTable({
+    $('#dataTable2').DataTable({
       "paging": true,
       "lengthChange": false,
       "searching": false,
