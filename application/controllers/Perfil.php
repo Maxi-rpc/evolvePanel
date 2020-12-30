@@ -22,7 +22,8 @@ class Perfil extends CI_Controller {
         getTemplate($vista);
     }
     
-    public function updatePerfil(){
+    public function updatePerfil()
+    {
         
         $rules = get_UserInfo_Rules();
         
@@ -53,12 +54,13 @@ class Perfil extends CI_Controller {
                 'email' => $email,	
             ];
 
-        $this->Users->update($id,$user);
+            $this->Users->update($id,$user);
 
 
-        $this->UserInfo->update($id,$userInfo);
+            $this->UserInfo->update($id,$userInfo);
 
 
-        redirect('perfil');
+            redirect('perfil');
+        }
     }
 }
