@@ -27,78 +27,82 @@
           <div class="container-fluid">
             <!-- =========================================================== -->
 
-            <!-- Small Box (Stat card) -->
             <div class="row">
-              <div class="col-lg-3 col-6">
-                <!-- small card -->
-                <div class="small-box bg-info">
-                  <div class="inner">
-                    <h3>150</h3>
+              <div class="col-md-3 col-sm-6 col-12">
+                <div class="info-box bg-info">
+                  <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
 
-                    <p>New Orders</p>
-                  </div>
-                  <div class="icon">
-                    <i class="fas fa-shopping-cart"></i>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- ./col -->
-              <div class="col-lg-3 col-6">
-                <!-- small card -->
-                <div class="small-box bg-success">
-                  <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+                  <div class="info-box-content">
+                    <span class="info-box-text">Bookmarks</span>
+                    <span class="info-box-number">41,410</span>
 
-                    <p>Bounce Rate</p>
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 70%"></div>
+                    </div>
+                    <span class="progress-description">
+                      70% Increase in 30 Days
+                    </span>
                   </div>
-                  <div class="icon">
-                    <i class="ion ion-stats-bars"></i>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                  </a>
+                  <!-- /.info-box-content -->
                 </div>
+                <!-- /.info-box -->
               </div>
-              <!-- ./col -->
-              <div class="col-lg-3 col-6">
-                <!-- small card -->
-                <div class="small-box bg-warning">
-                  <div class="inner">
-                    <h3>44</h3>
+              <!-- /.col -->
+              <div class="col-md-3 col-sm-6 col-12">
+                <div class="info-box mb-3 bg-warning">
+                  <span class="info-box-icon"><i class="fas fa-tag"></i></span>
 
-                    <p>User Registrations</p>
+                  <div class="info-box-content">
+                    <span class="info-box-text">Inventory</span>
+                    <span class="info-box-number">5,200</span>
                   </div>
-                  <div class="icon">
-                    <i class="fas fa-user-plus"></i>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                  </a>
+                  <!-- /.info-box-content -->
                 </div>
+                <!-- /.info-box -->
               </div>
-              <!-- ./col -->
-              <div class="col-lg-3 col-6">
-                <!-- small card -->
-                <div class="small-box bg-danger">
-                  <div class="inner">
-                    <h3>65</h3>
+              <!-- /.col -->
+              <div class="col-md-3 col-sm-6 col-12">
+                <div class="info-box bg-warning">
+                  <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
 
-                    <p>Unique Visitors</p>
+                  <div class="info-box-content">
+                    <span class="info-box-text">Events</span>
+                    <span class="info-box-number">41,410</span>
+
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 70%"></div>
+                    </div>
+                    <span class="progress-description">
+                      70% Increase in 30 Days
+                    </span>
                   </div>
-                  <div class="icon">
-                    <i class="fas fa-chart-pie"></i>
-                  </div>
-                  <a href="#" class="small-box-footer">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                  </a>
+                  <!-- /.info-box-content -->
                 </div>
+                <!-- /.info-box -->
               </div>
-              <!-- ./col -->
+              <!-- /.col -->
+              <div class="col-md-3 col-sm-6 col-12">
+                <div class="info-box bg-danger">
+                  <span class="info-box-icon"><i class="fas fa-comments"></i></span>
+
+                  <div class="info-box-content">
+                    <span class="info-box-text">Comments</span>
+                    <span class="info-box-number">41,410</span>
+
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 70%"></div>
+                    </div>
+                    <span class="progress-description">
+                      70% Increase in 30 Days
+                    </span>
+                  </div>
+                  <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+              </div>
+              <!-- /.col -->
             </div>
-            <!-- /.small box row -->
+            <!-- /.info Box row -->
 
             <!-- =========================================================== -->
           </div>
