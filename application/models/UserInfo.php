@@ -24,6 +24,7 @@ class UserInfo extends CI_Model
 		$this->db->trans_start();
 		$this->db->insert('usuario_info', $userInfo);
 		$user_info['id_usuario'] = $id;
+		$user_info['id'] = $this->db->insert_id();
 		$this->db->trans_complete();
 
 		if ($this->db->trans_status() === false) {
@@ -39,16 +40,16 @@ class UserInfo extends CI_Model
 		$this->db->update('usuario_info',$data);
 	}
 
-	public function getuserInfoall()
+	public function getuserInfo($id = NULL)
 	{
-		$sql = $this->db->get_where('usuario_info');
-		return $sql->result();
-	}
-
-	public function getuserInfo($id)
-	{
-		$sql = $this->db->get_where('usuario_info',array('id_usuario',$id));
-		return $sql->row_array();
+		if($id != NULL){
+			$sql = $this->db->get_where('usuario_info',array('id_usuario',$id));
+			$method = 'row_array';
+		} else {
+			$sql = $this->db->get_where('usuario_info');
+			$method = 'result';
+		}
+		return $sql->$method();
 	}
 
 	public function getuserID($email)
