@@ -20,9 +20,9 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+
         <div class="row">
           <div class="col-md-6">
-
             <!-- Profile -->
             <div class="card card-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
@@ -69,7 +69,9 @@
               </div>
             </div>
             <!-- /.card -->
-
+          </div>
+          <!-- /.col -->
+          <div class="col-md-6">
             <!-- About Me Box -->
             <div class="card card-primary">
               <div class="card-header">
@@ -101,67 +103,9 @@
             </div>
             <!-- /.card -->
           </div>
-          <!-- /.col -->
-          <div class="col-md-6">
-            <!-- About Me Box -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Editar Perfil</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-
-                <?php if(validation_errors()) { ?>
-                    <div class="alert alert-danger alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <h5><i class="icon fas fa-ban"></i> Alert!</h5>
-                    <?php echo validation_errors('<li>', '</li>'); ?>
-                  </div>
-                <?php } ?>
-
-                <?php form_open('perfil/updatePerfil',array('method'=>'POST')); ?>
-
-                <form class="form-horizontal">
-                  <div class="form-group row">
-                    <div class="col-sm-12">
-                      <input type="text" class="form-control" id="inputName" placeholder="firstname">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <div class="col-sm-12">
-                      <input type="text" class="form-control" id="inputName2" placeholder="lastname">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <div class="col-sm-12">
-                      <input type="text" class="form-control" id="inputExperience" placeholder="nickname">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <div class="col-sm-12">
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <div class="col-sm-12">
-                      <button type="submit" class="btn btn-danger">Guardar</button>
-                    </div>
-                  </div>
-                </form>
-
-                <?php form_close() ?>
-
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
         </div>
         <!-- /.row -->
+
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

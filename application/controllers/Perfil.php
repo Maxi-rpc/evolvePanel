@@ -18,7 +18,7 @@ class Perfil extends CI_Controller {
         $teams = $this->Teams->getTeam();
         $puestos = $this->Puestos->getPuesto();
 
-        $vista = $this->load->view('main/perfil', ['user'=> $user, 'sectores' => $sectores, 'teams' => $teams, 'puestos' => $puestos], TRUE);
+        $vista = $this->load->view('main/perfil/perfil', ['user'=> $user, 'sectores' => $sectores, 'teams' => $teams, 'puestos' => $puestos], TRUE);
         getTemplate($vista);
     }
     
