@@ -30,7 +30,12 @@ class Perfil extends CI_Controller {
         $this->form_validation->set_rules($rules);
 
 		if ($this->form_validation->run() == TRUE) {
-			$userInfo = [
+            
+            $nombre = $this->input->post('firstname');
+            $apellido = $this->input->post('lastname');
+            $nickname = $this->input->post('nickname');
+            
+            $userInfo = [
                 'nombre' => $nombre,
                 'apellido' => $apellido,
                 'nickname' => $nickname,		
