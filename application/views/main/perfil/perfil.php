@@ -73,8 +73,8 @@
             <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">Info de Mí</h3>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-defautl">Editar
+                <div class="card-tools">
+                  <button type="button" class="btn btn-defautl">Editar 
                     <i class="far fa-edit"></i>
                   </button>
                 </div>
