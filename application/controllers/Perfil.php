@@ -22,7 +22,7 @@ class Perfil extends CI_Controller {
         getTemplate($vista);
     }
     
-    public function updatePerfil()
+    public function edit()
     {
         
         $rules = get_UserInfo_Rules();

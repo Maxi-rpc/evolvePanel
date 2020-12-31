@@ -22,7 +22,7 @@
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <!-- Profile -->
             <div class="card card-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
@@ -43,7 +43,7 @@
                   <div class="col-sm-4 border-right">
                     <div class="description-block">
                       <h5 class="description-header">3,200</h5>
-                      <span class="description-text">SALES</span>
+                      <span class="description-text">Facebok</span>
                     </div>
                     <!-- /.description-block -->
                   </div>
@@ -51,7 +51,7 @@
                   <div class="col-sm-4 border-right">
                     <div class="description-block">
                       <h5 class="description-header">13,000</h5>
-                      <span class="description-text">FOLLOWERS</span>
+                      <span class="description-text">Instagram</span>
                     </div>
                     <!-- /.description-block -->
                   </div>
@@ -59,7 +59,7 @@
                   <div class="col-sm-4">
                     <div class="description-block">
                       <h5 class="description-header">35</h5>
-                      <span class="description-text">PRODUCTS</span>
+                      <span class="description-text">Twitter</span>
                     </div>
                     <!-- /.description-block -->
                   </div>
@@ -69,9 +69,6 @@
               </div>
             </div>
             <!-- /.card -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-6">
             <!-- About Me Box -->
             <div class="card card-primary">
               <div class="card-header">
@@ -103,6 +100,7 @@
             </div>
             <!-- /.card -->
           </div>
+          <!-- /.col -->
         </div>
         <!-- /.row -->
 
