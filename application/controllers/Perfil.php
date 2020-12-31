@@ -39,26 +39,23 @@ class Perfil extends CI_Controller {
 			$userInfo = [
                 'nombre' => $nombre,
                 'apellido' => $apellido,
-                'nickname' => $nickname,
-                'email' => $email,			
+                'nickname' => $nickname,		
             ];
     
             $user = [
                 'nombre' => $nombre,
                 'apellido' => $apellido,
-                'email' => $email,	
             ];
 
             $this->Users->update($id,$user);
 
             $this->UserInfo->update($id,$userInfo);
 
+            $this->session->set_flashdata('msg','Se guardo con exito.');
+
             redirect('perfil');
         }
 
-        if($id){
-            $this->session->set_flashdata('msg','Se guardo con exito.');
-        }
         $vista = $this->load->view('main/perfil/edit','',TRUE);
         getTemplate($vista);
     }
