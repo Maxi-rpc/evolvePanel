@@ -23,16 +23,14 @@ class Perfil extends CI_Controller {
     }
     
     public function edit($id = NULL)
-    {
-        
-        $rules = get_UserInfo_Rules();
-        
+    {   
         $nombre = $this->input->post('firstname');
         $apellido = $this->input->post('lastname');
         $nickname = $this->input->post('nickname');
 		
         $id = $_SESSION['id_usuario'];
 
+        $rules = get_UserInfo_Rules();
         $this->form_validation->set_rules($rules);
 
 		if ($this->form_validation->run() == TRUE) {
