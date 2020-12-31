@@ -50,19 +50,19 @@
                     <form class="form-horizontal">
                       <div class="form-group row">
                         <div class="col-sm-12">
-                          <input type="text" class="form-control" id="inputName" placeholder="firstname">
+                          <input type="text" class="form-control" name="firstname" id="inputName" placeholder="Nombre">
                         </div>
                       </div>
 
                       <div class="form-group row">
                         <div class="col-sm-12">
-                          <input type="text" class="form-control" id="inputName2" placeholder="lastname">
+                          <input type="text" class="form-control" name="lastname" id="inputName2" placeholder="Apellido">
                         </div>
                       </div>
 
                       <div class="form-group row">
                         <div class="col-sm-12">
-                          <input type="text" class="form-control" id="inputExperience" placeholder="nickname">
+                          <input type="text" class="form-control" name="nickname" id="inputExperience" placeholder="Nickname">
                         </div>
                       </div>
 
