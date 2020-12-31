@@ -24,10 +24,6 @@ class Perfil extends CI_Controller {
     
     public function edit($id = NULL)
     {   
-        $nombre = $this->input->post('firstname');
-        $apellido = $this->input->post('lastname');
-        $nickname = $this->input->post('nickname');
-		
         $id = $_SESSION['id_usuario'];
 
         $rules = get_UserInfo_Rules();
