@@ -22,7 +22,7 @@ class Perfil extends CI_Controller {
         getTemplate($vista);
     }
     
-    public function edit($id = NULL)
+    public function edit()
     {   
         $id = $_SESSION['id_usuario'];
 
