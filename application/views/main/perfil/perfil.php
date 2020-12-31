@@ -21,6 +21,16 @@
     <section class="content">
       <div class="container-fluid">
 
+        <?php if($this->session->flashdata('msg')): ?>
+          <div class="row">
+            <div class="alert alert-success alert-dismissible">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              <h5><i class="icon fas fa-check"></i> Alert!</h5>
+              <?php $this->session->flashdata('msg') ?>
+            </div>
+          </div>
+        <?php endif ?>
+
         <div class="row">
           <div class="col-md-12">
             <!-- Profile -->
@@ -75,7 +85,7 @@
                 <h3 class="card-title">Info de Mí</h3>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool"> 
-                    <i class="fas fa-edit"></i>
+                    <a href="<?php echo site_url('perfil/edit') ?>"><i class="fas fa-edit"></i></a>
                   </button>
                 </div>
               </div>

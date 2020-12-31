@@ -22,7 +22,7 @@ class Perfil extends CI_Controller {
         getTemplate($vista);
     }
     
-    public function edit()
+    public function edit($id = NULL)
     {
         
         $rules = get_UserInfo_Rules();
@@ -30,7 +30,6 @@ class Perfil extends CI_Controller {
         $nombre = $this->input->post('firstname');
         $apellido = $this->input->post('lastname');
         $nickname = $this->input->post('nickname');
-        $email = $this->input->post('email');
 		
         $id = $_SESSION['id_usuario'];
 
@@ -57,6 +56,9 @@ class Perfil extends CI_Controller {
             redirect('perfil');
         }
 
+        if($id){
+            $this->session->set_flashdata('msg','Se guardo con exito.')
+        }
         $vista = $this->load->view('main/perfil/edit','',TRUE);
         getTemplate($vista);
     }

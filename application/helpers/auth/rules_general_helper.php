@@ -7,6 +7,7 @@ function get_UserInfo_Rules(){
             'rules' => 'required|trim',
             'errors' => [
                 'required' => 'El %s es requerido',
+                'required' => 'El campo %s no puede ir vacío',
             ],
         ],
 
@@ -16,6 +17,7 @@ function get_UserInfo_Rules(){
             'rules' => 'required|trim',
             'errors' => [
                 'required' => 'El %s es requerido',
+                'required' => 'El campo %s no puede ir vacío',
             ],
         ],
 
@@ -25,19 +27,9 @@ function get_UserInfo_Rules(){
             'rules' => 'required|trim',
             'errors' => [
                 'required' => 'El %s es requerido',
+                'required' => 'El campo %s no puede ir vacío',
             ],
         ],
-
-        [
-			'field' => 'email',
-			'label' => 'Email',
-			'rules' => 'required|trim',
-			'errors' => [
-				'required' => 'El campo %s no puede ir vacío',
-				'valid_email' => 'Ingrese un %s válido',
-				'is_unique' => 'El %s ingresado ya se encuentra registrado',
-			],
-		],
 
     ];
 
