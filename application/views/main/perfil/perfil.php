@@ -85,7 +85,7 @@
                 <h3 class="card-title">Info de Mí</h3>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool"> 
-                    <a href="<?php echo site_url('perfil/edit') ?>"><i class="fas fa-edit"></i></a>
+                    <a href="<?php base_url('perfil/edit') ?>"><i class="fas fa-edit"></i></a>
                   </button>
                 </div>
               </div>
