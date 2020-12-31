@@ -57,7 +57,7 @@ class Perfil extends CI_Controller {
         }
 
         if($id){
-            $this->session->set_flashdata('msg','Se guardo con exito.')
+            $this->session->set_flashdata('msg','Se guardo con exito.');
         }
         $vista = $this->load->view('main/perfil/edit','',TRUE);
         getTemplate($vista);
