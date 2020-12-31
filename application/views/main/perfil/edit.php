@@ -45,7 +45,7 @@
                       </div>
                     <?php } ?>
 
-                    <?php form_open('perfil/updatePerfil',array('method'=>'POST')); ?>
+                    <?php form_open() ?>
 
                     <form class="form-horizontal">
                       <div class="form-group row">
