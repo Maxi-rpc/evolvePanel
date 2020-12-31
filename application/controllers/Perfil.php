@@ -56,5 +56,8 @@ class Perfil extends CI_Controller {
 
             redirect('perfil');
         }
+
+        $vista = $this->load->view('main/perfil/edit','',TRUE);
+        getTemplate($vista);
     }
 }
