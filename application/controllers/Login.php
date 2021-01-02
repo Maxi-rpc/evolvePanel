@@ -29,7 +29,9 @@ class Login extends CI_Controller
 		$this->form_validation->set_rules($rules);
 		
 		if ($this->form_validation->run() === FALSE) {
-			$this->load->view('login');
+			$this->load->view('auth/headerlogin');
+			$this->load->view('auth/login');
+			$this->load->view('auth/footerlogin');
 		} else {
 			$email = $this->input->post('email');
 			$pass = $this->input->post('password');
