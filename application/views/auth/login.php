@@ -7,11 +7,11 @@
     <div class="card">
         <div class="card-body login-card-body">
             <?php if(validation_errors()){ ?>
-            <div class="alert alert-warning alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
-                <?php print_r(validation_errors()); ?>
-            </div>
+                <div class="alert alert-warning alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
+                    <?php validation_errors(); ?>
+                </div>
             <?php } ?>
         <p class="login-box-msg">Iniciar Sesión</p>
 
