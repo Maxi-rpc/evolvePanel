@@ -6,7 +6,7 @@ class Login extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library(['form_validation','form']);
+		$this->load->library(['form_validation']);
 		$this->load->helper(['auth/login_rules','vistas']);
 		$this->load->model('Auth');
 	}
@@ -24,7 +24,6 @@ class Login extends CI_Controller
 
 	public function validate()
 	{
-		$this->form_validation->set_error_delimiters('', '');
 		$rules = getLoginRules();
 		$this->form_validation->set_rules($rules);
 
