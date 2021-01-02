@@ -19,6 +19,7 @@ class Login extends CI_Controller
 		}else{
 			$this->load->view('auth/headerlogin');
 			$this->load->view('auth/login');
+			$this->load->view('auth/footerlogin');
 		}
 	}
 
@@ -28,7 +29,7 @@ class Login extends CI_Controller
 		$this->form_validation->set_rules($rules);
 
 		if ($this->form_validation->run() === FALSE) {
-			redirect('login');
+			
 		} else {
 			$email = $this->input->post('email');
 			$pass = $this->input->post('password');
