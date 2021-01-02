@@ -28,7 +28,9 @@ class Login extends CI_Controller
 		$rules = getLoginRules();
 		$this->form_validation->set_rules($rules);
 
-		if ($this->form_validation->run() === TRUE) {
+		if ($this->form_validation->run() === FALSE) {
+			redirect('login');
+		} else {
 			$email = $this->input->post('email');
 			$pass = $this->input->post('password');
 			if (!($res = $this->Auth->login($email, $pass))) {
@@ -48,7 +50,6 @@ class Login extends CI_Controller
 
 			redirect('dashboard');
 		}
-		redirect('login');
 	}
 
 	public function logout()
