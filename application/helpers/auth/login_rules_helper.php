@@ -1,6 +1,6 @@
 <?php
 function getLoginRules(){
-	return $rules(
+	return array(
 		array(
 			'field' => 'email',
 			'label' => 'Email',
