@@ -27,7 +27,7 @@ class Login extends CI_Controller
 	{
 		$rules = getLoginRules();
 		$this->form_validation->set_rules($rules);
-
+		echo $rules;
 		if ($this->form_validation->run() === FALSE) {
 			redirect('login');
 		} else {
