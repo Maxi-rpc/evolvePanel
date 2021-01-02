@@ -1,21 +1,21 @@
 <?php
 function getLoginRules(){
-	return $rules = [
-		array = [
+	return $rules(
+		array(
 			'field' => 'email',
 			'label' => 'Email',
 			'rules' => 'required|trim',
 			'errors' => [
 				'required' => 'El %s es requerido',
 			],
-		],
-		array = [
+		),
+		array(
 			'field' => 'password',
 			'label' => 'Password',
 			'rules' => 'required|trim',
 			'errors' => [
 				'required' => 'El %s es requerido',
 			],
-		],
-	];
+		),
+	);
 }
