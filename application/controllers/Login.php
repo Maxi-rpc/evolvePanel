@@ -27,14 +27,8 @@ class Login extends CI_Controller
 		$this->form_validation->set_error_delimiters('', '');
 		$rules = getLoginRules();
 		$this->form_validation->set_rules($rules);
-		if ($this->form_validation->run() === false) {
-			$errors = [
-				'email' => form_error('email'),
-				'password' => form_error('password'),
-			];
-			echo json_encode($errors);
-			$this->output->set_status_header(400);
-		} else {
+
+		if ($this->form_validation->run() === TRUE) {
 			$email = $this->input->post('email');
 			$pass = $this->input->post('password');
 			if (!($res = $this->Auth->login($email, $pass))) {
@@ -54,7 +48,9 @@ class Login extends CI_Controller
 
 			redirect('dashboard');
 		}
+		redirect('login');
 	}
+
 	public function logout()
 	{
 		$data = ['id', 'nombre', 'apellido', 'email', 'perfil', 'is_logged'];
