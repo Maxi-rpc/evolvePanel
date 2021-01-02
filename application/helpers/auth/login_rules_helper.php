@@ -1,7 +1,7 @@
 <?php
 function getLoginRules(){
-	return [
-		[
+	return $rules = [
+		array = [
 			'field' => 'email',
 			'label' => 'Email',
 			'rules' => 'required|trim',
@@ -9,7 +9,7 @@ function getLoginRules(){
 				'required' => 'El %s es requerido',
 			],
 		],
-		[
+		array = [
 			'field' => 'password',
 			'label' => 'Password',
 			'rules' => 'required|trim',
