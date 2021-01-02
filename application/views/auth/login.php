@@ -6,13 +6,13 @@
     <!-- /.login-logo -->
     <div class="card">
         <div class="card-body login-card-body">
-            <?php if(validation_error()) ?>
+            <?php if(validation_error()){ ?>
             <div class="alert alert-warning alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
                 <?php echo validation_error(); ?>
             </div>
-            <?php endif ?>
+            <?php } ?>
         <p class="login-box-msg">Iniciar Sesión</p>
 
         <form action="<?= base_url('login/validate'); ?>" method="post" id="frm_login">
