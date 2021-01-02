@@ -12,7 +12,7 @@
                     <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
                     <?php validation_errors(); ?>
                 </div>
-            <?php } ?>
+            <?php }; ?>
         <p class="login-box-msg">Iniciar Sesión</p>
 
         <form action="<?php base_url() ?>login/validate" method="post" id="">
