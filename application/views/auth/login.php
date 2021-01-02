@@ -15,8 +15,7 @@
             <?php } ?>
         <p class="login-box-msg">Iniciar Sesión</p>
 
-        <?php form_open('login/validate') ?>
-        <!-- <form action="" method="post" id="frm_login"> -->
+        <form action="" method="post" id="frm_login">
             <div class="input-group mb-3">
             <input name="email" type="email" class="form-control" placeholder="Email">
             <div class="input-group-append">
@@ -48,8 +47,7 @@
             </div>
             <!-- /.col -->
             </div>
-        <!--</form>-->
-        <?php form_close() ?>
+        </form>
         <p class="mb-1">
             <a href="forgot-password.html">Olvidé mi contraseña</a>
         </p>
