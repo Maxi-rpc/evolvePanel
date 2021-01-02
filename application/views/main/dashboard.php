@@ -1,6 +1,9 @@
 <?= $head ?>
+	<!-- Navbar -->
     <?= $navbar ?> 
+	<!-- SideBar -->
 	<?= $aside ?>
-	<!-- CONTENT -->
+	<!-- Content -->
 	<?= $content ?>
+	<!-- Footer -->
 <?= $footer ?>

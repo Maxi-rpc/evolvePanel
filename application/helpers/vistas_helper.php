@@ -55,33 +55,3 @@ function getCantidadDatosSQL(){
 
   return $datos;
 }
-
-function mensaje(){
-
-  /*
-  if ( condición ) {
-    echo "<script>
-    $('.toastrDefaultSuccess')(function() {
-      toastr.success('Se creo con exito.')
-    });
-    </script>";
-  }
-  */
-  
-  echo "<script>
-  $(function() {
-    const Toast = Swal.mixin({
-      toast: true,
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 3000
-    });
-
-    $('.toastrDefaultSuccess')(function() {
-      toastr.success('Se creo con exito.')
-    });
-
-  });
-</script>";
-
-}

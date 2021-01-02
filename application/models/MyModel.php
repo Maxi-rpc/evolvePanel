@@ -8,7 +8,7 @@ class MyModel extends CI_Model
     public function get($id = NULL, $single = FALSE)
     {
         if($id != NULL){
-            $this->db->where($this->$_primary_key, $id);
+            $this->db->where($this->_primary_key, $id);
             $method = 'row';
         } elseif($single == TRUE){
             $method = 'row';
@@ -16,7 +16,7 @@ class MyModel extends CI_Model
             $method = 'result';
         }
 
-        return $this->db->get($this->$_table_name)->$method();
+        return $this->db->get($this->_table_name)->$method();
     }
 
 }
