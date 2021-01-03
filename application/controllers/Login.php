@@ -17,9 +17,7 @@ class Login extends CI_Controller
 			$vista = $this->load->view('main/home','',TRUE);
 			getTemplate($vista);
 		}else{
-			$this->load->view('auth/headerlogin');
 			$this->load->view('auth/login');
-			$this->load->view('auth/footerlogin');
 		}
 	}
 
