@@ -6,13 +6,7 @@
     <!-- /.login-logo -->
     <div class="card">
         <div class="card-body login-card-body">
-            <?php if($this->session->flashdata('msj')): ?>
-                <div class="alert alert-warning alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
-                    <?php echo $this->session->flashdata('msj') ?>
-                </div>
-            <?php endif ?>
+        <div class="invalid-feedback"></div>
         <p class="login-box-msg">Iniciar Sesión</p>
 
         <form action="<?php base_url() ?>login/validate" method="post" id="formLogin">

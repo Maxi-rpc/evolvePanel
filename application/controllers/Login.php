@@ -25,12 +25,17 @@ class Login extends CI_Controller
 
 	public function validate()
 	{
+		$this->form_validation->set_error_delimters('','');
 		$rules = getLoginRules();
 		$this->form_validation->set_rules($rules);
 		
 		if ($this->form_validation->run() === FALSE) {
-			$this->session->set_flashdata('msj','test');
-			redirect('login');
+			$errors = array(
+				'email' => form_error('email'),
+				'password' => form_error('password'),
+			);
+			echo json_encode($errors);
+			$this->output->set_status_header(400);
 		} else {
 			$email = $this->input->post('email');
 			$pass = $this->input->post('password');
