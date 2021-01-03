@@ -1,5 +1,5 @@
 (function ($) {
-    $("#frm_login").submit(function (ev) {
+    $("#formLogin").submit(function (ev) {
       $("#alert").html("");
       $.ajax({
         url: "login/validate",
