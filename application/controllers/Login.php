@@ -29,7 +29,8 @@ class Login extends CI_Controller
 		$this->form_validation->set_rules($rules);
 		
 		if ($this->form_validation->run() === FALSE) {
-			$this->session->set_flashdata('msj','TEST SALE BIEN');
+			$error = $this->validation_errors();
+			$this->session->set_flashdata('msj',$error);
 			redirect('login');
 		} else {
 			$email = $this->input->post('email');
