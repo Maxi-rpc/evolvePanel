@@ -24,13 +24,13 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Inicar sesión</p>
-                <?=if(validation_errors()){?>
+                <?php if(validation_errors()){ ?>
                     <div class="alert alert-danger alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                     <h5><i class="icon fas fa-ban"></i> Alert!</h5>
                     <?= validation_errors()?>
                   </div>
-                <?=}?>
+                <?php } ?>
                 <form action="<?= base_url('login/validate'); ?>" method="POST">
                     <div class="input-group mb-3">
                         <input type="email" name="email" class="form-control" placeholder="Email">
