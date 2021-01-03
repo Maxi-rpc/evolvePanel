@@ -5,8 +5,8 @@
         url: "login/validate",
         type: "POST",
         data: $(this).serialize(),
-        success: function (err) {
-          var json = JSON.parse(err);
+        success: function (data) {
+          var json = JSON.parse(data);
           window.location.replace(json.url);
         },
         statusCode: {
