@@ -32,7 +32,7 @@ class Login extends CI_Controller
 				'email' => form_error('email'),
 				'password' => form_error('password'),
 			);
-			echo json_encode($errors);
+			echo "test";//json_encode($errors);
 			$this->output->set_status_header(400);
 		} else {
 			$email = $this->input->post('email');
