@@ -20,9 +20,7 @@
             }
             if (json.password.length != 0) {
               $("#password > div:not(.input-group-append)").html(json.password);
-              $("#password > input:not(.input-group-append)").addClass(
-                "is-invalid"
-              );
+              $("#password > input:not(.input-group-append)").addClass("is-invalid");
             }
           },
           401: function (xhr) {

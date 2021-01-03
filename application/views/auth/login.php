@@ -6,25 +6,26 @@
     <!-- /.login-logo -->
     <div class="card">
         <div class="card-body login-card-body">
-        <div class="invalid-feedback"></div>
         <p class="login-box-msg">Iniciar Sesión</p>
 
         <form action="<?php base_url() ?>login/validate" method="post" id="formLogin">
-            <div class="input-group mb-3">
+            <div class="input-group mb-3" id="email">
             <input name="email" type="email" class="form-control" placeholder="Email">
             <div class="input-group-append">
                 <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
                 </div>
             </div>
+            <div class="invalid-feedback"></div>
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group mb-3" id="password">
             <input name="password" type="password" class="form-control" placeholder="Password">
             <div class="input-group-append">
                 <div class="input-group-text">
                 <span class="fas fa-lock"></span>
                 </div>
             </div>
+            <div class="invalid-feedback"></div>
             </div>
             <!-- /.col -->
             <div class="col-4">
