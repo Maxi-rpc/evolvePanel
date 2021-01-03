@@ -31,7 +31,7 @@
             <div class="card">
                 <div class="card-body login-card-body">
                 <p class="login-box-msg">Iniciar Sesión</p>
-
+                <?= validation_errors() ?>
                 <form action="<?= base_url('login/validate'); ?>" method="post" id="formLogin">
                     <div class="input-group mb-3" id="email">
                     <input name="email" type="email" class="form-control" placeholder="Email">
