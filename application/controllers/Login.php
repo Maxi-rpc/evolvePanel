@@ -34,7 +34,7 @@ class Login extends CI_Controller
 			);
 			//echo json_encode($errors);
 			//$this->output->set_status_header(400);
-			$this->load->view('login');
+			$this->load->view('auth/login');
 		} else {
 			$email = $this->input->post('email');
 			$pass = $this->input->post('password');
