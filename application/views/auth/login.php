@@ -23,7 +23,7 @@
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Ingresa tus credenciales para inicar sesión</p>
+                <p class="login-box-msg">Inicar sesión</p>
 
                 <form action="<?= base_url('login/validate'); ?>" method="POST" id="frm_login">
                     <div class="input-group mb-3" id="email">
@@ -77,7 +77,7 @@
     <!-- /.login-box -->
 
     <!-- jQuery -->
-    <script src="<?=base_url('assets/');?>js/jquery/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <!-- Bootstrap 4 -->
     <script src="<?=base_url('assets/');?>js/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
