@@ -34,4 +34,4 @@
       });
       ev.preventDefault();
     });
-})(jQuery);
+})(jQuery)
