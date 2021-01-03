@@ -5,8 +5,9 @@
         url: "login/validate",
         type: "POST",
         data: $(this).serialize(),
-        success: function (data) {
-          var json = JSON.parse(data);
+        success: function (err) {
+          var json = JSON.parse(err);
+          //console.log(json);
           window.location.replace(json.url);
         },
         statusCode: {
@@ -20,7 +21,9 @@
             }
             if (json.password.length != 0) {
               $("#password > div:not(.input-group-append)").html(json.password);
-              $("#password > input:not(.input-group-append)").addClass("is-invalid");
+              $("#password > input:not(.input-group-append)").addClass(
+                "is-invalid"
+              );
             }
           },
           401: function (xhr) {
@@ -34,4 +37,4 @@
       });
       ev.preventDefault();
     });
-})(jQuery)
+  })(jQuery);
