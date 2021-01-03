@@ -25,7 +25,7 @@ class Login extends CI_Controller
 
 	public function validate()
 	{
-		$this->form_validation->set_error_delimters('','');
+		$this->form_validation->set_error_delimiters('','');
 		$rules = getLoginRules();
 		$this->form_validation->set_rules($rules);
 		
