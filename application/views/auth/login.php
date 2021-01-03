@@ -25,7 +25,7 @@
     <body class="hold-transition login-page">
         <div class="login-box ">
             <div class="login-logo"> 
-                <a href="../../index2.html"><img src="" alt="">  EVOLVE | PANEL</a>
+                <a href="<?= base_url(); ?>"><img src="" alt="">  EVOLVE | PANEL</a>
             </div>
             <!-- /.login-logo -->
             <div class="card">
