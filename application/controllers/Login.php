@@ -29,9 +29,8 @@ class Login extends CI_Controller
 		$this->form_validation->set_rules($rules);
 		
 		if ($this->form_validation->run() === FALSE) {
-			$error = $this->validation_errors();
-			$this->session->set_flashdata('msj',$error);
-			redirect('login');
+			$this->session->set_flashdata('msj','test');
+			//redirect('login');
 		} else {
 			$email = $this->input->post('email');
 			$pass = $this->input->post('password');
