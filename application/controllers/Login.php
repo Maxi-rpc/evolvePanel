@@ -30,7 +30,7 @@ class Login extends CI_Controller
 		
 		if ($this->form_validation->run() === FALSE) {
 			$this->session->set_flashdata('msj','test');
-			//redirect('login');
+			redirect('login');
 		} else {
 			$email = $this->input->post('email');
 			$pass = $this->input->post('password');
