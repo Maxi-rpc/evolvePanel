@@ -7,7 +7,6 @@
         data: $(this).serialize(),
         success: function (err) {
           var json = JSON.parse(err);
-          //console.log(json);
           window.location.replace(json.url);
         },
         statusCode: {
