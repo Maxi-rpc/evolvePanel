@@ -60,7 +60,7 @@ class User extends CI_Controller
             getTemplate($vista);
 		}
 */
-		$vista = $this->load->view('main/adminarea/user/edit');
+		$vista = $this->load->view('main/adminarea/user/edit','',TRUE);
 		getTemplate($vista);
     }
 }
