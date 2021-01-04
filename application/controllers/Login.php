@@ -45,7 +45,11 @@ class Login extends CI_Controller
 				'is_logged' => TRUE,
 			];
 			$this->session->set_userdata($data);
-			$this->Users->update($data['id_usuario'],$data['is_logged']);
+			
+			$id = $data['id_usuario'];
+			$dat = $data['is_logged'];
+
+			$this->Users->update($id,$dat);
 			redirect('dashboard');
 		}
 	}
@@ -55,7 +59,7 @@ class Login extends CI_Controller
 		$data = ['id', 'nombre', 'apellido', 'email', 'perfil', 'is_logged'];
 		$this->session->unset_userdata($data);
 		$this->session->sess_destroy();
-		
+
 		redirect('login');
 	}
 }
