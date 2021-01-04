@@ -34,8 +34,7 @@ class Login extends CI_Controller
 			$pass = $this->input->post('password');
 			if (!($res = $this->Auth->login($email, $pass))) {
 				$this->session->set_flashdata('msj','Verifique sus credenciales');
-				$this->load->view('auth/login');
-				exit;
+				redirect('login');
 			}
 			$data = [
 				'id_usuario' => $res->id_usuario,
