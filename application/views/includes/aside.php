@@ -50,7 +50,7 @@
               </li>
               <li class="nav-item">
                 <!-- Redes -->
-                <a href="<?= base_url() ?>redes" class="nav-link">
+                <a href="<?= base_url() ?>" class="nav-link">
                   <i class="nav-icon fas fa-share-alt"></i>
                   <p>
                     Redes Sociales
@@ -103,7 +103,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url() ?>leagueoflegends" class="nav-link">
+                    <a href="<?= base_url() ?>" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>League of Legends</p>
                     </a>
@@ -112,7 +112,7 @@
               </li>
               <li class="nav-item">
                 <!-- STAFF -->
-                <a href="<?= base_url() ?>staff" class="nav-link bg-blue">
+                <a href="<?= base_url() ?>" class="nav-link bg-blue">
                   <i class="nav-icon fas fa-users"></i>
                   <p>Staff</p>
                 </a>
