@@ -54,7 +54,6 @@
                                     <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <label>Perfil</label>
                                     <select class="form-control" name="perfil">
                                         <option value="">Seleccione Perfil</option>
 

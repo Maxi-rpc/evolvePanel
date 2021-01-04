@@ -47,17 +47,14 @@ class User extends CI_Controller
 			];
 
 			if (!$this->Users->save($user)) {
-				$data['msj'] =
-					'Ocurrio un error al ingresar los datos, intente nuevamente';
+				$this->session->set_flashdata('msj','Ocurrio un error al ingresar los datos, intente nuevamente');
 			} else {
                 $buscarID = $this->Users->get($user['email']);
                 $user['id_usuario'] = $buscarID['id_usuario'];
                 $this->UserInfo->create($user); // Creamos el user en Usuario_info
-                $data['msj'] =
-					'Se creo registro';
+				$this->session->set_flashdata('msj','Se creo registro');
             }
-            $vista = $this->load->view('main/adminarea/user/index','',TRUE);
-            getTemplate($vista);
+            redirect('user');
 		}
 		$perfiles = $this->Perfil->get();
 		$vista = $this->load->view('main/adminarea/user/edit',['perfiles'=>$perfiles],TRUE);

@@ -27,6 +27,20 @@
           <div class="container-fluid">
             <!-- =========================================================== -->
 
+            
+              <?php if($this->session->flashdata('msj')){ ?>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                          <h5><i class="icon fas fa-ban"></i> Alert!</h5>
+                          <?= $this->session->flashdata('msj') ?>
+                        <?php } ?>
+                    </div>
+                  </div>
+                </div>
+              <?php } ?>
+
             <!-- Listados -->
             <div class="row">
               <div class="col-md-12">
@@ -74,7 +88,7 @@
                       </tbody>
                       <tfoot>
                         <tr>
-                        <th>ID Usuario</th>
+                          <th>ID Usuario</th>
                           <th>Nombre</th>
                           <th>Apellido</th>
                           <th>Email</th>
