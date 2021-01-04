@@ -137,6 +137,45 @@
             </div>
             <!-- /.info Box row -->
 
+            <!-- Listados -->
+            <div class="row">
+              <div class="card">
+                <div class="card-header">
+                  <h3>Listado de usuarios</h3>
+                </div>
+                <div class="card-body">
+                  <table id="dataTable2" class="table table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>Rendering engine</th>
+                        <th>Browser</th>
+                        <th>Platform(s)</th>
+                        <th>Engine version</th>
+                        <th>CSS grade</th>
+                      </tr>
+                    </thead> 
+                    <tbody>
+                      <tr>
+                        <th>Rendering engine</th>
+                        <th>Browser</th>
+                        <th>Platform(s)</th>
+                        <th>Engine version</th>
+                        <th>CSS grade</th>
+                      </tr> 
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th>Rendering engine</th>
+                        <th>Browser</th>
+                        <th>Platform(s)</th>
+                        <th>Engine version</th>
+                        <th>CSS grade</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
 
             <!-- =========================================================== -->
           </div>
