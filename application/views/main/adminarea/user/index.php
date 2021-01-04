@@ -64,7 +64,7 @@
                               <td><?= $user->perfil?></td>
                               <td><?= $user->estado?></td>
                               <td><?= $user->is_logged?></td>
-                              <td><button type="button" class="btn btn-tool"><a href="<?=base_url('user/edit'.$user->id_usuario)?>"><i class="fas fa-user-edit"></i></a>
+                              <td><button type="button" class="btn btn-tool"><a href="<?=base_url('user/edit/'.$user->id_usuario)?>"><i class="fas fa-user-edit"></i></a>
                       </button></td>
                             <?php endforeach ?>
                             <?php else: ?>
