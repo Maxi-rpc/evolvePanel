@@ -38,7 +38,7 @@
                   <div class="icon">
                     <i class="fas fa-user"></i>
                   </div>
-                  <a href="#" class="small-box-footer">
+                  <a href="<?php base_url('users') ?>" class="small-box-footer">
                     info <i class="fas fa-arrow-circle-right"></i>
                   </a>
                 </div> <!-- /.info-box -->
@@ -166,70 +166,6 @@
               <!-- /.col -->
             </div>
             <!-- /.info Box row -->
-
-            <!-- Listados -->
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card card-primary collapsed-card">
-                  <div class="card-header">
-                    <h3 class="card-title">Listado de usuarios</h3>
-
-                    <div class="card-tools">
-                      <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                      </button>
-                    </div>
-                    <!-- /.card-tools -->
-                  </div>
-                  <!-- /.card-header -->
-                  <div class="card-body">
-                    <table id="dataTable2" class="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>ID Usuario</th>
-                          <th>Nombre</th>
-                          <th>Apellido</th>
-                          <th>Email</th>
-                          <th>Perfil</th>
-                          <th>Estado</th>
-                          <th>Is Logged</th>
-                        </tr>
-                      </thead> 
-                      <tbody>
-                        <tr>
-                          <?php if($users != NULL): ?>
-                            <?php foreach($users as $user): ?>
-                              <td><?= $user->id_usuario?></td>
-                              <td><?= $user->nombre?></td>
-                              <td><?= $user->apellido?></td>
-                              <td><?= $user->email?></td>
-                              <td><?= $user->perfil?></td>
-                              <td><?= $user->estado?></td>
-                              <td><?= $user->is_logged?></td>
-                            <?php endforeach ?>
-                            <?php else: ?>
-                              <td class="text-center">No existen datos para mostrar.</td>
-                          <?php endif ?>
-                        </tr> 
-                      </tbody>
-                      <tfoot>
-                        <tr>
-                        <th>ID Usuario</th>
-                          <th>Nombre</th>
-                          <th>Apellido</th>
-                          <th>Email</th>
-                          <th>Perfil</th>
-                          <th>Estado</th>
-                          <th>Is Logged</th>
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
-                  <!-- /.card-body -->
-                </div>
-                <!-- /.card -->
-              </div>
-              <!-- /.col -->
-            </div>
 
             <!-- =========================================================== -->
           </div>
