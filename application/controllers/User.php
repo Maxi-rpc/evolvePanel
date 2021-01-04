@@ -19,7 +19,7 @@ class User extends CI_Controller
 		getTemplate($vista);
     }
 
-    public function create(){
+    public function edit($id = NULL){
         
         $nombre = $this->input->post('firstname');
 		$apellido = $this->input->post('lastname');
@@ -37,10 +37,7 @@ class User extends CI_Controller
 
 		$this->form_validation->set_rules($rules);
 
-		if ($this->form_validation->run() == false) {
-			$vista = $this->load->view('main/adminarea/user/index');
-			getTemplate($vista);
-		} else {
+		if ($this->form_validation->run() == TRUE) {
 			$user = [
 				'nombre' => $nombre,
 				'apellido' => $apellido,
@@ -50,7 +47,7 @@ class User extends CI_Controller
 				'estado' => 1,
 			];
 
-			if (!$this->Users->create($user)) {
+			if (!$this->Users->save($user)) {
 				$data['msj'] =
 					'Ocurrio un error al ingresar los datos, intente nuevamente';
 			} else {
@@ -60,8 +57,11 @@ class User extends CI_Controller
                 $data['msj'] =
 					'Se creo registro';
             }
-            $vista = $this->load->view('main/adminarea/user/index', $data);
+            $vista = $this->load->view('main/adminarea/user/index', $data,TRUE);
             getTemplate($vista);
 		}
+
+		$vista = $this->load->view('main/adminarea/user/edit');
+		getTemplate($vista);
     }
 }

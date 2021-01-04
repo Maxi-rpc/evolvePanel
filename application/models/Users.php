@@ -6,24 +6,22 @@ class Users extends CI_Model {
 		$this->load->database();
 	}
 
-	public function create($user)
+	public function save($data, $id = NULL)
 	{
-		$this->db->trans_start();
-		$this->db->insert('usuarios', $user);
-		$user_info['id_usuario'] = $this->db->insert_id();
-		$this->db->trans_complete();
-
-		if ($this->db->trans_status() === false) {
-			return false;
+		if($id === NULL){
+			$this->db->trans_start();
+			$this->db->insert('usuarios', $data);
+			$data['id_usuario'] = $this->db->insert_id();
+			$this->db->trans_complete();
+			if ($this->db->trans_status() === false) {
+				return false;
+			} else {
+				return true;
+			}
 		} else {
-			return true;
+			$this->db->where('id_usuario',$id);
+			$this->db->update('usuarios',$data);
 		}
-	}
-
-	public function update($id,$data)
-	{
-		$this->db->where('id_usuario',$id);
-		$this->db->update('usuarios',$data);
 	}
 
 	public function get($email = NULL)

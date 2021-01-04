@@ -35,6 +35,10 @@
                     <h3 class="card-title">Listado de usuarios - <span><?=$datosSql['cantUser']?></span></h3>
                   </div>
                   <!-- /.card-header -->
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool"><a href="<?=base_url('user/edit')?>"><i class="fas fa-user-plus"></i></a>
+                    </button>
+                  </div>
                   <div class="card-body">
                     <table id="dataTable2" class="table table-bordered table-striped">
                       <thead>
