@@ -166,7 +166,7 @@
                       </thead> 
                       <tbody>
                         <tr>
-                          <?php if($users != NULL): ?>
+                          <?php if($users === NULL): ?>
                             <?php foreach($users as $user): ?>
                               <td><?= $user->id_usuario?></td>
                               <td><?= $user->nombre?></td>
