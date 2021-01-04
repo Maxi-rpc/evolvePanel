@@ -147,7 +147,23 @@
                 <!-- /.info-box -->
               </div>
               <!-- /.col -->
-              
+              <div class="col-md-3 col-sm-6 col-12">
+                <div class="small-box bg-info">
+                        <div class="inner">
+                          <h3><?php echo $datosSql['cantStaff'] ?></h3>
+
+                          <p>Staff</p>
+                        </div>
+                        <div class="icon">
+                          <i class="fas fa-user"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">
+                          info <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                </div>
+                <!-- /.info-box -->
+              </div>
+              <!-- /.col -->
             </div>
             <!-- /.info Box row -->
 
