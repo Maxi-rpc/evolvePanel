@@ -50,6 +50,7 @@
                           <th>Perfil</th>
                           <th>Estado</th>
                           <th>Is Logged</th>
+                          <th>Acción</th>
                         </tr>
                       </thead> 
                       <tbody>
@@ -63,6 +64,8 @@
                               <td><?= $user->perfil?></td>
                               <td><?= $user->estado?></td>
                               <td><?= $user->is_logged?></td>
+                              <td><button type="button" class="btn btn-tool"><a href="<?=base_url('user/edit'.$user->id_usuario)?>"><i class="fas fa-user-plus"></i></a>
+                      </button></td>
                             <?php endforeach ?>
                             <?php else: ?>
                               <td class="text-center">No existen datos para mostrar.</td>
@@ -78,6 +81,7 @@
                           <th>Perfil</th>
                           <th>Estado</th>
                           <th>Is Logged</th>
+                          <th>Acción</th>
                         </tr>
                       </tfoot>
                     </table>
