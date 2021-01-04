@@ -156,11 +156,11 @@
                     </thead> 
                     <tbody>
                       <tr>
-                        <th>Rendering engine</th>
-                        <th>Browser</th>
-                        <th>Platform(s)</th>
-                        <th>Engine version</th>
-                        <th>CSS grade</th>
+                        <td>Rendering engine</td>
+                        <td>Browser</td>
+                        <td>Platform(s)</td>
+                        <td>Engine version</td>
+                        <td>CSS grade</td>
                       </tr> 
                     </tbody>
                     <tfoot>
