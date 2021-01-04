@@ -26,7 +26,7 @@ class Perfil extends CI_Model {
 
 	public function get($id = NULL)
 	{
-		if($email != NULL){
+		if($id != NULL){
 			$sql = $this->db->get_where('perfiles',array('id_perfil',$id));
             $method = 'row_array';
         } else {
