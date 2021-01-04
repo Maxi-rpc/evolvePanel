@@ -61,16 +61,19 @@
               </div>
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
-                <div class="info-box mb-3 bg-info">
-                    <span class="info-box-icon"><i class="fas fa-gamepad"></i></span>
+                <div class="small-box bg-info">
+                      <div class="inner">
+                        <h3><?php echo $datosSql['cantTeams'] ?></h3>
 
-                    <div class="info-box-content">
-                      <span class="info-box-text">Teams</span>
-                      <span class="info-box-number"><?php echo $datosSql['cantTeams'] ?></span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
+                        <p>Teams</p>
+                      </div>
+                      <div class="icon">
+                        <i class="fas fa-gamepad"></i>
+                      </div>
+                      <a href="#" class="small-box-footer">
+                        info <i class="fas fa-arrow-circle-right"></i>
+                      </a>
+                </div> <!-- /.info-box -->
               </div>
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
