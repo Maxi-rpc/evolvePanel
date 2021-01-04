@@ -37,6 +37,13 @@
                         <!-- form start -->
                         <form role="form">
                             <div class="card-body">
+                            <?php if(validation_errors(){ ?>
+                                <div class="alert alert-danger alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                        <h5><i class="icon fas fa-ban"></i> Error!</h5>
+                                    <?= validation_errors('<li>','</li>') ?>
+                                </div>
+                            <?php } ?>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="exampleInputEmail1" name="firstname" placeholder="Nombre">
                                 </div>
