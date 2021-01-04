@@ -144,7 +144,7 @@
                   <h3>Listado de usuarios</h3>
                 </div>
                 <div class="card-body">
-                  <table id="dataTable2" class="table table-bordered table-hover">
+                  <table id="dataTable2" class="dataTables_wrapper dt-bootstrap4">
                     <thead>
                       <tr>
                         <th>Rendering engine</th>
