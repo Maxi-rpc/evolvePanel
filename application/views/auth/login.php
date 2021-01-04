@@ -24,16 +24,18 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Inicar sesión</p>
+
                 <?php if(validation_errors() || $this->session->flashdata('msj') ){ ?>
                     <div class="alert alert-danger alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h5><i class="icon fas fa-ban"></i> Error!</h5>
-                    <?= validation_errors('<li>','</li>') ?>
-                    <?php if($this->session->flashdata('msj') ){ ?>
-                    <?= $this->session->flashdata('msj') ?>
-                    <?php } ?>
-                  </div>
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h5><i class="icon fas fa-ban"></i> Error!</h5>
+                        <?= validation_errors('<li>','</li>') ?>
+                        <?php if($this->session->flashdata('msj') ){ ?>
+                            <?= $this->session->flashdata('msj') ?>
+                        <?php } ?>
+                    </div>
                 <?php } ?>
+
                 <form action="<?= base_url('login/validate'); ?>" method="POST">
                     <div class="input-group mb-3">
                         <input type="email" name="email" class="form-control" placeholder="Email">
@@ -70,7 +72,7 @@
                 </form>
 
                 <p class="mb-1">
-                    <a href="forgot-password.html">Olvidé mi clave</a>
+                    <a href="<?= base_url(); ?>">Olvidé mi clave</a>
                 </p>
             </div>
             <!-- /.login-card-body -->
