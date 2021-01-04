@@ -56,10 +56,11 @@
                                 <div class="form-group">
                                     <label>Perfil</label>
                                     <select class="form-control" name="perfil">
+                                        <option value="">Seleccione Perfil</option>
 
-                                    <?php foreach($perfiles as $perfil): ?>
-                                    <option value="<?= $perfil->id_perfil ?>"><?= $perfil->nombre ?></option>
-                                    <?php endforeach ?>
+                                        <?php foreach($perfiles as $perfil): ?>
+                                        <option value="<?= $perfil->id_perfil ?>"><?= $perfil->nombre ?></option>
+                                        <?php endforeach ?>
 
                                     </select>
                                 </div>
