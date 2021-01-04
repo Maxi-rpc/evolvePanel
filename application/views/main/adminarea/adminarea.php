@@ -41,31 +41,23 @@
                   <a href="#" class="small-box-footer">
                     info <i class="fas fa-arrow-circle-right"></i>
                   </a>
-                </div>
+                </div> <!-- /.info-box -->
+              </div> <!-- /.col -->
               
-              <div class="info-box mb-3 bg-info">
-                  <span class="info-box-icon"><i class="fas fa-user"></i></span>
-
-                  <div class="info-box-content">
-                    <span class="info-box-text">Users</span>
-                    <span class="info-box-number"><?php echo $datosSql['cantUser'] ?></span>
-                  </div>
-                  <!-- /.info-box-content -->
-                </div>
-                  <!-- /.info-box -->
-              </div>
-              <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
-                <div class="info-box mb-3 bg-info">
-                  <span class="info-box-icon"><i class="fas fa-id-card"></i></span>
+                <div class="small-box bg-info">
+                    <div class="inner">
+                      <h3><?php echo $datosSql['cantUserInfo'] ?></h3>
 
-                  <div class="info-box-content">
-                    <span class="info-box-text">User Info</span>
-                    <span class="info-box-number"><?php echo $datosSql['cantUserInfo'] ?></span>
-                  </div>
-                  <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
+                      <p>User Info</p>
+                    </div>
+                    <div class="icon">
+                      <i class="fas fa-id-card"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">
+                      info <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div> <!-- /.info-box -->  
               </div>
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
