@@ -38,7 +38,7 @@
                   <div class="icon">
                     <i class="fas fa-user"></i>
                   </div>
-                  <a href="<?php base_url('users') ?>" class="small-box-footer">
+                  <a href="<?=base_url('users')?>" class="small-box-footer">
                     info <i class="fas fa-arrow-circle-right"></i>
                   </a>
                 </div> <!-- /.info-box -->
