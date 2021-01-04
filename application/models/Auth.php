@@ -26,6 +26,8 @@ class Auth extends CI_Model
 		//Si la contraseña coincide retorno la fila
 		if ($verify) {
 			return $query->row();
+		}else{
+			return false;
 		}
 	}
 }
