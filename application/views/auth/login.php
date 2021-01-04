@@ -29,10 +29,10 @@
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                     <h5><i class="icon fas fa-ban"></i> Error!</h5>
                     <?= if(validation_errors(){
-                        validation_errors('<li>','</li>')}
-                        else($this->session->flashdata('msj')){
-                            $this->session->flashdata('msj');
-                        } ?>
+                        validation_errors('<li>','</li>');
+                    }else{
+                        $this->session->flashdata('msj');
+                        }?>
                   </div>
                 <?php } ?>
                 <form action="<?= base_url('login/validate'); ?>" method="POST">
