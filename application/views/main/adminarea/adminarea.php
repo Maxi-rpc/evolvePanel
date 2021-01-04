@@ -42,8 +42,8 @@
                     info <i class="fas fa-arrow-circle-right"></i>
                   </a>
                 </div> <!-- /.info-box -->
-              </div> <!-- /.col -->
-              
+              </div>
+              <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="small-box bg-info">
                     <div class="inner">
@@ -127,8 +127,8 @@
                         <a href="#" class="small-box-footer">
                           info <i class="fas fa-arrow-circle-right"></i>
                         </a>
-                  </div>
                 </div>
+              </div>
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
                 <div class="small-box bg-info">
@@ -143,7 +143,6 @@
                         <a href="#" class="small-box-footer">
                           info <i class="fas fa-arrow-circle-right"></i>
                         </a>
-                  </div>
                 </div>
                 <!-- /.info-box -->
               </div>
@@ -163,7 +162,7 @@
                       </a>
                     </div>
                 </div>
-                  <!-- /.info-box -->
+                <!-- /.info-box -->
               </div>
               <!-- /.col -->
             </div>
