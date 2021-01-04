@@ -51,6 +51,8 @@ class Adminarea extends CI_Controller
 				$data['msj'] =
 					'Ocurrio un error al ingresar los datos, intente nuevamente';
 			} else {
+                $buscarID = $this->Users->get($user['email']);
+                $user['id_usuario'] = $buscarID['id_usuario'];
                 $this->UserInfo->create($user); // Creamos el user en Usuario_info
                 $data['msj'] =
 					'Se creo registro';
