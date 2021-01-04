@@ -37,7 +37,7 @@
                         <!-- form start -->
                         <form role="form">
                             <div class="card-body">
-                            <?php if(validation_errors(){ ?>
+                            <?php if(validation_errors()){ ?>
                                 <div class="alert alert-danger alert-dismissible">
                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                                         <h5><i class="icon fas fa-ban"></i> Error!</h5>
