@@ -152,7 +152,35 @@
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body">
-                    The body of the card
+                    <table id="dataTable2" class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>Rendering engine</th>
+                          <th>Browser</th>
+                          <th>Platform(s)</th>
+                          <th>Engine version</th>
+                          <th>CSS grade</th>
+                        </tr>
+                      </thead> 
+                      <tbody>
+                        <tr>
+                          <td>Rendering engine</td>
+                          <td>Browser</td>
+                          <td>Platform(s)</td>
+                          <td>Engine version</td>
+                          <td>CSS grade</td>
+                        </tr> 
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>Rendering engine</th>
+                          <th>Browser</th>
+                          <th>Platform(s)</th>
+                          <th>Engine version</th>
+                          <th>CSS grade</th>
+                        </tr>
+                      </tfoot>
+                    </table>
                   </div>
                   <!-- /.card-body -->
                 </div>
@@ -167,35 +195,7 @@
                   <h3>Listado de usuarios</h3>
                 </div>
                 <div class="card-body">
-                  <table id="dataTable2" class="table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>Rendering engine</th>
-                        <th>Browser</th>
-                        <th>Platform(s)</th>
-                        <th>Engine version</th>
-                        <th>CSS grade</th>
-                      </tr>
-                    </thead> 
-                    <tbody>
-                      <tr>
-                        <td>Rendering engine</td>
-                        <td>Browser</td>
-                        <td>Platform(s)</td>
-                        <td>Engine version</td>
-                        <td>CSS grade</td>
-                      </tr> 
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>Rendering engine</th>
-                        <th>Browser</th>
-                        <th>Platform(s)</th>
-                        <th>Engine version</th>
-                        <th>CSS grade</th>
-                      </tr>
-                    </tfoot>
-                  </table>
+                  
                 </div>
               </div>
             </div>
