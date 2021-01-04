@@ -8,7 +8,7 @@ class User extends CI_Controller
 		parent::__construct();
 		$this->load->library(['form_validation']);
 		$this->load->helper(['vistas','auth/rules_general']);
-		$this->load->model('Users');
+		$this->load->model(['Users','Perfil']);
 	}
 
 	public function index()
@@ -59,8 +59,8 @@ class User extends CI_Controller
             $vista = $this->load->view('main/adminarea/user/index','',TRUE);
             getTemplate($vista);
 		}
-
-		$vista = $this->load->view('main/adminarea/user/edit','',TRUE);
+		$perfiles = $this->Perfil->get();
+		$vista = $this->load->view('main/adminarea/user/edit',['perfiles'=>$perfiles],TRUE);
 		getTemplate($vista);
     }
 }

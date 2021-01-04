@@ -54,7 +54,12 @@
                                     <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="perfil" placeholder="">
+                                    <label>Select</label>
+                                    <select class="form-control">
+                                    <?php foreach($perfiles as $perfil): ?>
+                                    <option value="<?= $perfil->id_perfil ?>"><?= $perfil->nombre ?></option>
+                                    <?php endforeach ?>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
