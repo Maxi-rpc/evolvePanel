@@ -166,11 +166,17 @@
                       </thead> 
                       <tbody>
                         <tr>
-                          <td>Rendering engine</td>
-                          <td>Browser</td>
-                          <td>Platform(s)</td>
-                          <td>Engine version</td>
-                          <td>CSS grade</td>
+                          <?= if($users != NULL){ ?>
+                            <?= foreach($users as $user): ?>
+                              <td><?= $user['id_usuario'] ?></td>
+                              <td><?= $user['nombre'] ?></td>
+                              <td><?= $user['apellido'] ?></td>
+                              <td><?= $user['email'] ?></td>
+                              <td><?= $user['perfil'] ?></td>
+                              <td><?= $user['estado'] ?></td>
+                              <td><?= $user['is_logged'] ?></td>
+                            <?= endforeach ?>
+                          <?= } ?>
                         </tr> 
                       </tbody>
                       <tfoot>
