@@ -166,8 +166,8 @@
                       </thead> 
                       <tbody>
                         <tr>
-                          <?= if($users != NULL){ ?>
-                            <?= foreach($users as $user): ?>
+                          <?php if($users != NULL){ ?>
+                            <?php foreach($users as $user): ?>
                               <td><?= $user['id_usuario'] ?></td>
                               <td><?= $user['nombre'] ?></td>
                               <td><?= $user['apellido'] ?></td>
@@ -175,8 +175,8 @@
                               <td><?= $user['perfil'] ?></td>
                               <td><?= $user['estado'] ?></td>
                               <td><?= $user['is_logged'] ?></td>
-                            <?= endforeach ?>
-                          <?= } ?>
+                            <?php endforeach ?>
+                          <?php } ?>
                         </tr> 
                       </tbody>
                       <tfoot>
