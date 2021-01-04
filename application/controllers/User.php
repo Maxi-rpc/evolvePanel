@@ -8,13 +8,13 @@ class User extends CI_Controller
 		parent::__construct();
 		$this->load->library(['form_validation']);
 		$this->load->helper(['vistas','auth/rules_general']);
-		$this->load->model(['Users','Perfil']);
+		$this->load->model(['Users_m','Perfil_m']);
 	}
 
 	public function index()
 	{
         $datosSql = getCantidadDatosSQL();
-        $users = $this->Users->get();
+        $users = $this->Users_m->get();
         $vista = $this->load->view('main/adminarea/user/index',['datosSql'=>$datosSql,'users'=>$users],TRUE);
 		getTemplate($vista);
     }
@@ -25,6 +25,7 @@ class User extends CI_Controller
 		$this->form_validation->set_rules($rules);
 
 		if ($this->form_validation->run() == TRUE) {
+			
 			$nombre = $this->input->post('firstname');
 			$apellido = $this->input->post('lastname');
 			$email = $this->input->post('email');
@@ -46,17 +47,17 @@ class User extends CI_Controller
 				'estado' => 1,
 			];
 
-			if (!$this->Users->save($user)) {
+			if (!$this->Users_m->save($user)) {
 				$this->session->set_flashdata('msj','Ocurrio un error al ingresar los datos, intente nuevamente');
 			} else {
-                $buscarID = $this->Users->get($user['email']);
+                $buscarID = $this->Users_m->get($user['email']);
                 $user['id_usuario'] = $buscarID['id_usuario'];
-                $this->UserInfo->create($user); // Creamos el user en Usuario_info
+                $this->UserInfo_m->create($user); // Creamos el user en Usuario_info
 				$this->session->set_flashdata('msj','Se creo registro');
             }
             redirect('user');
 		}
-		$perfiles = $this->Perfil->get();
+		$perfiles = $this->Perfil_m->get();
 		$vista = $this->load->view('main/adminarea/user/edit',['perfiles'=>$perfiles],TRUE);
 		getTemplate($vista);
     }

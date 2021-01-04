@@ -1,6 +1,6 @@
 <?php
 
-class UserInfo extends CI_Model {
+class UserInfo_m extends CI_Model {
     
     protected $_table_name = 'usuario_info';
 

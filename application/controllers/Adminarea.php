@@ -6,9 +6,7 @@ class Adminarea extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library(['form_validation']);
-		$this->load->helper(['vistas','auth/rules_general']);
-		$this->load->model('Users');
+		$this->load->helper('vistas');
 	}
 
 	public function index()

@@ -1,6 +1,6 @@
 <?php
 
-class Users extends CI_Model {
+class Users_m extends CI_Model {
 	function __construct()
 	{
 		$this->load->database();
