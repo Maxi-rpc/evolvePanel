@@ -20,7 +20,7 @@ class User extends CI_Controller
     }
 
     public function edit($id = NULL){
-        /*
+        
 		$rules = get_UserCreate_Rules();
 		$this->form_validation->set_rules($rules);
 
@@ -59,7 +59,7 @@ class User extends CI_Controller
             $vista = $this->load->view('main/adminarea/user/index','',TRUE);
             getTemplate($vista);
 		}
-*/
+
 		$vista = $this->load->view('main/adminarea/user/edit','',TRUE);
 		getTemplate($vista);
     }
