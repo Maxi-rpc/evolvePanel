@@ -8,7 +8,7 @@ class Login extends CI_Controller
 		parent::__construct();
 		$this->load->library(['form_validation']);
 		$this->load->helper(['auth/login_rules','vistas']);
-		$this->load->model('Auth');
+		$this->load->model(['Auth','Users']);
 	}
 
 	public function index()
@@ -45,7 +45,7 @@ class Login extends CI_Controller
 				'is_logged' => TRUE,
 			];
 			$this->session->set_userdata($data);
-
+			$this->Users->update($data['id_usuario'],$data['is_logged']);
 			redirect('dashboard');
 		}
 	}
@@ -55,7 +55,7 @@ class Login extends CI_Controller
 		$data = ['id', 'nombre', 'apellido', 'email', 'perfil', 'is_logged'];
 		$this->session->unset_userdata($data);
 		$this->session->sess_destroy();
-
+		
 		redirect('login');
 	}
 }

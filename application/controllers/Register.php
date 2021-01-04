@@ -8,7 +8,7 @@ class Register extends CI_Controller
 		parent::__construct();
 		$this->load->model(['Users','UserInfo']);
 		$this->load->library(['form_validation', 'email']);
-		$this->load->helper('vistas');
+		$this->load->helper(['vistas'.'auth/rules_general']);
 	}
 
 	public function index()
@@ -17,96 +17,6 @@ class Register extends CI_Controller
 		$query = $this->db->get('usuarios');
 	}
 
-	public function create()
-	{
-		$nombre = $this->input->post('firstname');
-		$apellido = $this->input->post('lastname');
-		$email = $this->input->post('email');
-		$perfil = $this->input->post('perfil');
-		$password = $this->input->post('password');
-		$password_c = $this->input->post('password_c');
-
-		$config = [
-			[
-				'field' => 'firstname',
-				'label' => 'Nombre',
-				'rules' => 'required',
-				'errors' => [
-					'required' => 'El campo %s no puede ir vacío',
-				],
-			],
-			[
-				'field' => 'lastname',
-				'label' => 'Apellido',
-				'rules' => 'required',
-				'errors' => [
-					'required' => 'El campo %s no puede ir vacío',
-				],
-			],
-			[
-				'field' => 'email',
-				'label' => 'email',
-				'rules' => 'required|valid_email|is_unique[usuarios.email]',
-				'errors' => [
-					'required' => 'El campo %s no puede ir vacío',
-					'valid_email' => 'Ingrese un %s válido',
-					'is_unique' => 'El %s ingresado ya se encuentra registrado',
-				],
-			],
-			[
-				'field' => 'perfil',
-				'label' => 'Perfil',
-				'rules' => 'required|numeric',
-				'errors' => [
-					'required' => 'El campo %s no puede ir vacío',
-					'numeric' => 'Ingrese solo números',
-				],
-			],
-			[
-				'field' => 'password',
-				'label' => 'contraseña',
-				'rules' => 'required',
-				'errors' => [
-					'required' => 'El campo % no puede ir vacío',
-				],
-			],
-			[
-				'field' => 'password_c',
-				'label' => 'confirmación de contraseña',
-				'rules' => 'required|matches[password]',
-				'errors' => [
-					'matches' => 'La %s no es igual a la contraseña',
-				],
-			],
-		];
-
-		///Encriptamos la contrsaeña
-		$password_segura = password_hash($password, PASSWORD_BCRYPT, [
-			'cost' => 4,
-		]);
-
-		$this->form_validation->set_rules($config);
-
-		if ($this->form_validation->run() == false) {
-			$this->load->view('dashboard');
-		} else {
-			$user = [
-				'nombre' => $nombre,
-				'apellido' => $apellido,
-				'email' => $email,				
-				'password' => $password_segura, ///Enviamos la contraseña encripatada a la BD
-				'perfil' => $perfil,
-				'estado' => 1,
-			];
-
-			if (!$this->Users->create($user)) {
-				$data['msg'] =
-					'Ocurrio un error al ingresar los datos, intente nuevamente';
-				$this->load->view('adminarea', $data);
-			}
-			$this->UserInfo->create($user);
-		}
-    }
     
     public function createAdmin()
 	{

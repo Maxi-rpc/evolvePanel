@@ -1,7 +1,6 @@
 <?php
 
-class Users extends CI_Model
-{
+class Users extends CI_Model {
 	function __construct()
 	{
 		$this->load->database();
@@ -27,15 +26,16 @@ class Users extends CI_Model
 		$this->db->update('usuarios',$data);
 	}
 
-	public function getuserall()
+	public function get($email = NULL)
 	{
-		$sql = $this->db->get_where('usuarios');
-		return $sql->result();
-	}
+		if($email != NULL){
+			$sql = $this->db->get_where('usuarios',array('email',$email));
+            $method = 'row_array';
+        } else {
+			$sql = $this->db->get_where('usuarios');
+			$method = 'result';
+        }
 
-	public function getuser($email)
-	{
-		$sql = $this->db->get_where('usuarios',array('email',$email));
-		return $sql->row_array();
+		return $sql->$method();
 	}
 }
