@@ -166,17 +166,19 @@
                       </thead> 
                       <tbody>
                         <tr>
-                          <?php if($users != NULL){ ?>
+                          <?php if($users != NULL): ?>
                             <?php foreach($users as $user): ?>
-                              <td><?= $user->'id_usuario'?></td>
-                              <td><?= $user->'nombre'?></td>
-                              <td><?= $user->'apellido'?></td>
-                              <td><?= $user->'email'?></td>
-                              <td><?= $user->'perfil'?></td>
-                              <td><?= $user->'estado'?></td>
-                              <td><?= $user->'is_logged'?></td>
+                              <td><?= $user->id_usuario?></td>
+                              <td><?= $user->nombre?></td>
+                              <td><?= $user->apellido?></td>
+                              <td><?= $user->email?></td>
+                              <td><?= $user->perfil?></td>
+                              <td><?= $user->estado?></td>
+                              <td><?= $user->is_logged?></td>
                             <?php endforeach ?>
-                          <?php } ?>
+                            <?php else: ?>
+                              <td class="text-center">No existen datos para mostrar.</td>
+                          <?php endif ?>
                         </tr> 
                       </tbody>
                       <tfoot>
