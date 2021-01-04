@@ -35,7 +35,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form">
+                        <form action="<?= base_url('user/edit'); ?>" method="POST">
                             <div class="card-body">
                             <?php if(validation_errors()){ ?>
                                 <div class="alert alert-danger alert-dismissible">
