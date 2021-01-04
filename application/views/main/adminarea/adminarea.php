@@ -155,11 +155,13 @@
                     <table id="dataTable2" class="table table-bordered table-striped">
                       <thead>
                         <tr>
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th>Platform(s)</th>
-                          <th>Engine version</th>
-                          <th>CSS grade</th>
+                          <th>ID Usuario</th>
+                          <th>Nombre</th>
+                          <th>Apellido</th>
+                          <th>Email</th>
+                          <th>Perfil</th>
+                          <th>Estado</th>
+                          <th>Is Logged</th>
                         </tr>
                       </thead> 
                       <tbody>
@@ -173,11 +175,13 @@
                       </tbody>
                       <tfoot>
                         <tr>
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th>Platform(s)</th>
-                          <th>Engine version</th>
-                          <th>CSS grade</th>
+                        <th>ID Usuario</th>
+                          <th>Nombre</th>
+                          <th>Apellido</th>
+                          <th>Email</th>
+                          <th>Perfil</th>
+                          <th>Estado</th>
+                          <th>Is Logged</th>
                         </tr>
                       </tfoot>
                     </table>
@@ -187,17 +191,6 @@
                 <!-- /.card -->
               </div>
               <!-- /.col -->
-            </div>
-
-            <div class="row">
-              <div class="card">
-                <div class="card-header">
-                  <h3>Listado de usuarios</h3>
-                </div>
-                <div class="card-body">
-                  
-                </div>
-              </div>
             </div>
 
             <!-- =========================================================== -->
