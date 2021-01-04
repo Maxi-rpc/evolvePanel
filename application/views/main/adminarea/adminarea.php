@@ -155,7 +155,7 @@
                           <p>Staff</p>
                         </div>
                         <div class="icon">
-                          <i class="fas fa-user"></i>
+                          <i class="fas fa-users"></i>
                         </div>
                         <a href="#" class="small-box-footer">
                           info <i class="fas fa-arrow-circle-right"></i>
