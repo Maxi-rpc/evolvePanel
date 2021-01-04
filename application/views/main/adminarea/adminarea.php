@@ -98,14 +98,18 @@
 
             <div class="row">
               <div class="col-md-3 col-sm-6 col-12">
-                <div class="info-box mb-3 bg-info">
-                    <span class="info-box-icon"><i class="fas fa-user-tie"></i></span>
+                <div class="small-box bg-info">
+                      <div class="inner">
+                        <h3><?php echo $datosSql['cantPuesto'] ?></h3>
 
-                    <div class="info-box-content">
-                      <span class="info-box-text">Puesto</span>
-                      <span class="info-box-number"><?php echo $datosSql['cantPuesto'] ?></span>
-                    </div>
-                    <!-- /.info-box-content -->
+                        <p>Puesto</p>
+                      </div>
+                      <div class="icon">
+                        <i class="fas fa-user-tie"></i>
+                      </div>
+                      <a href="#" class="small-box-footer">
+                        info <i class="fas fa-arrow-circle-right"></i>
+                      </a>
                 </div>
                 <!-- /.info-box -->
               </div>
