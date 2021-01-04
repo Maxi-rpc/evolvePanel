@@ -29,15 +29,19 @@
 
             <div class="row">
               <div class="col-md-3 col-sm-6 col-12">
-                <div class="info-box">
-                  <span class="info-box-icon bg-info"><i class="fas fa-user"></i></span>
+                <div class="small-box bg-info">
+                  <div class="inner">
+                    <h3><?php echo $datosSql['cantUser'] ?></h3>
 
-                  <div class="info-box-content">
-                    <span class="info-box-text">Users</span>
-                    <span class="info-box-number"><?php echo $datosSql['cantUser'] ?></span>
+                    <p>Users</p>
                   </div>
-                  <!-- /.info-box-content -->
-                </div>  
+                  <div class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">
+                    info <i class="fas fa-user"></i>
+                  </a>
+                </div>
               
               <div class="info-box mb-3 bg-info">
                   <span class="info-box-icon"><i class="fas fa-user"></i></span>
