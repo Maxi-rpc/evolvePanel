@@ -21,23 +21,22 @@ class User extends CI_Controller
 
     public function edit($id = NULL){
         
-        $nombre = $this->input->post('firstname');
-		$apellido = $this->input->post('lastname');
-		$email = $this->input->post('email');
-		$perfil = $this->input->post('perfil');
-		$password = $this->input->post('password');
-		$password_c = $this->input->post('password_c');
-
 		$rules = get_UserCreate_Rules();
-
-		///Encriptamos la contrsaeña
-		$password_segura = password_hash($password, PASSWORD_BCRYPT, [
-			'cost' => 4,
-		]);
-
 		$this->form_validation->set_rules($rules);
 
 		if ($this->form_validation->run() == TRUE) {
+			$nombre = $this->input->post('firstname');
+			$apellido = $this->input->post('lastname');
+			$email = $this->input->post('email');
+			$perfil = $this->input->post('perfil');
+			$password = $this->input->post('password');
+			$password_c = $this->input->post('password_c');
+
+			///Encriptamos la contrsaeña
+			$password_segura = password_hash($password, PASSWORD_BCRYPT, [
+				'cost' => 4,
+			]);
+
 			$user = [
 				'nombre' => $nombre,
 				'apellido' => $apellido,
