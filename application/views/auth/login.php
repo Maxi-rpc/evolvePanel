@@ -28,11 +28,7 @@
                     <div class="alert alert-danger alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                     <h5><i class="icon fas fa-ban"></i> Error!</h5>
-                    <?php if(validation_errors()){
-                        validation_errors('<li>','</li>');
-                    }else{
-                        $this->session->flashdata('msj');
-                        }?>
+                    <?= validation_errors('<li>','</li>') ?>
                   </div>
                 <?php } ?>
                 <form action="<?= base_url('login/validate'); ?>" method="POST">
