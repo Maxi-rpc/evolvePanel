@@ -57,7 +57,7 @@ class User extends CI_Controller
                 $data['msj'] =
 					'Se creo registro';
             }
-            $vista = $this->load->view('main/adminarea/user/index', $data,TRUE);
+            $vista = $this->load->view('main/adminarea/user/index','',TRUE);
             getTemplate($vista);
 		}
 
