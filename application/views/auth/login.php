@@ -24,11 +24,15 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Inicar sesión</p>
-                <?php if(validation_errors()){ ?>
+                <?php if(validation_errors() || $this->session->flashdata('msj') ){ ?>
                     <div class="alert alert-danger alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h5><i class="icon fas fa-ban"></i> Alert!</h5>
-                    <?= validation_errors('<li>','</li>')?>
+                    <h5><i class="icon fas fa-ban"></i> Error!</h5>
+                    <?= if(validation_errors(){
+                        validation_errors('<li>','</li>')}
+                        else($this->session->flashdata('msj')){
+                            $this->session->flashdata('msj');
+                        } ?>
                   </div>
                 <?php } ?>
                 <form action="<?= base_url('login/validate'); ?>" method="POST">
@@ -39,7 +43,6 @@
                                 <span class="fas fa-envelope"></span>
                             </div>
                         </div>
-                        <div class="invalid-feedback"></div>
                     </div>
                     <div class="input-group mb-3">
                         <input type="password" name="password" class="form-control" placeholder="Contraseña">
@@ -48,7 +51,6 @@
                                 <span class="fas fa-lock"></span>
                             </div>
                         </div>
-                        <div class="invalid-feedback"></div>
                     </div>
                     <div class="row">
                         <div class="col-8">
@@ -64,17 +66,12 @@
                             <button type="submit" class="btn btn-primary btn-block">Entrar</button>
                         </div>
                         <!-- /.col -->
-                    </div><br>
-                    <div class="form-group" id="alert">
-
                     </div>
+                    <br>
                 </form>
 
                 <p class="mb-1">
                     <a href="forgot-password.html">Olvidé mi clave</a>
-                </p>
-                <p class="mb-0">
-                    <a href="<?=base_url();?>" class="text-center">Registrarme</a>
                 </p>
             </div>
             <!-- /.login-card-body -->
@@ -88,8 +85,6 @@
     <script src="<?=base_url('assets/');?>js/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="<?=base_url('assets/');?>js/adminlte.min.js"></script>
-
-    <script src="<?=base_url('assets/js/auth/login.js')?>"></script>
 
 </body>
 

@@ -33,7 +33,8 @@ class Login extends CI_Controller
 			$email = $this->input->post('email');
 			$pass = $this->input->post('password');
 			if (!($res = $this->Auth->login($email, $pass))) {
-				
+				$this->session->set_flashdata('msj','Verifique sus credenciales');
+				$this->load->view('auth/login');
 			}
 			$data = [
 				'id_usuario' => $res->id_usuario,
