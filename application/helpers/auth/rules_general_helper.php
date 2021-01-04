@@ -83,7 +83,7 @@ function get_UserCreate_Rules(){
             'label' => 'contraseña',
             'rules' => 'required',
             'errors' => [
-                'required' => 'El campo % no puede ir vacío',
+                'required' => 'El campo %s no puede ir vacío',
             ],
         ],
 
