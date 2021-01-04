@@ -131,29 +131,39 @@
                 </div>
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
-                <div class="info-box mb-3 bg-info">
-                    <span class="info-box-icon"><i class="fas fa-user-friends"></i></span>
+                <div class="small-box bg-info">
+                        <div class="inner">
+                          <h3><?php echo $datosSql['cantPlayer'] ?></h3>
 
-                    <div class="info-box-content">
-                      <span class="info-box-text">Players</span>
-                      <span class="info-box-number"><?php echo $datosSql['cantPlayer'] ?></span>
-                    </div>
-                    <!-- /.info-box-content -->
+                          <p>Players</p>
+                        </div>
+                        <div class="icon">
+                          <i class="fas fa-user-friends"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">
+                          info <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                  </div>
                 </div>
                 <!-- /.info-box -->
               </div>
               <!-- /.col -->
               <div class="col-md-3 col-sm-6 col-12">
-                <div class="info-box mb-3 bg-info">
-                    <span class="info-box-icon"><i class="fas fa-users"></i></span>
+                <div class="small-box bg-info">
+                      <div class="inner">
+                          <h3><?php echo $datosSql['cantStaff'] ?></h3>
 
-                    <div class="info-box-content">
-                      <span class="info-box-text">Staff</span>
-                      <span class="info-box-number"><?php echo $datosSql['cantStaff'] ?></span>
+                          <p>Staff</p>
+                      </div>
+                      <div class="icon">
+                          <i class="fas fa-users"></i>
+                      </div>
+                      <a href="#" class="small-box-footer">
+                          info <i class="fas fa-arrow-circle-right"></i>
+                      </a>
                     </div>
-                    <!-- /.info-box-content -->
                 </div>
-                <!-- /.info-box -->
+                  <!-- /.info-box -->
               </div>
               <!-- /.col -->
             </div>
