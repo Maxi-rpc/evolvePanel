@@ -36,10 +36,10 @@
                     <p>Users</p>
                   </div>
                   <div class="icon">
-                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-user"></i>
                   </div>
                   <a href="#" class="small-box-footer">
-                    info <i class="fas fa-user"></i>
+                    info <i class="fas fa-arrow-circle-right"></i>
                   </a>
                 </div>
               
