@@ -62,18 +62,20 @@
                         </tr>
                       </thead> 
                       <tbody>
-                        <tr>
-                          <?php if($teams != NULL): ?>
+                        <?php if($teams != NULL): ?>
                             <?php foreach($teams as $team): ?>
+                            <tr>
                               <td><?= $team->id?></td>
                               <td><?= $team->nombre?></td>
                               <td><button type="button" class="btn btn-tool"><a href="<?=base_url('team/edit/'.$team->id)?>"><i class="fas fa-user-edit"></i></a>
-                      </button></td>
+                                </button></td>
+                            </tr> 
                             <?php endforeach ?>
                             <?php else: ?>
-                              <td class="text-center">No existen datos para mostrar.</td>
-                          <?php endif ?>
-                        </tr> 
+                                <tr>
+                                    <td class="text-center">No existen datos para mostrar.</td>
+                                </tr>
+                        <?php endif ?>
                       </tbody>
                       <tfoot>
                         <tr>
