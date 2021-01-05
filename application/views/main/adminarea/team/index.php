@@ -65,7 +65,7 @@
                         <tr>
                           <?php if($teams != NULL): ?>
                             <?php foreach($teams as $team): ?>
-                              <td><?= $team->id_team?></td>
+                              <td><?= $team->id?></td>
                               <td><?= $team->nombre?></td>
                               <td><button type="button" class="btn btn-tool"><a href="<?=base_url('team/edit/'.$user->id_usuario)?>"><i class="fas fa-user-edit"></i></a>
                       </button></td>
