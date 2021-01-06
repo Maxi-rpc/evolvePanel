@@ -124,7 +124,7 @@
                         <div class="icon">
                           <i class="fas fa-user-secret"></i>
                         </div>
-                        <a href="#" class="small-box-footer">
+                        <a href="<?=base_url('perfil')?>" class="small-box-footer">
                           info <i class="fas fa-arrow-circle-right"></i>
                         </a>
                 </div>
