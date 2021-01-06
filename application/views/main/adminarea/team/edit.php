@@ -31,7 +31,7 @@
                 <div class="col-12">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Editar Datos</h3>
+                            <h3 class="card-title"><?php echo empty($team->nombre) ? 'Nuevo Team':'Editar Team';?></h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -45,7 +45,8 @@
                                 </div>
                             <?php } ?>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" placeholder="Nombre">
+                                  <label for="">Ingresar Nombre</label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="name" value="<?php echo set_value('name',$team->nombre) ?>">
                                 </div>
                             </div>
                             <!-- /.card-body -->

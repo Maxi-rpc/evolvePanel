@@ -6,9 +6,9 @@ class Teams_m extends MY_Model {
   protected $_table_name = 'teams';
 
   public $rules = array(
-    'nombre' => array(
-      'field' => 'nombre',
-      'label' => 'Nombre',
+    'name' => array(
+      'field' => 'name',
+      'label' => 'Name',
       'rules' => 'trim|required',
       'errors' => [
         'required' => 'El %s es requerido',

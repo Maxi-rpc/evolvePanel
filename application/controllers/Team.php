@@ -20,17 +20,21 @@ class Team extends CI_Controller
     }
 
     public function edit($id = NULL){
-        
+
+		if ($id) {
+			$data['team'] = $this->Teams_m->get($id);
+			//count((array)$data['category']) || $this->session->set_flashdata('msg', 'No existe esa categoria');
+		  } else {
+			$data['team'] = $this->Teams_m->get_new();
+		  }
+
 		$rules = $this->Teams_m->rules;
 		$this->form_validation->set_rules($rules);
 
 		if ($this->form_validation->run() == TRUE) {
 			
-			$nombre = $this->input->post('nombre');
-
-			$team_data = [
-				'nombre' => $nombre,
-            ];
+			$team_data = $this->Teams_m->array_from_post(['name']);
+			//$nombre = $this->input->post('nombre');
             
             $this->Teams_m->save($team_data,$id);
 
@@ -41,8 +45,8 @@ class Team extends CI_Controller
             }
             redirect('team');
 		}
-		$teams = $this->Teams_m->get();
-		$vista = $this->load->view('main/adminarea/team/edit',['teams'=>$teams],TRUE);
+		
+		$vista = $this->load->view('main/adminarea/team/edit',$data,TRUE);
 		getTemplate($vista);
     }
 }
