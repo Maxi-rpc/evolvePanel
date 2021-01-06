@@ -45,9 +45,9 @@
               <div class="col-md-12">
                 <div class="card card-primary">
                   <div class="card-header">
-                    <h3 class="card-title">Listado de usuarios - <span><?=$datosSql['cantUser']?></span></h3>
+                    <h3 class="card-title">Listado de Puesto - <span><?=$datosSql['cantPuesto']?></span></h3>
                     <div class="card-tools">
-                      <button type="button" class="btn btn-tool"><a href="<?=base_url('user/edit')?>"><i class="fas fa-user-plus"></i></a>
+                      <button type="button" class="btn btn-tool"><a href="<?=base_url('puesto/edit')?>"><i class="fas fa-user-plus"></i></a>
                       </button>
                     </div>
                   </div>
@@ -58,46 +58,33 @@
                         <tr>
                           <th>ID</th>
                           <th>Nombre</th>
-                          <th>Apellido</th>
-                          <th>Email</th>
-                          <th>Perfil</th>
-                          <th>Estado</th>
-                          <th>Is Logged</th>
                           <th>Acción</th>
                         </tr>
                       </thead> 
                       <tbody>
-                        <tr>
-                          <?php if($users != NULL): ?>
-                            <?php foreach($users as $user): ?>
-                              <td><?= $user->id?></td>
-                              <td><?= $user->nombre?></td>
-                              <td><?= $user->apellido?></td>
-                              <td><?= $user->email?></td>
-                              <td><?= $user->perfil?></td>
-                              <td><?= $user->estado?></td>
-                              <td><?= $user->is_logged?></td>
+                        <?php if($puesto != NULL): ?>
+                            <?php foreach($puesto as $puest): ?>
+                            <tr>
+                              <td><?= $puest->id?></td>
+                              <td><?= $puest->nombre?></td>
                               <td>
-                                <button type="button" class="btn btn-tool"><a href="<?=base_url('user/edit/'.$user->id)?>"><i class="fas fa-edit"></i></a>
-                              </button>
-                                <button type="button" class="btn btn-tool"><a href="<?=base_url('team/delete/'.$user->id)?>"><i class="fas fa-trash-alt"></i></a>
+                                <button type="button" class="btn btn-tool"><a href="<?=base_url('puesto/edit/'.$puest->id)?>"><i class="fas fa-edit"></i></a>
+                                </button>
+                                <button type="button" class="btn btn-tool"><a href="<?=base_url('puesto/delete/'.$puest->id)?>"><i class="fas fa-trash-alt"></i></a>
                                 </button>
                               </td>
+                            </tr> 
                             <?php endforeach ?>
                             <?php else: ?>
-                              <td class="text-center">No existen datos para mostrar.</td>
-                          <?php endif ?>
-                        </tr> 
+                                <tr>
+                                    <td class="text-center">No existen datos para mostrar.</td>
+                                </tr>
+                        <?php endif ?>
                       </tbody>
                       <tfoot>
                         <tr>
                           <th>ID</th>
                           <th>Nombre</th>
-                          <th>Apellido</th>
-                          <th>Email</th>
-                          <th>Perfil</th>
-                          <th>Estado</th>
-                          <th>Is Logged</th>
                           <th>Acción</th>
                         </tr>
                       </tfoot>
