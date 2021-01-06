@@ -9,7 +9,7 @@ class Teams extends CI_Controller
 		$this->load->library(['form_validation']);
 		$this->load->helper(['vistas']);
 		$this->load->model(['Teams_m']);
-	}
+    }
 
 	public function index()
 	{

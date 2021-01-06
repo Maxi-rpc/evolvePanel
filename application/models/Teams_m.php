@@ -10,10 +10,10 @@ class Teams_m extends MY_Model {
       'field' => 'nombre',
       'label' => 'Nombre',
       'rules' => 'trim|required'
-      'errors' => [
+      'errors' => (
         'required' => 'El %s es requerido',
         'required' => 'El campo %s no puede ir vacío',
-        ],
+      ),
     ),
   );
 
