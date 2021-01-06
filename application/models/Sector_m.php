@@ -20,7 +20,7 @@ class Sector_m extends MY_Model {
   public function get_new()
   {
     $sector = new stdClass(); //clase vacia
-    $sector->sector = '';
+    $sector->nombre = '';
     $sector->id = 0;
 
     return $sector;
