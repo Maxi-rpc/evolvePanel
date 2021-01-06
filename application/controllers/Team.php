@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Teams extends CI_Controller
+class Team extends CI_Controller
 {
 	public function __construct()
 	{
@@ -39,7 +39,7 @@ class Teams extends CI_Controller
             }else{
 				$this->session->set_flashdata('msj','Se creo con exito.');
             }
-            redirect('teams');
+            redirect('team');
 		}
 		$teams = $this->Teams_m->get();
 		$vista = $this->load->view('main/adminarea/team/edit',['teams'=>$teams],TRUE);
