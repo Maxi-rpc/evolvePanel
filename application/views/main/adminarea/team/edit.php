@@ -35,7 +35,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="<?= base_url('team/edit'); ?>" method="POST">
+                        
                             <div class="card-body">
                             <?php if(validation_errors()){ ?>
                                 <div class="alert alert-danger alert-dismissible">
@@ -44,6 +44,7 @@
                                     <?= validation_errors('<li>','</li>') ?>
                                 </div>
                             <?php } ?>
+                            <?php echo form_open() ?>
                                 <div class="form-group">
                                   <label for="">Ingresar Nombre</label>
                                   <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo set_value('name',$team->nombre) ?>">
@@ -53,7 +54,8 @@
                             <div class="card-footer">
                             <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
-                        </form>
+                            <?php echo form_close() ?>
+                        
                     </div>
                 </div>
             </div>

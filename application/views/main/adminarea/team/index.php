@@ -31,7 +31,7 @@
               <?php if($this->session->flashdata('msj')){ ?>
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="alert alert-warning alert-dismissible">
+                    <div class="alert alert-success alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                           <h5><i class="icon fas fa-ban"></i> Alert!</h5>
                           <?= $this->session->flashdata('msj') ?>
@@ -67,8 +67,12 @@
                             <tr>
                               <td><?= $team->id?></td>
                               <td><?= $team->nombre?></td>
-                              <td><button type="button" class="btn btn-tool"><a href="<?=base_url('team/edit/'.$team->id)?>"><i class="fas fa-user-edit"></i></a>
-                                </button></td>
+                              <td>
+                                <button type="button" class="btn btn-tool"><a href="<?=base_url('team/edit/'.$team->id)?>"><i class="fas fa-user-edit"></i></a>
+                                </button>
+                                <button type="button" class="btn btn-tool"><a href="<?=base_url('team/edit/'.$team->id)?>"><i class="fas fa-user-edit"></i></a>
+                                </button>
+                              </td>
                             </tr> 
                             <?php endforeach ?>
                             <?php else: ?>
