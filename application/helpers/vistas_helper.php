@@ -33,7 +33,7 @@ function getCantidadDatosSQL(){
   $sql_puesto = $CI->db->get_where('puesto');
   $cPuesto = $sql_puesto->num_rows();
 
-  $sql_perfiles = $CI->db->get_where('perfiles');
+  $sql_perfiles = $CI->db->get_where('perfil');
   $cPerfiles = $sql_perfiles->num_rows();
 
   $sql_players = $CI->db->get_where('usuario_info',array('sector' => 'player'));
