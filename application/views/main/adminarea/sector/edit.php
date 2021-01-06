@@ -31,7 +31,7 @@
               <div class="col-12">
                 <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title"><?php echo empty($puesto->nombre) ? 'Nuevo Puesto':'Editar Puesto';?></h3>
+                            <h3 class="card-title"><?php echo empty($sector->nombre) ? 'Nuevo Sector':'Editar Sector';?></h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -46,7 +46,7 @@
                           <?php echo form_open() ?>
                             <div class="form-group">
                               <label for="">Ingresar Nombre</label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo set_value('name',$puesto->nombre) ?>">
+                              <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo set_value('name',$sector->nombre) ?>">
                             </div>
                             </div>
                             <!-- /.card-body -->
