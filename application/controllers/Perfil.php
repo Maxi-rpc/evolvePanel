@@ -14,7 +14,7 @@ class Perfil extends CI_Controller
 	public function index()
 	{
         $datosSql = getCantidadDatosSQL();
-        $perfil = $this->Puesto_m->get();
+        $perfil = $this->Perfil_m->get();
         $vista = $this->load->view('main/adminarea/perfil/index',['datosSql'=>$datosSql,'perfil'=>$perfil],TRUE);
 		getTemplate($vista);
     }
