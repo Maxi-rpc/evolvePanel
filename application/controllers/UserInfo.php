@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class User extends CI_Controller
+class UserInfo extends CI_Controller
 {
 	public function __construct()
 	{
@@ -60,5 +60,6 @@ class User extends CI_Controller
 		$perfiles = $this->Perfil_m->get();
 		$vista = $this->load->view('main/adminarea/user/edit',['perfiles'=>$perfiles],TRUE);
 		getTemplate($vista);
-    }
+	}
+
 }

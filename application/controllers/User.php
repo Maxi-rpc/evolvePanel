@@ -8,7 +8,7 @@ class User extends CI_Controller
 		parent::__construct();
 		$this->load->library(['form_validation']);
 		$this->load->helper(['vistas','auth/rules_general']);
-		$this->load->model(['Users_m','Perfil_m']);
+		$this->load->model(['Users_m','Perfil_m','UserInfo_m']);
 	}
 
 	public function index()
