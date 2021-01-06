@@ -35,7 +35,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="<?= base_url('teams/edit'); ?>" method="POST">
+                        <form action="<?= base_url('team/edit'); ?>" method="POST">
                             <div class="card-body">
                             <?php if(validation_errors()){ ?>
                                 <div class="alert alert-danger alert-dismissible">
