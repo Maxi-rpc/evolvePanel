@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Team extends CI_Controller
+class Puesto extends CI_Controller
 {
 	public function __construct()
 	{
