@@ -46,7 +46,7 @@
                             <?php } ?>
                                 <div class="form-group">
                                   <label for="">Ingresar Nombre</label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" name="name" value="<?php echo set_value('name',$team->nombre) ?>">
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo set_value('name',$team->nombre) ?>">
                                 </div>
                             </div>
                             <!-- /.card-body -->

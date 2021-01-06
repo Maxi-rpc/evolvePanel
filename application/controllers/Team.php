@@ -33,7 +33,7 @@ class Team extends CI_Controller
 
 		if ($this->form_validation->run() == TRUE) {
 			
-			$team_data = $this->Teams_m->array_from_post(['name']);
+			$team_data = $this->Teams_m->array_from_post(['nombre']);
 			//$nombre = $this->input->post('nombre');
             
             $this->Teams_m->save($team_data,$id);
