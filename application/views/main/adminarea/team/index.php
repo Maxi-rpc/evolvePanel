@@ -56,7 +56,7 @@
                     <table id="dataTable2" class="table table-bordered table-striped">
                       <thead>
                         <tr>
-                          <th>ID Team</th>
+                          <th>ID</th>
                           <th>Nombre</th>
                           <th>Acción</th>
                         </tr>
@@ -79,7 +79,7 @@
                       </tbody>
                       <tfoot>
                         <tr>
-                          <th>ID Team</th>
+                          <th>ID</th>
                           <th>Nombre</th>
                           <th>Acción</th>
                         </tr>
