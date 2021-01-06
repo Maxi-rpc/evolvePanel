@@ -15,7 +15,7 @@ class Puesto extends CI_Controller
 	{
         $datosSql = getCantidadDatosSQL();
         $puesto = $this->Puesto_m->get();
-        $vista = $this->load->view('main/adminarea/team/index',['datosSql'=>$datosSql,'puesto'=>$puesto],TRUE);
+        $vista = $this->load->view('main/adminarea/puesto/index',['datosSql'=>$datosSql,'puesto'=>$puesto],TRUE);
 		getTemplate($vista);
     }
 
