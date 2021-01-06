@@ -53,6 +53,7 @@ class MY_Model extends CI_Model {
 
     $this->db->where($this->_primary_key, $id);
     $this->db->delete($this->_table_name);
+    return TRUE;
   }
 
   public function array_from_post($fields)
