@@ -21,7 +21,7 @@ class Team extends CI_Controller
 
     public function edit($id = NULL){
         
-		$rules = $this->Team_m->rules;
+		$rules = $this->Teams_m->rules;
 		$this->form_validation->set_rules($rules);
 
 		if ($this->form_validation->run() == TRUE) {
