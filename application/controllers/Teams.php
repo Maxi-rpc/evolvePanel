@@ -7,7 +7,7 @@ class Teams extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library(['form_validation']);
-		$this->load->helper(['vistas','auth/rules_general']);
+		$this->load->helper(['vistas']);
 		$this->load->model(['Teams_m']);
 	}
 
@@ -21,44 +21,28 @@ class Teams extends CI_Controller
 
     public function edit($id = NULL){
         
-		$rules = get_UserCreate_Rules();
+		$rules = $this->Team_m->rules;
 		$this->form_validation->set_rules($rules);
 
 		if ($this->form_validation->run() == TRUE) {
 			
-			$nombre = $this->input->post('firstname');
-			$apellido = $this->input->post('lastname');
-			$email = $this->input->post('email');
-			$perfil = $this->input->post('perfil');
-			$password = $this->input->post('password');
-			$password_c = $this->input->post('password_c');
+			$nombre = $this->input->post('nombre');
 
-			///Encriptamos la contrsaeña
-			$password_segura = password_hash($password, PASSWORD_BCRYPT, [
-				'cost' => 4,
-			]);
-
-			$user = [
+			$team_data = [
 				'nombre' => $nombre,
-				'apellido' => $apellido,
-				'email' => $email,				
-				'password' => $password_segura, ///Enviamos la contraseña encripatada a la BD
-				'perfil' => $perfil,
-				'estado' => 1,
-			];
+            ];
+            
+            $this->Teams_m->save($team_data,$id);
 
-			if (!$this->Users_m->save($user)) {
-				$this->session->set_flashdata('msj','Ocurrio un error al ingresar los datos, intente nuevamente');
-			} else {
-                $buscarID = $this->Users_m->get($user['email']);
-                $user['id_usuario'] = $buscarID['id_usuario'];
-                $this->UserInfo_m->create($user); // Creamos el user en Usuario_info
-				$this->session->set_flashdata('msj','Se creo registro');
+            if($id){
+                $this->session->set_flashdata('msj','Se edito con exito.');
+            }else{
+				$this->session->set_flashdata('msj','Se creo con exito.');
             }
-            redirect('user');
+            redirect('teams');
 		}
-		$perfiles = $this->Perfil_m->get();
-		$vista = $this->load->view('main/adminarea/user/edit',['perfiles'=>$perfiles],TRUE);
+		$teams = $this->Teams_m->get();
+		$vista = $this->load->view('main/adminarea/team/edit',['teams'=>$teams],TRUE);
 		getTemplate($vista);
     }
 }
