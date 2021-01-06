@@ -86,7 +86,7 @@
                       <div class="icon">
                         <i class="fas fa-chalkboard-teacher"></i>
                       </div>
-                      <a href="#" class="small-box-footer">
+                      <a href="<?=base_url('sector')?>" class="small-box-footer">
                         info <i class="fas fa-arrow-circle-right"></i>
                       </a>
                 </div>
