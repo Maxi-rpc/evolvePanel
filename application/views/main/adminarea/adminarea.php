@@ -70,7 +70,7 @@
                       <div class="icon">
                         <i class="fas fa-gamepad"></i>
                       </div>
-                      <a href="<?=base_url('teams')?>" class="small-box-footer">
+                      <a href="<?=base_url('team')?>" class="small-box-footer">
                         info <i class="fas fa-arrow-circle-right"></i>
                       </a>
                 </div> <!-- /.info-box -->
