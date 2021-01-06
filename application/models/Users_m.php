@@ -1,30 +1,82 @@
 <?php
 
-class Users_m extends CI_Model {
-	function __construct()
+class Users_m extends MY_Model {
+
+	protected $_table_name = 'usuarios';
+
+	public $rules = array(
+		'firstname' => array(
+			'field' => 'firstname',
+			'label' => 'Nombre',
+			'rules' => 'trim|required',
+			'errors' => [
+				'required' => 'El %s es requerido',
+				'required' => 'El campo %s no puede ir vacío',
+				],
+			),
+		'lastname' => array(
+			'field' => 'lastname',
+			'label' => 'Apellido',
+			'rules' => 'trim|required',
+			'errors' => [
+				'required' => 'El %s es requerido',
+				'required' => 'El campo %s no puede ir vacío',
+				],
+			),
+		'email' => array(
+			'field' => 'email',
+			'label' => 'email',
+			'rules' => 'trim|required',
+			'errors' => [
+				'required' => 'El %s es requerido',
+				'required' => 'El campo %s no puede ir vacío',
+				'valid_email' => 'Ingrese un %s válido',
+				'is_unique' => 'El %s ingresado ya se encuentra registrado',
+				],
+			),
+		'perfil' => array(
+			'field' => 'perfil',
+			'label' => 'perfil',
+			'rules' => 'trim|required',
+			'errors' => [
+				'required' => 'El %s es requerido',
+				'required' => 'El campo %s no puede ir vacío',
+				'numeric' => 'Ingrese solo números',
+				],
+			),
+		'password' => array(
+			'field' => 'password',
+			'label' => 'contraseña',
+			'rules' => 'trim|required',
+			'errors' => [
+				'required' => 'El campo %s no puede ir vacío',
+				],
+			),
+		'password_c' => array(
+			'field' => 'password_c',
+			'label' => 'confirmación de contraseña',
+			'rules' => 'trim|required',
+			'errors' => [
+				'matches' => 'La %s no es igual a la contraseña',
+				],
+			),
+	);
+
+	public function get_new()
 	{
-		$this->load->database();
+		$user = new stdClass(); //clase vacia
+		$user->nombre = '';
+		$user->apellido = '';
+		$user->email = '';
+		$user->password = '';
+		$user->perfil = 0;
+		$user->estado = 0;
+		$user->is_logged = 0;
+
+		return $user;
 	}
 
-	public function save($data, $id = NULL)
-	{
-		if($id === NULL){
-			$this->db->trans_start();
-			$this->db->insert('usuarios', $data);
-			$data['id_usuario'] = $this->db->insert_id();
-			$this->db->trans_complete();
-			if ($this->db->trans_status() === false) {
-				return false;
-			} else {
-				return true;
-			}
-		} else {
-			$this->db->where('id_usuario',$id);
-			$this->db->update('usuarios',$data);
-		}
-	}
-
-	public function get($email = NULL)
+	public function get_byEmail($email = NULL)
 	{
 		if($email != NULL){
 			$sql = $this->db->get_where('usuarios',array('email',$email));

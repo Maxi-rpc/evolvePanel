@@ -46,13 +46,12 @@ class User extends CI_Controller
 				'perfil' => $perfil,
 				'estado' => 1,
 			];
-
-			if (!$this->Users_m->save($user)) {
+			$buscarID = $this->Users_m->save($user);
+			if ($buscarID = NULL) {
 				$this->session->set_flashdata('msj','Ocurrio un error al ingresar los datos, intente nuevamente');
 			} else {
-                $buscarID = $this->Users_m->get($user['email']);
-                $user['id_usuario'] = $buscarID['id_usuario'];
-                $this->UserInfo_m->create($user); // Creamos el user en Usuario_info
+                $user['id_usuario'] = $buscarID;
+                $this->UserInfo_m->save($user); // Creamos el user en Usuario_info
 				$this->session->set_flashdata('msj','Se creo registro');
             }
             redirect('user');
