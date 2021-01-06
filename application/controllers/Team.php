@@ -23,7 +23,7 @@ class Team extends CI_Controller
 
 		if ($id) {
 			$data['team'] = $this->Teams_m->get($id);
-			//count((array)$data['category']) || $this->session->set_flashdata('msg', 'No existe esa categoria');
+			
 		  } else {
 			$data['team'] = $this->Teams_m->get_new();
 		  }
