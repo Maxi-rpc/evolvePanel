@@ -48,5 +48,16 @@ class Team extends CI_Controller
 		
 		$vista = $this->load->view('main/adminarea/team/edit',$data,TRUE);
 		getTemplate($vista);
+	}
+
+	public function delete($id = NULL)
+	{
+		$team_id = $this->Teams_m->get($id);
+		if($this->Teams_m->delete($team_id) == TRUE){
+			$this->session->set_flashdata('msj','Se elimino con exito.');
+		} else {
+			$this->session->set_flashdata('msj','No se pudo eliminar.');
+		}
+        redirect('team');
     }
 }

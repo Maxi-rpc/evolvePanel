@@ -68,9 +68,9 @@
                               <td><?= $team->id?></td>
                               <td><?= $team->nombre?></td>
                               <td>
-                                <button type="button" class="btn btn-tool"><a href="<?=base_url('team/edit/'.$team->id)?>"><i class="fas fa-user-edit"></i></a>
+                                <button type="button" class="btn btn-tool"><a href="<?=base_url('team/edit/'.$team->id)?>"><i class="fas fa-edit"></i></a>
                                 </button>
-                                <button type="button" class="btn btn-tool"><a href="<?=base_url('team/edit/'.$team->id)?>"><i class="fas fa-user-edit"></i></a>
+                                <button type="button" class="btn btn-tool"><a href="<?=base_url('team/delete/'.$team->id)?>"><i class="fas fa-trash-alt"></i></a>
                                 </button>
                               </td>
                             </tr> 
