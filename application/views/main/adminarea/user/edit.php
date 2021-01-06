@@ -57,8 +57,8 @@
                                     <select class="form-control" name="perfil">
                                         <option value="">Seleccione Perfil</option>
 
-                                        <?php foreach($perfiles as $perfil): ?>
-                                        <option value="<?= $perfil->id_perfil ?>"><?= $perfil->nombre ?></option>
+                                        <?php foreach($perfil as $perf): ?>
+                                        <option value="<?= $perf->id ?>"><?= $perf->nombre ?></option>
                                         <?php endforeach ?>
 
                                     </select>

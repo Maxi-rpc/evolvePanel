@@ -14,7 +14,7 @@ class User extends CI_Controller
 	public function index()
 	{
         $datosSql = getCantidadDatosSQL();
-        $users = $this->Users_m->get();
+		$users = $this->Users_m->get();
         $vista = $this->load->view('main/adminarea/user/index',['datosSql'=>$datosSql,'users'=>$users],TRUE);
 		getTemplate($vista);
     }
@@ -57,8 +57,8 @@ class User extends CI_Controller
             }
             redirect('user');
 		}
-		$perfiles = $this->Perfil_m->get();
-		$vista = $this->load->view('main/adminarea/user/edit',['perfiles'=>$perfiles],TRUE);
+		$perfil = $this->Perfil_m->get();
+		$vista = $this->load->view('main/adminarea/user/edit',['perfil'=>$perfil],TRUE);
 		getTemplate($vista);
     }
 }
