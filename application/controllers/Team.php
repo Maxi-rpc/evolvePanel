@@ -52,7 +52,7 @@ class Team extends CI_Controller
 
 	public function delete($id = NULL)
 	{
-		if($this->Teams_m->delete($team_id) == TRUE){
+		if($this->Teams_m->delete($id) == TRUE){
 			$this->session->set_flashdata('msj','Se elimino con exito.');
 		} else {
 			$this->session->set_flashdata('msj','No se pudo eliminar.');
