@@ -47,7 +47,7 @@ class Profile extends CI_Controller
             redirect('profile');
 		}
 		
-		$vista = $this->load->view('main/profile/edit',$data,TRUE);
+		$vista = $this->load->view('main/profile/index',$data,TRUE);
 		getTemplate($vista);
 	}
 
