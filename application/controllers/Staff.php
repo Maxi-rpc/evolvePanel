@@ -28,14 +28,16 @@ class Staff extends CI_Controller
 
 		//Buscamos los datos para mostrar en Search
 		$userSearch = $this->UserInfo_m->get($id);
-		$userSearchSec = $this->Sector_m->get($userSearch->sector);
+		$sector = $this->Sector_m->get($userSearch->sector);
+		$puesto = $this->Puesto_m->get($userSearch->puesto);
 
 		$data['userSearch'] = array(
 			'nombre' => $userSearch->nombre,
 			'apellido' => $userSearch->apellido,
 			'nickname' => $userSearch->nickname,
 			'email' => $userSearch->email,
-			'sector' => $userSearchSec->nombre,
+			'sector' => $sector->nombre,
+			'puesto' => $puesto->nombre,
 		);
 		
         $vista = $this->load->view('main/staff/search',$data,TRUE);
