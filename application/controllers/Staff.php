@@ -28,7 +28,7 @@ class Staff extends CI_Controller
 
 		//Buscamos los datos para mostrar en Search
 		$userSearch['info'] = $this->UserInfo_m->get($id);
-		$userSearch['sector'] = $this->Sector_m->get($userSearch->sector);
+		$userSearch['sector'] = $this->Sector_m->get($userSearch->info->sector);
 
 		$data['userSearch'] = array(
 			'nombre' => $userSearch->info->nombre,
