@@ -23,7 +23,7 @@
       <div class="container-fluid">
       <!-- =========================================================== -->
 
-        <?php if($userSearch): ?>
+        <?php if($userSearch != NULL): ?>
           <?php foreach($userSearch as $uSearch){ ?>
           <div class="row">
             <div class="col-12">
