@@ -34,7 +34,7 @@
                     <h3 class="widget-user-username text-right"><?php echo $userSearch->nombre.' '.$userSearch->apellido ?></h3>
                     <h4 class="widget-user-username text-right"><?php echo $userSearch->nickname ?></h4>
                     <?php foreach($sectores as $sect):?> 
-                        <?php if($sect == $userSearch->sector){ ?>
+                        <?php if($sect->id == $userSearch->sector){ ?>
                             <h5 class="widget-user-desc text-right"><?php echo $sect->nombre ?></h5>
                         <?php } ?>    
                         <?php endforeach ?>
