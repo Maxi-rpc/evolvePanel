@@ -25,15 +25,7 @@ class Staff extends CI_Controller
         $data['userInfo'] = $this->UserInfo_m->get($id);
 		$data['sectores'] = $this->Sector_m->get();
 		$data['puestos'] = $this->Puesto_m->get();
-		
-		if($id != NULL){
-			if($id){
-				$this->session->set_flashdata('msj','Se encontro usuario');
-			}else{
-				$this->session->set_flashdata('msj','No se encontro usuario.');
-			}
-			redirect('staff');
-		}
+		$data['msj'] = 1;
 		
         $vista = $this->load->view('main/staff/index',$data,TRUE);
 		getTemplate($vista);

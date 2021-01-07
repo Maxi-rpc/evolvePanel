@@ -23,7 +23,7 @@
       <div class="container-fluid">
       <!-- =========================================================== -->
 
-        <?php if($this->session->flashdata('msj')): ?>
+        <?php if($msj): ?>
           <div class="row">
             <div class="col-12">
               <!-- Widget: user widget style 1 -->
