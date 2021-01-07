@@ -21,12 +21,12 @@
     <section class="content">
       <div class="container-fluid">
 
-        <?php if($this->session->flashdata('msg')): ?>
+        <?php if($this->session->flashdata('msj')): ?>
           <div class="row">
             <div class="alert alert-success alert-dismissible">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
               <h5><i class="icon fas fa-check"></i> Alert!</h5>
-              <?php $this->session->flashdata('msg') ?>
+              <?php $this->session->flashdata('msj') ?>
             </div>
           </div>
         <?php endif ?>
@@ -37,16 +37,16 @@
             <div class="card card-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header"
-                   style="background: url('../dist/img/photo1.png') center center;">
-                <h3 class="widget-user-username"><?php echo $user['nickname'] ?></h3>
+                   style="background: url('<?=base_url()?>assets/img/photo1.png') center center;">
+                <h3 class="widget-user-username"><?php echo $datos->nickname ?></h3>
                 <h5 class="widget-user-desc"> <?php foreach($sectores as $sec){
-                  if($sec->id_sector == $user['sector']){
+                  if($sec->id == $datos->sector){
                     echo $sec->nombre;
                   };
                 } ?> </h5>
               </div>
               <div class="widget-user-image">
-                <img class="img-circle" src="../dist/img/user3-128x128.jpg" alt="User Avatar">
+                <img class="img-circle" src="<?=base_url()?>assets/img/user3-128x128.jpg" alt="User Avatar">
               </div>
               <div class="card-footer">
                 <div class="row">
@@ -85,7 +85,7 @@
                 <h3 class="card-title">Info de Mí</h3>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool"> 
-                    <a href="<?php base_url() ?>perfil/edit"><i class="fas fa-edit"></i></a>
+                    <a href="<?php base_url('profile/edit') ?>"><i class="fas fa-edit"></i></a>
                   </button>
                 </div>
               </div>
@@ -95,7 +95,7 @@
 
                 <p class="text-muted">
                   <?php 
-                  echo $user['nombre']. " - " .$user['apellido']. " - " .$user['email'];
+                  echo $datos->nombre. " - " .$datos->apellido. " - " .$datos->email;
                   ?>
                 </p>
 

@@ -8,14 +8,14 @@ class Profile extends CI_Controller
 		parent::__construct();
 		$this->load->library(['form_validation']);
 		$this->load->helper(['vistas']);
-		$this->load->model(['Users_m','UserInfo_m','Perfil_m']);
+		$this->load->model(['Users_m','UserInfo_m','Sector_m']);
     }
 
 	public function index()
 	{
-        $id = $this->session->id_usuario;
-        $datos = $this->UserInfo_m->
-        $datos['perfil'] = $this->Perfil_m->get();
+        $id = $this->session->userdata('id');
+        $datos = $this->UserInfo_m->get($id);
+        $datos['sectores'] = $this->Sector_m->get();
 
         $vista = $this->load->view('main/profile/index',$datos,TRUE);
 		getTemplate($vista);

@@ -37,7 +37,7 @@ class Login extends CI_Controller
 				redirect('login');
 			}
 			$data = [
-				'id_usuario' => $res->id_usuario,
+				'id' => $res->id,
 				'nombre' => $res->nombre,
 				'apellido' => $res->apellido,
 				'email' => $res->email,
