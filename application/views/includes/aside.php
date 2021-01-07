@@ -23,7 +23,7 @@
               />
             </div>
             <div class="info">
-              <a href="<?=base_url()?>perfil" class="d-block">
+              <a href="<?=base_url()?>profile" class="d-block">
               <?php
                 if(isset($_SESSION['nombre'])){
                   echo $_SESSION['nombre'];
