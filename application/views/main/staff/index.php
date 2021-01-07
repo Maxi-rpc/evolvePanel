@@ -64,17 +64,17 @@
                                         </tr>
                                 <?php endif ?>
                             </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Nickname</th>
-                                <th>Email</th>
-                                <th>Sector</th>
-                                <th>Puesto</th>
-                                <th>Acción</th>
-                            </tr>
-                        </tfoot>
+                            <tfoot>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Nickname</th>
+                                    <th>Email</th>
+                                    <th>Sector</th>
+                                    <th>Puesto</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div> <!-- /.card-body -->
                 </div> <!-- /.card -->
