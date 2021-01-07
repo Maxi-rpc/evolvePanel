@@ -14,7 +14,7 @@ class Profile extends CI_Controller
 	public function index()
 	{
         $id = $this->session->userdata('id');
-        $datos = $this->UserInfo_m->get($id);
+        $datos['userInfo'] = $this->UserInfo_m->get($id);
         $datos['sectores'] = $this->Sector_m->get();
 
         $vista = $this->load->view('main/profile/index',$datos,TRUE);
