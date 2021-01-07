@@ -22,10 +22,19 @@ class Staff extends CI_Controller
 
 	public function search($id = NULL)
 	{
-		$data['userSearch'] = $this->UserInfo_m->get($id);
 		$data['userInfo'] = $this->UserInfo_m->get();
 		$data['sectores'] = $this->Sector_m->get();
 		$data['puestos'] = $this->Puesto_m->get();
+
+		$userSearch = $this->UserInfo_m->get($id);
+
+		$data['userSearch'] = array(
+			'nombre' => $userSearch->nombre;
+			'apellido' => $userSearch->apellido;
+			'nickname' => $userSearch->nickname;
+			'email' => $userSearch->email;
+			'sector' => $this->Sector_m->get($userSearch->sector);
+		);
 		
         $vista = $this->load->view('main/staff/search',$data,TRUE);
 		getTemplate($vista);

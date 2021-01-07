@@ -27,6 +27,8 @@
           <div class="row">
             <div class="col-12">
               <!-- Widget: user widget style 1 -->
+              
+
               <div class="card card-widget widget-user">
                   <!-- Add the bg color to the header using any of the bg-* classes -->
                   <div class="widget-user-header text-white"
