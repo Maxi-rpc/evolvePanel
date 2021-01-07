@@ -24,7 +24,6 @@
       <!-- =========================================================== -->
 
         <?php if($userSearch != NULL): ?>
-          <?php foreach($userSearch as $uSearch){ ?>
           <div class="row">
             <div class="col-12">
               <!-- Widget: user widget style 1 -->
@@ -32,9 +31,9 @@
                   <!-- Add the bg color to the header using any of the bg-* classes -->
                   <div class="widget-user-header text-white"
                       style="background: url('<?=base_url()?>assets/img/photo1.png') center center;">
-                    <h3 class="widget-user-username text-right"><?php echo $uSearch->nombre.' '.$uSearch->apellido ?></h3>
-                    <h4 class="widget-user-username text-right"><?php echo $uSearch->nickname ?></h4>
-                    <h5 class="widget-user-desc text-right"><?php echo $uSearch->sector ?></h5>
+                    <h3 class="widget-user-username text-right"><?php echo $userSearch->nombre.' '.$userSearch->apellido ?></h3>
+                    <h4 class="widget-user-username text-right"><?php echo $userSearch->nickname ?></h4>
+                    <h5 class="widget-user-desc text-right"><?php echo $userSearch->sector ?></h5>
                   </div>
                   <div class="widget-user-image">
                     <img class="img-circle" src="<?=base_url()?>assets/img/user3-128x128.jpg" alt="User Avatar">
@@ -71,7 +70,6 @@
               </div> <!-- /.widget-user -->
             </div> <!-- /.col-12 -->
           </div> <!-- /.row -->
-          <?php } ?>
         <?php endif ?>
 
         <div class="row">
