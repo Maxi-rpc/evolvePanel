@@ -36,7 +36,7 @@
                     <h3 class="widget-user-username text-right"><?php echo $userSearch['nombre'].' '.$userSearch['apellido'] ?></h3>
                     <h4 class="widget-user-username text-right"><?php echo $userSearch['nickname'] ?></h4>
                     
-                            <h5 class="widget-user-desc text-right"><?php echo $userSearch['nombre'] ?></h5>
+                            <h5 class="widget-user-desc text-right"><?php echo $userSearch['sector'] ?></h5>
                         
                   </div>
                   <div class="widget-user-image">
