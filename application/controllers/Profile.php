@@ -44,17 +44,8 @@ class Profile extends CI_Controller
             redirect('profile');
 		}
 		
-		$vista = $this->load->view('main/adminarea/profile/edit',$data,TRUE);
+		$vista = $this->load->view('main/profile/edit',$data,TRUE);
 		getTemplate($vista);
 	}
 
-	public function delete($id = NULL)
-	{
-		if($this->Perfil_m->delete($id) == FALSE){
-			$this->session->set_flashdata('msj','No se pudo eliminar.');
-		} else {
-			$this->session->set_flashdata('msj','Se elimino con exito.');
-		}
-        redirect('perfil');
-    }
 }
