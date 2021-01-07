@@ -7,7 +7,7 @@ class Staff extends CI_Controller
 	{
 		parent::__construct();
         $this->load->helper('vistas');
-        $this->load->model(['UsersInfo_m','Sector_m','Puesto_m']);
+        $this->load->model(['UserInfo_m','Sector_m','Puesto_m']);
 	}
 
 	public function index()
