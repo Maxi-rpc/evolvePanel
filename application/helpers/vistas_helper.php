@@ -40,7 +40,7 @@ function getCantidadDatosSQL(){
   $sql_staff = $CI->db->get_where('usuario_info',array('sector' => $staff));
   $cStaff = $sql_staff->num_rows();
 
-  $player = 1;
+  $player = 2;
   $sql_players = $CI->db->get_where('usuario_info',array('sector' => $player));
   $cPlayer = $sql_players->num_rows();
 
