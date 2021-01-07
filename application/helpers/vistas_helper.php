@@ -36,11 +36,13 @@ function getCantidadDatosSQL(){
   $sql_perfiles = $CI->db->get_where('perfil');
   $cPerfiles = $sql_perfiles->num_rows();
 
-  $sql_players = $CI->db->get_where('usuario_info',array('sector' => 'player'));
-  $cPlayer = $sql_players->num_rows();
-
-  $sql_staff = $CI->db->get_where('usuario_info',array('sector' => 'staff'));
+  $staff = 1;
+  $sql_staff = $CI->db->get_where('usuario_info',array('sector' => $staff));
   $cStaff = $sql_staff->num_rows();
+
+  $player = 1;
+  $sql_players = $CI->db->get_where('usuario_info',array('sector' => $player));
+  $cPlayer = $sql_players->num_rows();
 
   $datos = array(
       'cantUser' => $cUser,
@@ -49,8 +51,8 @@ function getCantidadDatosSQL(){
       'cantSector' => $cSector,
       'cantPuesto' => $cPuesto,
       'cantPerfil' => $cPerfiles,
-      'cantPlayer' => $cPlayer,
       'cantStaff' => $cStaff,
+      'cantPlayer' => $cPlayer,
   );
 
   return $datos;
