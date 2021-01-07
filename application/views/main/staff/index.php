@@ -50,8 +50,16 @@
                                             <td><?= $user->apellido?></td>
                                             <td><?= $user->nickname?></td>
                                             <td><?= $user->email?></td>
-                                            <td><?= $user->sector?></td>
-                                            <td><?= $user->puesto?></td>
+                                            <?php foreach($sectores as $sec): ?>
+                                              <?php if($user->sector == $sec->id){ ?>
+                                                <td><?= $sec->nombre?></td>
+                                              <?php } ?>
+                                            <?php endforeach ?>
+                                            <?php foreach($puestos as $pue): ?>
+                                              <?php if($user->puesto == $pue->id){ ?>
+                                                <td><?= $pue->nombre?></td>
+                                              <?php } ?>
+                                            <?php endforeach ?>
                                             <td>
                                                 <button type="button" class="btn btn-tool"><a href="<?=base_url('staff/search/'.$user->id)?>"><i class="fas fa-search-plus"></i></a>
                                                 </button>
