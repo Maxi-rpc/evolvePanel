@@ -20,4 +20,22 @@ class Staff extends CI_Controller
 		getTemplate($vista);
     }
 
+	public function search($id = NULL)
+	{
+        $data['userInfo'] = $this->UserInfo_m->get($id);
+		$data['sectores'] = $this->Sector_m->get();
+		$data['puestos'] = $this->Puesto_m->get();
+		
+		if($id != NULL){
+			if($id){
+				$this->session->set_flashdata('msj','Se encontro usuario');
+			}else{
+				$this->session->set_flashdata('msj','No se encontro usuario.');
+			}
+			redirect('staff');
+		}
+		
+        $vista = $this->load->view('main/staff/index',$data,TRUE);
+		getTemplate($vista);
+    }
 }
