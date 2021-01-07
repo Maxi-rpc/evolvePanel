@@ -27,27 +27,29 @@
           <div class="row">
             <div class="col-12">
               <!-- Widget: user widget style 1 -->
-              
-
               <div class="card card-widget widget-user">
                   <!-- Add the bg color to the header using any of the bg-* classes -->
                   <div class="widget-user-header text-white"
                       style="background: url('<?=base_url()?>assets/img/photo1.png') center center;">
                     <h3 class="widget-user-username text-left"><?php echo $userSearch['nombre'].' '.$userSearch['apellido'] ?></h3>
                     <h4 class="widget-user-username text-left"><?php echo $userSearch['nickname'] ?></h4>
-                    
-                            <h5 class="widget-user-desc text-left"><?php echo $userSearch['sector'] ?></h5>
-                        
+                    <h5 class="widget-user-desc text-left"><?php echo $userSearch['sector'] ?></h5>                        
                   </div>
                   <div class="widget-user-image">
                     <img class="img-circle" src="<?=base_url()?>assets/img/user3-128x128.jpg" alt="User Avatar">
                   </div>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+                    </button>
+                </div>
+
                   <div class="card-footer">
                     <div class="row">
                       <div class="col-sm-4 border-right">
                         <div class="description-block">
-                          <h5 class="description-header">3,200</h5>
-                          <span class="description-text">SALES</span>
+                          <h5 class="description-header"><?php echo $userSearch['email'] ?></h5>
+                          <span class="description-text">Email</span>
                         </div>
                         <!-- /.description-block -->
                       </div>
@@ -55,7 +57,7 @@
                       <div class="col-sm-4 border-right">
                         <div class="description-block">
                           <h5 class="description-header">13,000</h5>
-                          <span class="description-text">FOLLOWERS</span>
+                          <span class="description-text">Facebook</span>
                         </div>
                         <!-- /.description-block -->
                       </div>
@@ -63,7 +65,7 @@
                       <div class="col-sm-4">
                         <div class="description-block">
                           <h5 class="description-header">35</h5>
-                          <span class="description-text">PRODUCTS</span>
+                          <span class="description-text">Twitter</span>
                         </div>
                         <!-- /.description-block -->
                       </div>
