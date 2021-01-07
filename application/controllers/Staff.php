@@ -29,11 +29,11 @@ class Staff extends CI_Controller
 		$userSearch = $this->UserInfo_m->get($id);
 
 		$data['userSearch'] = array(
-			'nombre' => $userSearch->nombre;
-			'apellido' => $userSearch->apellido;
-			'nickname' => $userSearch->nickname;
-			'email' => $userSearch->email;
-			'sector' => $this->Sector_m->get($userSearch->sector);
+			'nombre' => $userSearch->nombre,
+			'apellido' => $userSearch->apellido,
+			'nickname' => $userSearch->nickname,
+			'email' => $userSearch->email,
+			'sector' => $this->Sector_m->get($userSearch->sector),
 		);
 		
         $vista = $this->load->view('main/staff/search',$data,TRUE);
