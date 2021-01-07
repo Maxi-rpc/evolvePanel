@@ -27,7 +27,7 @@ class Staff extends CI_Controller
 		$data['sectores'] = $this->Sector_m->get();
 		$data['puestos'] = $this->Puesto_m->get();
 		
-        $vista = $this->load->view('main/staff/index',$data,TRUE);
+        $vista = $this->load->view('main/staff/search',$data,TRUE);
 		getTemplate($vista);
     }
 }
