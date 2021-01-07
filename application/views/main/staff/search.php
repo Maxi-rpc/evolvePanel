@@ -33,13 +33,11 @@
                   <!-- Add the bg color to the header using any of the bg-* classes -->
                   <div class="widget-user-header text-white"
                       style="background: url('<?=base_url()?>assets/img/photo1.png') center center;">
-                    <h3 class="widget-user-username text-right"><?php echo $userSearch->nombre.' '.$userSearch->apellido ?></h3>
-                    <h4 class="widget-user-username text-right"><?php echo $userSearch->nickname ?></h4>
-                    <?php foreach($sectores as $sect):?> 
-                        <?php if($sect->id == $userSearch->sector){ ?>
-                            <h5 class="widget-user-desc text-right"><?php echo $sect->nombre ?></h5>
-                        <?php } ?>    
-                        <?php endforeach ?>
+                    <h3 class="widget-user-username text-right"><?php echo $userSearch['nombre'].' '.$userSearch['apellido'] ?></h3>
+                    <h4 class="widget-user-username text-right"><?php echo $userSearch['nickname'] ?></h4>
+                    
+                            <h5 class="widget-user-desc text-right"><?php echo $userSearch['nombre'] ?></h5>
+                        
                   </div>
                   <div class="widget-user-image">
                     <img class="img-circle" src="<?=base_url()?>assets/img/user3-128x128.jpg" alt="User Avatar">
