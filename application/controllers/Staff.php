@@ -22,7 +22,7 @@ class Staff extends CI_Controller
 
 	public function search($id = NULL)
 	{
-		$data['userInfoSearch'] = $this->UserInfo_m->get($id);
+		$data['userSearch'] = $this->UserInfo_m->get($id);
 		$data['userInfo'] = $this->UserInfo_m->get();
 		$data['sectores'] = $this->Sector_m->get();
 		$data['puestos'] = $this->Puesto_m->get();
