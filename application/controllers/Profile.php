@@ -8,14 +8,15 @@ class Profile extends CI_Controller
 		parent::__construct();
 		$this->load->library(['form_validation']);
 		$this->load->helper(['vistas']);
-		$this->load->model(['Users_m','UserInfo_m','Sector_m']);
+		$this->load->model(['Users_m','UserInfo_m','Puesto_m']);
     }
 
 	public function index()
 	{
         $id = $this->session->userdata('id');
         $data['userInfo'] = $this->UserInfo_m->get($id);
-        $data['sectores'] = $this->Sector_m->get();
+		$data['sectores'] = $this->Sector_m->get();
+		$data['puestos'] = $this->Puesto_m->get();
 
         $vista = $this->load->view('main/profile/index',$data,TRUE);
 		getTemplate($vista);
@@ -25,6 +26,8 @@ class Profile extends CI_Controller
 
 		if ($id) {
 			$data['userInfo'] = $this->UserInfo_m->get($id);
+			$data['sectores'] = $this->Sector_m->get();
+			$data['puestos'] = $this->Puesto_m->get();
 		}
 
 		$rules = $this->UserInfo_m->rules;
@@ -32,10 +35,10 @@ class Profile extends CI_Controller
 
 		if ($this->form_validation->run() == TRUE) {
 			
-			$perfil_data = $this->Perfil_m->array_from_post(['nombre']);
+			//$userInfo_data = $this->Perfil_m->array_from_post(['nombre']);
 			//$nombre = $this->input->post('nombre');
             
-            $this->Perfil_m->save($perfil_data,$id);
+            //$this->UserInfo_m->save($userInfo_data,$id);
 
             if($id){
                 $this->session->set_flashdata('msj','Se edito con exito.');
