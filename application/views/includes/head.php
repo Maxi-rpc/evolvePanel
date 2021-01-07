@@ -20,8 +20,11 @@ if(!$this->session->userdata('is_logged')){
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
         crossorigin="anonymous"
     />
+    <!-- DataTables -->
+    <link rel="stylesheet" href="<?=base_url()?>assets/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/datatables-responsive/css/responsive.bootstrap4.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/css/adminlte.min.css" />
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/adminlte.min.css" />
     <!-- Google Font: Source Sans Pro -->
     <link
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
