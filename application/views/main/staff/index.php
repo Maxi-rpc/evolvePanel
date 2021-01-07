@@ -23,7 +23,7 @@
       <div class="container-fluid">
       <!-- =========================================================== -->
 
-        <?php if($userInfo): ?>
+        <?php if($userInfoSearch): ?>
           <div class="row">
             <div class="col-12">
               <!-- Widget: user widget style 1 -->
@@ -31,9 +31,9 @@
                   <!-- Add the bg color to the header using any of the bg-* classes -->
                   <div class="widget-user-header text-white"
                       style="background: url('<?=base_url()?>assets/img/photo1.png') center center;">
-                    <h3 class="widget-user-username text-right"><?php echo $userInfo->nombre.' '.$userInfo->apellido ?></h3>
-                    <h4 class="widget-user-username text-right"><?php echo $userInfo->nickname ?></h4>
-                    <h5 class="widget-user-desc text-right"><?php echo $userInfo->sector ?></h5>
+                    <h3 class="widget-user-username text-right"><?php echo $userInfoSearch->nombre.' '.$userInfoSearch->apellido ?></h3>
+                    <h4 class="widget-user-username text-right"><?php echo $userInfoSearch->nickname ?></h4>
+                    <h5 class="widget-user-desc text-right"><?php echo $userInfoSearch->sector ?></h5>
                   </div>
                   <div class="widget-user-image">
                     <img class="img-circle" src="<?=base_url()?>assets/img/user3-128x128.jpg" alt="User Avatar">
