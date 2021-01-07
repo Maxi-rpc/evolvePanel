@@ -67,25 +67,29 @@
                         </tr>
                       </thead> 
                       <tbody>
-                        <tr>
+                        
                           <?php if($users != NULL): ?>
                             <?php foreach($users as $user): ?>
-                              <td><?= $user->id?></td>
-                              <td><?= $user->nombre?></td>
-                              <td><?= $user->apellido?></td>
-                              <td><?= $user->email?></td>
-                              <td><?= $user->perfil?></td>
-                              <td><?= $user->estado?></td>
-                              <td><?= $user->is_logged?></td>
-                              <td>
-                                <button type="button" class="btn btn-tool"><a href="<?=base_url('user/edit/'.$user->id)?>"><i class="fas fa-edit"></i></a>
-                              </button>
-                                <button type="button" class="btn btn-tool"><a href="<?=base_url('team/delete/'.$user->id)?>"><i class="fas fa-trash-alt"></i></a>
-                                </button>
-                              </td>
+                              <tr>
+                                <td><?= $user->id?></td>
+                                <td><?= $user->nombre?></td>
+                                <td><?= $user->apellido?></td>
+                                <td><?= $user->email?></td>
+                                <td><?= $user->perfil?></td>
+                                <td><?= $user->estado?></td>
+                                <td><?= $user->is_logged?></td>
+                                <td>
+                                  <button type="button" class="btn btn-tool"><a href="<?=base_url('user/edit/'.$user->id)?>"><i class="fas fa-edit"></i></a>
+                                  </button>
+                                  <button type="button" class="btn btn-tool"><a href="<?=base_url('team/delete/'.$user->id)?>"><i class="fas fa-trash-alt"></i></a>
+                                  </button>
+                                </td>
+                              </tr>
                             <?php endforeach ?>
                             <?php else: ?>
-                              <td class="text-center">No existen datos para mostrar.</td>
+                              <tr>
+                                <td class="text-center">No existen datos para mostrar.</td>
+                              </tr>
                           <?php endif ?>
                         </tr> 
                       </tbody>
