@@ -30,7 +30,7 @@
                         <h3 class="card-title">Listado de todo el Staff</h3>
                     </div> <!-- /.card-header -->
                     <div class="card-body">
-                        <table id="example1" class="table table-bordered table-striped">
+                        <table id="dataTable1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
