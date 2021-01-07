@@ -14,23 +14,20 @@ class Profile extends CI_Controller
 	public function index()
 	{
         $id = $this->session->userdata('id');
-        $datos['userInfo'] = $this->UserInfo_m->get($id);
-        $datos['sectores'] = $this->Sector_m->get();
+        $data['userInfo'] = $this->UserInfo_m->get($id);
+        $data['sectores'] = $this->Sector_m->get();
 
-        $vista = $this->load->view('main/profile/index',$datos,TRUE);
+        $vista = $this->load->view('main/profile/index',$data,TRUE);
 		getTemplate($vista);
     }
 
     public function edit($id = NULL){
 
 		if ($id) {
-			$data['perfil'] = $this->Perfil_m->get($id);
-			
-		  } else {
-			$data['perfil'] = $this->Perfil_m->get_new();
-		  }
+			$data['userInfo'] = $this->UserInfo_m->get($id);
+		}
 
-		$rules = $this->Perfil_m->rules;
+		$rules = $this->UserInfo_m->rules;
 		$this->form_validation->set_rules($rules);
 
 		if ($this->form_validation->run() == TRUE) {
@@ -42,13 +39,12 @@ class Profile extends CI_Controller
 
             if($id){
                 $this->session->set_flashdata('msj','Se edito con exito.');
-            }else{
-				$this->session->set_flashdata('msj','Se creo con exito.');
-            }
-            redirect('perfil');
+			}
+			
+            redirect('profile');
 		}
 		
-		$vista = $this->load->view('main/adminarea/perfil/edit',$data,TRUE);
+		$vista = $this->load->view('main/adminarea/profile/edit',$data,TRUE);
 		getTemplate($vista);
 	}
 
