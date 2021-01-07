@@ -107,7 +107,7 @@
 
                 <hr>
 
-                <strong><i class="far fa-share-alt mr-1"></i> Redes</strong>
+                <strong><i class="fas fa-share-alt mr-1"></i> Redes</strong>
 
                 <p class="text-muted">Acá van las redes.</p>
               </div>
