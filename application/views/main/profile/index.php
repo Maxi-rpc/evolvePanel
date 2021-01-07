@@ -38,8 +38,8 @@
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header"
                    style="background: url('<?=base_url()?>assets/img/photo1.png') center center;">
-                <h3 class="widget-user-username"><?php echo $userInfo->nickname ?></h3>
-                <h5 class="widget-user-desc"> <?php foreach($sectores as $sec){
+                <h3 class="widget-user-username text-right"><?php echo $userInfo->nickname ?></h3>
+                <h5 class="widget-user-desc text-right"> <?php foreach($sectores as $sec){
                   if($sec->id == $userInfo->sector){
                     echo $sec->nombre;
                   };
