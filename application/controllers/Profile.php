@@ -8,7 +8,7 @@ class Profile extends CI_Controller
 		parent::__construct();
 		$this->load->library(['form_validation']);
 		$this->load->helper(['vistas']);
-		$this->load->model(['Users_m','UserInfo_m','Puesto_m']);
+		$this->load->model(['Users_m','UserInfo_m','Sector_m','Puesto_m']);
     }
 
 	public function index()
