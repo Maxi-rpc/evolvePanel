@@ -53,7 +53,7 @@
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body">
-                    <table id="dataTable2" class="table table-bordered table-striped">
+                    <table id="dataTable1" class="table table-bordered table-striped">
                       <thead>
                         <tr>
                           <th>ID</th>
