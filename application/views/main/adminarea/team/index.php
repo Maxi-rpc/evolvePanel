@@ -42,7 +42,7 @@
 
             <!-- Listados -->
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-12">
                 <div class="card card-primary">
                   <div class="card-header">
                     <h3 class="card-title">Listado de Teams - <span><?=$datosSql['cantTeams']?></span></h3>
@@ -53,7 +53,7 @@
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body">
-                    <table id="dataTable2" class="table table-bordered table-striped">
+                    <table id="dataTable1" class="table table-bordered table-striped">
                       <thead>
                         <tr>
                           <th>ID</th>
