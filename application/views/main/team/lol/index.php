@@ -18,8 +18,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if($partidaSearch != NULL): ?>
-                                    <?php foreach($partidaSearch as $par): ?>
+                                <?php if($partidas != NULL): ?>
+                                    <?php foreach($partidas as $par): ?>
                                         <tr>
                                             <td><?= $par->id_partida?></td>
                                             <td><?= $par->nombre?></td>
