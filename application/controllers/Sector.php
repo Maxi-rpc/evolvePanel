@@ -45,7 +45,7 @@ class Sector extends CI_Controller
             }else{
 				$this->session->set_flashdata('msj','Se creo con exito.');
             }
-            redirect('sector');
+            redirect('admin/sector');
 		}
 		
 		$vista = $this->load->view('main/adminarea/sector/edit',$data,TRUE);
@@ -59,6 +59,6 @@ class Sector extends CI_Controller
 		} else {
 			$this->session->set_flashdata('msj','Se elimino con exito.');
 		}
-        redirect('sector');
+        redirect('admin/sector');
     }
 }

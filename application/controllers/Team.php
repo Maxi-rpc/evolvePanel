@@ -45,7 +45,7 @@ class Team extends CI_Controller
             }else{
 				$this->session->set_flashdata('msj','Se creo con exito.');
             }
-            redirect('team');
+            redirect('admin/team');
 		}
 		
 		$vista = $this->load->view('main/adminarea/team/edit',$data,TRUE);
@@ -59,6 +59,6 @@ class Team extends CI_Controller
 		} else {
 			$this->session->set_flashdata('msj','Se elimino con exito.');
 		}
-        redirect('team');
+        redirect('admin/team');
     }
 }

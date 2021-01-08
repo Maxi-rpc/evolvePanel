@@ -45,7 +45,7 @@ class Puesto extends CI_Controller
             }else{
 				$this->session->set_flashdata('msj','Se creo con exito.');
             }
-            redirect('puesto');
+            redirect('admin/puesto');
 		}
 		
 		$vista = $this->load->view('main/adminarea/puesto/edit',$data,TRUE);
@@ -59,6 +59,6 @@ class Puesto extends CI_Controller
 		} else {
 			$this->session->set_flashdata('msj','Se elimino con exito.');
 		}
-        redirect('puesto');
+        redirect('admin/puesto');
     }
 }

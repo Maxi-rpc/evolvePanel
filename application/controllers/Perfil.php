@@ -59,6 +59,6 @@ class Perfil extends CI_Controller
 		} else {
 			$this->session->set_flashdata('msj','Se elimino con exito.');
 		}
-        redirect('perfil');
+        redirect('admin/perfil');
     }
 }

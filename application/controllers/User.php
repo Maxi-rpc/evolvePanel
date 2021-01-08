@@ -56,7 +56,7 @@ class User extends CI_Controller
                 $this->UserInfo_m->save($user); // Creamos el user en Usuario_info
 				$this->session->set_flashdata('msj','Se creo registro');
             }
-            redirect('user');
+            redirect('admin/user');
 		}
 		$perfil = $this->Perfil_m->get();
 		$vista = $this->load->view('main/adminarea/user/edit',['perfil'=>$perfil],TRUE);
