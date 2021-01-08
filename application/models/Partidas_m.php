@@ -60,6 +60,7 @@ class Partidas_m extends MY_Model {
     $partida->id_partida = 0;
     $partida->id_teams = 0;
     $partida->nombre = '';
+    $partida->fecha = '';
     $partida->resultado = '';
     
     return $partida;
