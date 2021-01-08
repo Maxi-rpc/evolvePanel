@@ -22,8 +22,20 @@
                               <input type="text" class="form-control" id="exampleInputEmail1" name="id_partida" value="<?php echo set_value('id_partida',$partidas->id_partida) ?>">
                             </div>
                             <div class="form-group">
+                              <label for="">Ingresar Teams</label>
+                              <input type="text" class="form-control" id="exampleInputEmail1" name="id_teams" value="<?php echo set_value('id_teams',$partidas->id_teams) ?>">
+                            </div>
+                            <div class="form-group">
                               <label for="">Ingresar Nombre</label>
                               <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo set_value('name',$partidas->nombre) ?>">
+                            </div>
+                            <div class="form-group">
+                              <label for="">Ingresar Fecha</label>
+                              <input type="text" class="form-control" id="exampleInputEmail1" name="fecha" value="<?php echo set_value('fecha',$partidas->fecha) ?>">
+                            </div>
+                            <div class="form-group">
+                              <label for="">Ingresar Resultado</label>
+                              <input type="text" class="form-control" id="exampleInputEmail1" name="resultado" value="<?php echo set_value('resultado',$partidas->resultado) ?>">
                             </div>
                         </div> <!-- /.card-body -->
                             
