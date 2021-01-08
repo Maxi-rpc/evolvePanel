@@ -11,12 +11,14 @@ class Sector extends CI_Controller
 		$this->load->model(['Sector_m']);
     }
 
+	public $location = 'Adminarea-Sector'; // Locacion del controlador
+
 	public function index()
 	{
         $datosSql = getCantidadDatosSQL();
         $sector = $this->Sector_m->get();
         $vista = $this->load->view('main/adminarea/sector/index',['datosSql'=>$datosSql,'sector'=>$sector],TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
     }
 
     public function edit($id = NULL){
@@ -47,7 +49,7 @@ class Sector extends CI_Controller
 		}
 		
 		$vista = $this->load->view('main/adminarea/sector/edit',$data,TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
 	}
 
 	public function delete($id = NULL)
