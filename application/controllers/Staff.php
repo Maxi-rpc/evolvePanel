@@ -10,6 +10,8 @@ class Staff extends CI_Controller
         $this->load->model(['UserInfo_m','Sector_m','Puesto_m']);
 	}
 
+	public $location = 'Staff'; // Locacion del controlador
+
 	public function index()
 	{
         $data['userInfo'] = $this->UserInfo_m->get();
@@ -17,7 +19,7 @@ class Staff extends CI_Controller
         $data['puestos'] = $this->Puesto_m->get();
         
         $vista = $this->load->view('main/staff/index',$data,TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
     }
 
 	public function search($id = NULL)
@@ -41,6 +43,6 @@ class Staff extends CI_Controller
 		);
 		
         $vista = $this->load->view('main/staff/search',$data,TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
     }
 }
