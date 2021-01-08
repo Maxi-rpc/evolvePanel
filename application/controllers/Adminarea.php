@@ -11,7 +11,7 @@ class Adminarea extends CI_Controller
 
 	public function index()
 	{
-		$location = 'Home';
+		$location = 'Adminarea';
 		$datosSql = getCantidadDatosSQL();
         $vista = $this->load->view('main/adminarea/adminarea',['datosSql'=>$datosSql],TRUE);
 		getTemplate($vista,$location);
