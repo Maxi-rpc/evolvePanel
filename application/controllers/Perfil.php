@@ -16,6 +16,7 @@ class Perfil extends CI_Controller
         $datosSql = getCantidadDatosSQL();
         $perfil = $this->Perfil_m->get();
         $vista = $this->load->view('main/adminarea/perfil/index',['datosSql'=>$datosSql,'perfil'=>$perfil],TRUE);
+		$location = 'Adminarea-Perfil';
 		getTemplate($vista);
     }
 
@@ -47,7 +48,8 @@ class Perfil extends CI_Controller
 		}
 		
 		$vista = $this->load->view('main/adminarea/perfil/edit',$data,TRUE);
-		getTemplate($vista);
+		$location = 'Adminarea-Perfil-Edit';
+		getTemplate($vista,$location);
 	}
 
 	public function delete($id = NULL)
