@@ -10,14 +10,15 @@ class Perfil extends CI_Controller
 		$this->load->helper(['vistas']);
 		$this->load->model(['Perfil_m']);
     }
+	
+	public $location = 'Adminarea-Perfil'; // Locacion del controlador
 
 	public function index()
 	{
         $datosSql = getCantidadDatosSQL();
         $perfil = $this->Perfil_m->get();
         $vista = $this->load->view('main/adminarea/perfil/index',['datosSql'=>$datosSql,'perfil'=>$perfil],TRUE);
-		$location = 'Adminarea-Perfil';
-		getTemplate($vista);
+		getTemplate($vista,$location);
     }
 
     public function edit($id = NULL){
@@ -48,7 +49,6 @@ class Perfil extends CI_Controller
 		}
 		
 		$vista = $this->load->view('main/adminarea/perfil/edit',$data,TRUE);
-		$location = 'Adminarea-Perfil-Edit';
 		getTemplate($vista,$location);
 	}
 
