@@ -9,12 +9,13 @@ class Adminarea extends CI_Controller
 		$this->load->helper('vistas');
 	}
 
+	public $location = 'Adminarea'; // Locacion del controlador
+
 	public function index()
 	{
 		$datosSql = getCantidadDatosSQL();
         $vista = $this->load->view('main/adminarea/adminarea',['datosSql'=>$datosSql],TRUE);
-		$location = 'Adminarea';
-		getTemplate($vista,$location);
+		getTemplate($vista,$this->location);
     }
 
 }
