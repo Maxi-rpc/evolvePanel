@@ -9,7 +9,9 @@ class Profile extends CI_Controller
 		$this->load->library(['form_validation']);
 		$this->load->helper(['vistas']);
 		$this->load->model(['Users_m','UserInfo_m','Sector_m','Puesto_m']);
-    }
+	}
+
+	public $location = 'Profile'; // Locacion del controlador
 
 	public function index()
 	{
@@ -19,7 +21,7 @@ class Profile extends CI_Controller
 		$data['puestos'] = $this->Puesto_m->get();
 
         $vista = $this->load->view('main/profile/index',$data,TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
     }
 
     public function edit($id = NULL){
@@ -48,7 +50,7 @@ class Profile extends CI_Controller
 		}
 		
 		$vista = $this->load->view('main/profile/edit',$data,TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
 	}
 
 }
