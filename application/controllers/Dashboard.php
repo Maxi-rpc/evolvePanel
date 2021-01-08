@@ -6,11 +6,13 @@ class Dashboard extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('vistas');
 	}
+
+	public $location = 'Home'; // Locacion del controlador
+
 	public function index(){
 		if($this->session->userdata('is_logged')){
-			$location = 'Home';
 			$vista = $this->load->view('main/home','',TRUE);
-			getTemplate($vista,$location);
+			getTemplate($vista,$this->location);
 		}else{
 			redirect('login');
 		}
