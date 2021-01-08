@@ -1,6 +1,6 @@
 <?php
 
-function getTemplate($view,$location){
+function getTemplate($view,$location = NULL){
     $CI = &get_instance();
 
 	$data = array(
