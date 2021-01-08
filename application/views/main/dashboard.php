@@ -3,6 +3,8 @@
     <?= $navbar ?> 
 	<!-- SideBar -->
 	<?= $aside ?>
+	<!-- PreContent -->
+	<?= $preContent ?>
 	<!-- Content -->
 	<?= $content ?>
 	<!-- Footer -->

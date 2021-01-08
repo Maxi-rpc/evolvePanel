@@ -1,12 +1,13 @@
 <?php
 
-function getTemplate($view){
+function getTemplate($view,$location){
     $CI = &get_instance();
 
 	$data = array(
 		'head' => $CI->load->view('includes/head','',TRUE),
     'navbar' => $CI->load->view('includes/navbar','',TRUE),
     'aside' => $CI->load->view('includes/aside','',TRUE),
+    'preContent' => $CI->load->view('includes/preContent',$location,TRUE),
 		'content' => $view,
 		'footer' => $CI->load->view('includes/footer','',TRUE),			
     );
