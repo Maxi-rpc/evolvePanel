@@ -16,6 +16,7 @@
                                 <?= validation_errors('<li>','</li>') ?>
                             </div>
                           <?php } ?>
+                          
                           <?php echo form_open() ?>
                             <div class="form-group">
                               <label for="">Ingresar Id Partida</label>
