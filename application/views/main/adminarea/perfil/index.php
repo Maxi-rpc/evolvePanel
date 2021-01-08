@@ -6,7 +6,7 @@
                   <div class="col-md-12">
                     <div class="alert alert-success alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                          <h5><i class="icon fas fa-ban"></i> Alert!</h5>
+                          <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
                           <?= $this->session->flashdata('msj') ?>
                     </div>
                   </div>
@@ -20,7 +20,7 @@
                   <div class="card-header">
                     <h3 class="card-title">Listado de Perfil - <span><?=$datosSql['cantPerfil']?></span></h3>
                     <div class="card-tools">
-                      <button type="button" class="btn btn-tool"><a href="<?=base_url('perfil/edit')?>"><i class="fas fa-user-plus"></i></a>
+                      <button type="button" class="btn btn-tool"><a href="<?=base_url('admin/perfil/edit')?>"><i class="fas fa-user-plus"></i></a>
                       </button>
                     </div>
                   </div>
@@ -41,9 +41,9 @@
                               <td><?= $perf->id?></td>
                               <td><?= $perf->nombre?></td>
                               <td>
-                                <button type="button" class="btn btn-tool"><a href="<?=base_url('perfil/edit/'.$perf->id)?>"><i class="fas fa-edit"></i></a>
+                                <button type="button" class="btn btn-tool"><a href="<?=base_url('admin/perfil/edit/'.$perf->id)?>"><i class="fas fa-edit"></i></a>
                                 </button>
-                                <button type="button" class="btn btn-tool"><a href="<?=base_url('perfil/delete/'.$perf->id)?>"><i class="fas fa-trash-alt"></i></a>
+                                <button type="button" class="btn btn-tool"><a href="<?=base_url('admin/perfil/delete/'.$perf->id)?>" onclick="return confirm('¿Estas seguro de eliminar?')"><i class="fas fa-trash-alt"></i></a>
                                 </button>
                               </td>
                             </tr> 
