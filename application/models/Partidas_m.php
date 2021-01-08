@@ -73,4 +73,5 @@ class Partidas_m extends MY_Model {
     $array = json_decode($json,true);
     return $array;
   }
+
 }
