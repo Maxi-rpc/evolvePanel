@@ -11,12 +11,14 @@ class User extends CI_Controller
 		$this->load->model(['Users_m','Perfil_m','UserInfo_m']);
 	}
 
+	public $location = 'Adminarea-User'; // Locacion del controlador
+
 	public function index()
 	{
         $datosSql = getCantidadDatosSQL();
 		$users = $this->Users_m->get();
         $vista = $this->load->view('main/adminarea/user/index',['datosSql'=>$datosSql,'users'=>$users],TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
     }
 
     public function edit($id = NULL){
@@ -58,6 +60,6 @@ class User extends CI_Controller
 		}
 		$perfil = $this->Perfil_m->get();
 		$vista = $this->load->view('main/adminarea/user/edit',['perfil'=>$perfil],TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
     }
 }
