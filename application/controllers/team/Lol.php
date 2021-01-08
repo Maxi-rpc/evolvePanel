@@ -30,7 +30,7 @@ class Lol extends CI_Controller
 		$partidaSearch = $this->Partidas_m->get($id);
 		$teams = $this->Teams_m->get($partidaSearch->id_teams);
 
-		$data['userSearch'] = array(
+		$data['partidaSearch'] = array(
 			'id_partida' => $partidaSearch->id_partida,
 			'nombre' => $partidaSearch->nombre,
 			'fecha' => $partidaSearch->fecha,
