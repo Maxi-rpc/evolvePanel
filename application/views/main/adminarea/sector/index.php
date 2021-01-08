@@ -19,7 +19,7 @@
                   <div class="card-header">
                     <h3 class="card-title">Listado de Sector - <span><?=$datosSql['cantSector']?></span></h3>
                     <div class="card-tools">
-                      <button type="button" class="btn btn-tool"><a href="<?=base_url('sector/edit')?>"><i class="fas fa-user-plus"></i></a>
+                      <button type="button" class="btn btn-tool"><a href="<?=base_url('admin/sector/edit')?>"><i class="fas fa-user-plus"></i></a>
                       </button>
                     </div>
                   </div>
@@ -40,9 +40,9 @@
                               <td><?= $sec->id?></td>
                               <td><?= $sec->nombre?></td>
                               <td>
-                                <button type="button" class="btn btn-tool"><a href="<?=base_url('sector/edit/'.$sec->id)?>"><i class="fas fa-edit"></i></a>
+                                <button type="button" class="btn btn-tool"><a href="<?=base_url('admin/sector/edit/'.$sec->id)?>"><i class="fas fa-edit"></i></a>
                                 </button>
-                                <button type="button" class="btn btn-tool"><a href="<?=base_url('sector/delete/'.$sec->id)?>"><i class="fas fa-trash-alt"></i></a>
+                                <button type="button" class="btn btn-tool"><a href="<?=base_url('admin/sector/delete/'.$sec->id)?>" onclick="return confirm('¿Estas seguro de eliminar?')"><i class="fas fa-trash-alt"></i></a>
                                 </button>
                               </td>
                             </tr> 
