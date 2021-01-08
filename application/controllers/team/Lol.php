@@ -5,7 +5,8 @@ class Lol extends CI_Controller
 {
 	public function __construct()
 	{
-		parent::__construct();
+        parent::__construct();
+        $this->load->library(['form_validation']);
         $this->load->helper('vistas');
         $this->load->model(['Partidas_m','Teams_m']);
 	}
