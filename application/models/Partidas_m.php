@@ -66,4 +66,11 @@ class Partidas_m extends MY_Model {
     return $partida;
   }
 
+  function get_WebApi($id = NULL)
+  {
+    $url ='http://api.geonames.org/citiesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&lang=de&username=demo';
+    $json = file_get_contents($url);
+    $array = json_decode($json,true);
+    return $array;
+  }
 }
