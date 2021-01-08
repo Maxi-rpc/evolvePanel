@@ -14,8 +14,7 @@ class Login extends CI_Controller
 	public function index()
 	{
 		if($this->session->userdata('is_logged')){
-			$vista = $this->load->view('main/home','',TRUE);
-			getTemplate($vista);
+			redirect('dashboard');
 		}else{
 			$this->load->view('auth/login');
 		}
