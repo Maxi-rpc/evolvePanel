@@ -37,7 +37,7 @@ class Lol extends CI_Controller
 			'resultado' => $partidaSearch->resultado,
 		);
 		
-        $vista = $this->load->view('main/team/lol/index',$data,TRUE);
+        $vista = $this->load->view('main/team/lol/search',$data,TRUE);
 		getTemplate($vista,$this->location);
     }
 }
