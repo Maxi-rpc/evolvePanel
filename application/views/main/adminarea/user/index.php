@@ -19,7 +19,7 @@
                   <div class="card-header">
                     <h3 class="card-title">Listado de usuarios - <span><?=$datosSql['cantUser']?></span></h3>
                     <div class="card-tools">
-                      <button type="button" class="btn btn-tool"><a href="<?=base_url('user/edit')?>"><i class="fas fa-user-plus"></i></a>
+                      <button type="button" class="btn btn-tool"><a href="<?=base_url('admin/user/edit')?>"><i class="fas fa-user-plus"></i></a>
                       </button>
                     </div>
                   </div>
@@ -51,9 +51,9 @@
                                 <td><?= $user->estado?></td>
                                 <td><?= $user->is_logged?></td>
                                 <td>
-                                  <button type="button" class="btn btn-tool"><a href="<?=base_url('user/edit/'.$user->id)?>"><i class="fas fa-edit"></i></a>
+                                  <button type="button" class="btn btn-tool"><a href="<?=base_url('admin/user/edit/'.$user->id)?>"><i class="fas fa-edit"></i></a>
                                   </button>
-                                  <button type="button" class="btn btn-tool"><a href="<?=base_url('team/delete/'.$user->id)?>"><i class="fas fa-trash-alt"></i></a>
+                                  <button type="button" class="btn btn-tool"><a href="<?=base_url('admin/team/delete/'.$user->id)?>" onclick="return confirm('¿Estas seguro de eliminar?')"><i class="fas fa-trash-alt"></i></a>
                                   </button>
                                 </td>
                               </tr>
