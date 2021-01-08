@@ -19,7 +19,7 @@
                   <div class="card-header">
                     <h3 class="card-title">Listado de Teams - <span><?=$datosSql['cantTeams']?></span></h3>
                     <div class="card-tools">
-                      <button type="button" class="btn btn-tool"><a href="<?=base_url('team/edit')?>"><i class="fas fa-user-plus"></i></a>
+                      <button type="button" class="btn btn-tool"><a href="<?=base_url('admin/team/edit')?>"><i class="fas fa-user-plus"></i></a>
                       </button>
                     </div>
                   </div>
