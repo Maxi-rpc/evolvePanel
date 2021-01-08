@@ -11,12 +11,14 @@ class Puesto extends CI_Controller
 		$this->load->model(['Puesto_m']);
     }
 
+	public $location = 'Adminarea-Puesto'; // Locacion del controlador
+
 	public function index()
 	{
         $datosSql = getCantidadDatosSQL();
         $puesto = $this->Puesto_m->get();
         $vista = $this->load->view('main/adminarea/puesto/index',['datosSql'=>$datosSql,'puesto'=>$puesto],TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
     }
 
     public function edit($id = NULL){
@@ -47,7 +49,7 @@ class Puesto extends CI_Controller
 		}
 		
 		$vista = $this->load->view('main/adminarea/puesto/edit',$data,TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
 	}
 
 	public function delete($id = NULL)
