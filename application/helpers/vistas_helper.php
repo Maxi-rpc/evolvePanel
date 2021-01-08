@@ -8,7 +8,7 @@ function getTemplate($view,$location = NULL){
 		'head' => $CI->load->view('includes/head','',TRUE),
     'navbar' => $CI->load->view('includes/navbar','',TRUE),
     'aside' => $CI->load->view('includes/aside','',TRUE),
-    'preContent' => $CI->load->view('includes/preContent',$loc,TRUE),
+    'preContent' => $CI->load->view('includes/preContent',array('loc'=>$loc),TRUE),
     'content' => $view,
     'afterContent' => $CI->load->view('includes/afterContent','',TRUE),
 		'footer' => $CI->load->view('includes/footer','',TRUE),			
