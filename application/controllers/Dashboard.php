@@ -8,7 +8,7 @@ class Dashboard extends CI_Controller {
 	}
 	public function index(){
 		if($this->session->userdata('is_logged')){
-			$location = 'home';
+			$location = 'Home';
 			$vista = $this->load->view('main/home','',TRUE);
 			getTemplate($vista,$location);
 		}else{
