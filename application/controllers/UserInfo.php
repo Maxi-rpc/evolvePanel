@@ -11,12 +11,14 @@ class UserInfo extends CI_Controller
 		$this->load->model(['UsersInfo_m','Perfil_m']);
 	}
 
+	public $location = 'Adminarea-UserInfo'; // Locacion del controlador
+
 	public function index()
 	{
         $datosSql = getCantidadDatosSQL();
         $usersInfo = $this->UsersInfo_m->get();
         $vista = $this->load->view('main/adminarea/user/index',['datosSql'=>$datosSql,'users'=>$users],TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
     }
 
     public function edit($id = NULL){
@@ -59,7 +61,7 @@ class UserInfo extends CI_Controller
 		}
 		$perfiles = $this->Perfil_m->get();
 		$vista = $this->load->view('main/adminarea/user/edit',['perfiles'=>$perfiles],TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
 	}
 
 }
