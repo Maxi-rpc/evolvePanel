@@ -10,7 +10,7 @@ class Lol extends CI_Controller
         $this->load->model(['UserInfo_m','Sector_m','Puesto_m']);
 	}
 
-	public $location = 'League of Legends'; // Locacion del controlador
+	public $location = 'Team-League of Legends'; // Locacion del controlador
 
 	public function index()
 	{
