@@ -3,9 +3,9 @@
     <?= $navbar ?> 
 	<!-- SideBar -->
 	<?= $aside ?>
-	<!-- PreContent -->
+	<!-- PreContent / Locacion -->
 	<?= $preContent ?>
-	<!-- Content -->
+	<!-- Content / Contenido -->
 	<?= $content ?>
 	<!-- AfetContent -->
 	<?= $afterContent ?>
