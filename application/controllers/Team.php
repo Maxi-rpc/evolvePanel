@@ -11,12 +11,14 @@ class Team extends CI_Controller
 		$this->load->model(['Teams_m']);
     }
 
+	public $location = 'Adminarea-Team'; // Locacion del controlador
+
 	public function index()
 	{
         $datosSql = getCantidadDatosSQL();
         $teams = $this->Teams_m->get();
         $vista = $this->load->view('main/adminarea/team/index',['datosSql'=>$datosSql,'teams'=>$teams],TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
     }
 
     public function edit($id = NULL){
@@ -47,7 +49,7 @@ class Team extends CI_Controller
 		}
 		
 		$vista = $this->load->view('main/adminarea/team/edit',$data,TRUE);
-		getTemplate($vista);
+		getTemplate($vista,$this->location);
 	}
 
 	public function delete($id = NULL)
