@@ -26,6 +26,10 @@
                 <div class="card card-primary">
                     <div class="card-header">
                         <h3 class="card-title">Listado de todo las Partidas</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool"><a href="<?=base_url('team/lol/edit')?>"><i class="fas fa-user-plus"></i></a>
+                            </button>
+                        </div>
                     </div> <!-- /.card-header -->
                     <div class="card-body">
                         <table id="dataTable1" class="table table-bordered table-striped">
