@@ -35,7 +35,7 @@ class Partidas_m extends MY_Model {
     ),
     'fecha' => array(
         'field' => 'fecha',
-        'label' => 'fecha',
+        'label' => 'Fecha',
         'rules' => 'trim|required',
         'errors' => [
             'required' => 'El %s es requerido',
@@ -44,7 +44,7 @@ class Partidas_m extends MY_Model {
     ), 
     'resultado' => array(
         'field' => 'resultado',
-        'label' => 'resultado',
+        'label' => 'Resultado',
         'rules' => 'trim|required',
         'errors' => [
             'required' => 'El %s es requerido',
