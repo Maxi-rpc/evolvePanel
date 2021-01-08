@@ -18,6 +18,10 @@
                           <?php } ?>
                           <?php echo form_open() ?>
                             <div class="form-group">
+                              <label for="">Ingresar Id Partida</label>
+                              <input type="text" class="form-control" id="exampleInputEmail1" name="id_partida" value="<?php echo set_value('id_partida',$partidas->id_partida) ?>">
+                            </div>
+                            <div class="form-group">
                               <label for="">Ingresar Nombre</label>
                               <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo set_value('name',$partidas->nombre) ?>">
                             </div>
