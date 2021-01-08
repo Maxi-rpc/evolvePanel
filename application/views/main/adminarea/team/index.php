@@ -1,6 +1,5 @@
 <!-- =========================================================== -->
 
-            
               <?php if($this->session->flashdata('msj')){ ?>
                 <div class="row">
                   <div class="col-md-12">
