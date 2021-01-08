@@ -45,7 +45,7 @@ class Perfil extends CI_Controller
             }else{
 				$this->session->set_flashdata('msj','Se creo con exito.');
             }
-            redirect('perfil');
+            redirect('admin/perfil');
 		}
 		
 		$vista = $this->load->view('main/adminarea/perfil/edit',$data,TRUE);
