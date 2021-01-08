@@ -11,7 +11,7 @@
                   <div class="icon">
                     <i class="fas fa-user"></i>
                   </div>
-                  <a href="<?=base_url('user')?>" class="small-box-footer">
+                  <a href="<?=base_url('admin/user')?>" class="small-box-footer">
                     info <i class="fas fa-arrow-circle-right"></i>
                   </a>
                 </div> <!-- /.info-box -->
@@ -43,7 +43,7 @@
                       <div class="icon">
                         <i class="fas fa-gamepad"></i>
                       </div>
-                      <a href="<?=base_url('team')?>" class="small-box-footer">
+                      <a href="<?=base_url('admin/team')?>" class="small-box-footer">
                         info <i class="fas fa-arrow-circle-right"></i>
                       </a>
                 </div> <!-- /.info-box -->
@@ -59,7 +59,7 @@
                       <div class="icon">
                         <i class="fas fa-chalkboard-teacher"></i>
                       </div>
-                      <a href="<?=base_url('sector')?>" class="small-box-footer">
+                      <a href="<?=base_url('admin/sector')?>" class="small-box-footer">
                         info <i class="fas fa-arrow-circle-right"></i>
                       </a>
                 </div>
@@ -80,7 +80,7 @@
                       <div class="icon">
                         <i class="fas fa-user-tie"></i>
                       </div>
-                      <a href="<?=base_url('puesto')?>" class="small-box-footer">
+                      <a href="<?=base_url('admin/puesto')?>" class="small-box-footer">
                         info <i class="fas fa-arrow-circle-right"></i>
                       </a>
                 </div>
@@ -97,7 +97,7 @@
                         <div class="icon">
                           <i class="fas fa-user-secret"></i>
                         </div>
-                        <a href="<?=base_url('perfil')?>" class="small-box-footer">
+                        <a href="<?=base_url('admin/perfil')?>" class="small-box-footer">
                           info <i class="fas fa-arrow-circle-right"></i>
                         </a>
                 </div>
