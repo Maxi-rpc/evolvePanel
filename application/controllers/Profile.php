@@ -41,10 +41,9 @@ class Profile extends CI_Controller
 
 		if ($this->form_validation->run() == TRUE) {
 			
-			//$userInfo_data = $this->Perfil_m->array_from_post(['nombre']);
-			//$nombre = $this->input->post('nombre');
+			$userInfo_data = $this->Perfil_m->array_from_post(['firstname','lastname','nickname']);
             
-            //$this->UserInfo_m->save($userInfo_data,$id);
+            $this->UserInfo_m->save($userInfo_data,$id);
 
             if($id){
                 $this->session->set_flashdata('msj','Se edito con exito.');

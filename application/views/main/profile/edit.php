@@ -9,6 +9,7 @@
                         <!-- /.card-header -->
                         <!-- form start -->
                         <div class="card-body">
+
                           <?php if(validation_errors()){ ?>
                             <div class="alert alert-danger alert-dismissible">
                               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -16,6 +17,7 @@
                                 <?= validation_errors('<li>','</li>') ?>
                             </div>
                           <?php } ?>
+
                           <?php echo form_open() ?>
                             <div class="form-group">
                               <label for="">Ingresar Nombre</label>
@@ -35,6 +37,7 @@
                           <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
                           <?php echo form_close() ?>
+                          
                 </div>
               </div>
             </div>
