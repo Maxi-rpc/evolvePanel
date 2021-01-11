@@ -41,7 +41,7 @@ class Profile extends CI_Controller
 
 		if ($this->form_validation->run() == TRUE) {
 			
-			$userInfo_data = $this->UserInfo_m->array_from_post(['firstname','lastname','nickname']);
+			$userInfo_data = $this->UserInfo_m->array_from_post(['nombre','apellido','nickname']);
             
             $this->UserInfo_m->save($userInfo_data,$id);
 

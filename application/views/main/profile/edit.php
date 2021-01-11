@@ -21,11 +21,11 @@
                           <?php echo form_open() ?>
                             <div class="form-group">
                               <label for="">Ingresar Nombre</label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" name="firstname" value="<?php echo set_value('firstname',$userInfo->nombre) ?>">
+                              <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo set_value('firstname',$userInfo->nombre) ?>">
                             </div>
                             <div class="form-group">
                               <label for="">Ingresar Apellido</label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" name="lastname" value="<?php echo set_value('lastname',$userInfo->apellido) ?>">
+                              <input type="text" class="form-control" id="exampleInputEmail1" name="apellido" value="<?php echo set_value('lastname',$userInfo->apellido) ?>">
                             </div>
                             <div class="form-group">
                               <label for="">Ingresar Nickname</label>
@@ -37,7 +37,7 @@
                           <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
                           <?php echo form_close() ?>
-                          
+
                 </div>
               </div>
             </div>
