@@ -13,7 +13,7 @@
         <?php endif ?>
 
         <div class="row">
-          <div class="col-6">
+          <div class="col-12">
             <!-- Profile -->
             <div class="card card-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
