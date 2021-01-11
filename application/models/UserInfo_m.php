@@ -32,13 +32,5 @@ class UserInfo_m extends MY_Model {
                 'required' => 'El campo %s no puede ir vacío',
                 ],
             ),
-		'puesto' => array(
-			'field' => 'puesto',
-			'label' => 'Puesto',
-			'rules' => 'trim|required',
-			'errors' => [
-				'required' => 'El %s es requerido',
-				],
-			),
 	);
 }
