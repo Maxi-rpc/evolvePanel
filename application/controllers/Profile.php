@@ -53,8 +53,8 @@ class Profile extends CI_Controller
             redirect('profile');
 		}
 		
-		$vista = $this->load->view('main/profile/edit',$data,TRUE);
-		getTemplate($vista,$this->location);
+		/*$vista = $this->load->view('main/profile/edit',$data,TRUE);
+		getTemplate($vista,$this->location);*/
 	}
 
 }
