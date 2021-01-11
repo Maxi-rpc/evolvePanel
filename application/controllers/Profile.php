@@ -20,7 +20,11 @@ class Profile extends CI_Controller
 		$data['sectores'] = $this->Sector_m->get();
 		$data['puestos'] = $this->Puesto_m->get();
 
-        $vista = $this->load->view('main/profile/index',$data,TRUE);
+		$data['sector'] = $this->Sector_m->get($this->userInfo->sector);
+		$data['puesto'] = $this->Puesto_m->get($this->userInfo->puesto);
+
+
+		$vista = $this->load->view('main/profile/index',$data,TRUE);
 		getTemplate($vista,$this->location);
     }
 
