@@ -22,11 +22,11 @@
                               <input type="text" class="form-control" id="exampleInputEmail1" name="firstname" value="<?php echo set_value('firstname',$userInfo->nombre) ?>">
                             </div>
                             <div class="form-group">
-                              <label for="">Ingresar Nombre</label>
+                              <label for="">Ingresar Apellido</label>
                               <input type="text" class="form-control" id="exampleInputEmail1" name="lastname" value="<?php echo set_value('lastname',$userInfo->apellido) ?>">
                             </div>
                             <div class="form-group">
-                              <label for="">Ingresar Nombre</label>
+                              <label for="">Ingresar Nickname</label>
                               <input type="text" class="form-control" id="exampleInputEmail1" name="nickname" value="<?php echo set_value('nickname',$userInfo->nickname) ?>">
                             </div>
                         </div>
