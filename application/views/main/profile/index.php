@@ -2,10 +2,12 @@
 
         <?php if($this->session->flashdata('msj')): ?>
           <div class="row">
-            <div class="alert alert-success alert-dismissible">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              <h5><i class="icon fas fa-check"></i> Alert!</h5>
-              <?php $this->session->flashdata('msj') ?>
+            <div class="col-12">
+              <div class="alert alert-success alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h5><i class="icon fas fa-check"></i> Alert!</h5>
+                  <?php $this->session->flashdata('msj') ?>
+              </div>
             </div>
           </div>
         <?php endif ?>
