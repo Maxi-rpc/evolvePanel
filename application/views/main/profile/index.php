@@ -110,7 +110,7 @@
                                 <?= validation_errors('<li>','</li>') ?>
                             </div>
                           <?php } ?>
-                          <?php echo form_open() ?>
+                          <?php echo form_open('profile/edit/'.$userInfo->id) ?>
                             <div class="form-group">
                               <label for="">Ingresar Nombre</label>
                               <input type="text" class="form-control" id="exampleInputEmail1" name="firstname" value="<?php echo set_value('firstname',$userInfo->nombre) ?>">
