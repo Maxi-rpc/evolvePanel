@@ -29,7 +29,7 @@ class Profile extends CI_Controller
     public function edit($id = NULL){
 
 		if ($id) {
-			$data['userInfo'] = $this->UserInfo_m->get($id);
+			$data['userInfo'] = $this->UserInfo_m->get_by(['id_usuario',$id],TRUE);
 			$data['sectores'] = $this->Sector_m->get();
 			$data['puestos'] = $this->Puesto_m->get();
 			$data['redes'] = $this->Redes_m->get_by(['id_usuario',$data['userInfo']->id_usuario],FALSE);
@@ -42,7 +42,7 @@ class Profile extends CI_Controller
 			
 			$userInfo_data = $this->UserInfo_m->array_from_post(['nombre','apellido','nickname']);
             
-            $this->UserInfo_m->save($userInfo_data,$id);
+            $this->UserInfo_m->save($userInfo_data,$data['userInfo']->id_usuario);
 
             if($id){
                 $this->session->set_flashdata('msj','Se edito con exito.');
