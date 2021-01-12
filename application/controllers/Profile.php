@@ -16,10 +16,7 @@ class Profile extends CI_Controller
 	public function index()
 	{
         $id = $this->session->userdata('id');
-        $data['userInfo'] = $this->UserInfo_m->get($id);
-		$data['sectores'] = $this->Sector_m->get();
-		$data['puestos'] = $this->Puesto_m->get();
-
+        $data['userInfo'] = $this->UserInfo_m->get_by(['id_usuario',$id],TRUE);
 		$data['sector'] = $this->Sector_m->get($data['userInfo']->sector);
 		$data['puesto'] = $this->Puesto_m->get($data['userInfo']->puesto);
 		$data['redes'] = $this->Redes_m->get_by(['id_usuario',$data['userInfo']->id_usuario],FALSE);
@@ -35,7 +32,7 @@ class Profile extends CI_Controller
 			$data['userInfo'] = $this->UserInfo_m->get($id);
 			$data['sectores'] = $this->Sector_m->get();
 			$data['puestos'] = $this->Puesto_m->get();
-			$data['redes'] = $this->Redes_m->get_by([$data['userInfo']->id_usuario],FALSE);
+			$data['redes'] = $this->Redes_m->get_by(['id_usuario',$data['userInfo']->id_usuario],FALSE);
 		}
 
 		$rules = $this->UserInfo_m->rules;
