@@ -39,12 +39,33 @@
                                 </div>
                               </div>
                             </div>
-                            <?php foreach($redes as $red): ?>
-                            <div class="form-group">
-                              <label for="">Ingresar <?= $red->red_nombre ?></label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" name="<?=$red->red_nombre?>" value="<?php echo set_value($red->red_nombre,$red->red_user) ?>">
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="">Ingresar Facebook</label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="facebook" value="<?php echo set_value('facebook',$red->user_facebook) ?>">
+                                </div>
+                              </div>
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="">Ingresar Instagram</label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="instagtram" value="<?php echo set_value('instagtram',$red->user_instagram) ?>">
+                                </div>
+                              </div>
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="">Ingresar Twitter</label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="twitter" value="<?php echo set_value('twitter',$red->user_twitter) ?>">
+                                </div>
+                              </div>
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="">Ingresar Twitch</label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="twitch" value="<?php echo set_value('twitch',$red->user_twitch) ?>">
+                                </div>
+                              </div>
                             </div>
-                            <?php endforeach ?>
+                            
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">

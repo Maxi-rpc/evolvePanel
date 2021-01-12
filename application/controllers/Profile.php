@@ -32,7 +32,7 @@ class Profile extends CI_Controller
 			$data['userInfo'] = $this->UserInfo_m->get_by(['id_usuario',$id],TRUE);
 			$data['sectores'] = $this->Sector_m->get();
 			$data['puestos'] = $this->Puesto_m->get();
-			$data['redes'] = $this->Redes_m->get_by(['id_usuario',$data['userInfo']->id_usuario],FALSE);
+			$data['redes'] = $this->Redes_m->get_by(['id_usuario',$data['userInfo']->id_usuario],TRUE);
 		}
 
 		$rules = $this->UserInfo_m->rules;
@@ -41,7 +41,9 @@ class Profile extends CI_Controller
 		if ($this->form_validation->run() == TRUE) {
 			
 			$userInfo_data = $this->UserInfo_m->array_from_post(['nombre','apellido','nickname']);
-			$userRedes_data = $this->Redes_m->array_from_post(['twitter','instagram','facebook']);
+			
+			$userRedes_data = $this->Redes_m->array_from_post(['facebook','instagram','twitter','twitch']);
+			$userRedes_data['id_usuario'] = $data['userInfo']->id_usuario;
             
 			$this->UserInfo_m->save($userInfo_data,$data['userInfo']->id_usuario);
 			$this->Redes_m->save($userRedes_data,$data['userInfo']->id_usuario);
