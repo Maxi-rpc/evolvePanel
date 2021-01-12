@@ -43,25 +43,25 @@
                               <div class="col-sm-3">
                                 <div class="form-group">
                                   <label for="">Ingresar Facebook</label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" name="facebook" value="<?php echo set_value('facebook',$redes->user_facebook) ?>">
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="user_facebook" value="<?php echo set_value('user_facebook',$redes->user_facebook) ?>">
                                 </div>
                               </div>
                               <div class="col-sm-3">
                                 <div class="form-group">
                                   <label for="">Ingresar Instagram</label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" name="instagtram" value="<?php echo set_value('instagtram',$redes->user_instagram) ?>">
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="user_instagtram" value="<?php echo set_value('user_instagram',$redes->user_instagram) ?>">
                                 </div>
                               </div>
                               <div class="col-sm-3">
                                 <div class="form-group">
                                   <label for="">Ingresar Twitter</label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" name="twitter" value="<?php echo set_value('twitter',$redes->user_twitter) ?>">
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="user_twitter" value="<?php echo set_value('user_twitter',$redes->user_twitter) ?>">
                                 </div>
                               </div>
                               <div class="col-sm-3">
                                 <div class="form-group">
                                   <label for="">Ingresar Twitch</label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" name="twitch" value="<?php echo set_value('twitch',$redes->user_twitch) ?>">
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="user_twitch" value="<?php echo set_value('user_twitch',$redes->user_twitch) ?>">
                                 </div>
                               </div>
                             </div>
