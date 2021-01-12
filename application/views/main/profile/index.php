@@ -85,7 +85,7 @@
                 <hr>
 
                 <strong><i class="fas fa-share-alt mr-1"></i> Redes</strong>
-
+                <?php print_r($redes) ?>
                 <li><i class="fab fa-facebook-f"></i> <?php echo $redes->user_facebook ?></li>
                 <li><i class="fab fa-instagram"></i> <?php echo $redes->user_instagram ?></li>
                 <li><i class="fab fa-twitter"></i> <?php echo $redes->user_twitter ?></li>
