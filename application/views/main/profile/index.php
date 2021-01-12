@@ -87,7 +87,7 @@
                 <strong><i class="fas fa-share-alt mr-1"></i> Redes</strong>
 
                 <?php foreach($redes as $red): ?>
-                  <li><i class="fab fa-<?=$red->red_nombre?>"></i><?php echo $red->red_nombre." - ".$red->red_user ?></li>
+                  <li><i class="fab fa-<?=$red->red_nombre?>"></i> <?php echo $red->red_nombre." - ".$red->red_user ?></li>
                 <?php endforeach ?>
 
               </div>
