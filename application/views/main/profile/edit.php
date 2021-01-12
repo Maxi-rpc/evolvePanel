@@ -49,7 +49,7 @@
                               <div class="col-sm-3">
                                 <div class="form-group">
                                   <label for="">Ingresar Instagram</label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" name="user_instagtram" value="<?php echo set_value('user_instagram',$redes->user_instagram) ?>">
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="user_instagram" value="<?php echo set_value('user_instagram',$redes->user_instagram) ?>">
                                 </div>
                               </div>
                               <div class="col-sm-3">
