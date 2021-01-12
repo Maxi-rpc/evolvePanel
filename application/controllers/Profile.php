@@ -22,7 +22,7 @@ class Profile extends CI_Controller
 
 		$data['sector'] = $this->Sector_m->get($data['userInfo']->sector);
 		$data['puesto'] = $this->Puesto_m->get($data['userInfo']->puesto);
-		$data['redes'] = $this->Redes_m->get_by([$data['userInfo']->id_usuario],FALSE);
+		$data['redes'] = $this->Redes_m->get_by(['id_usuario',$data['userInfo']->id_usuario],FALSE);
 
 
 		$vista = $this->load->view('main/profile/index',$data,TRUE);
