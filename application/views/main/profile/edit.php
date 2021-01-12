@@ -19,22 +19,24 @@
                           <?php } ?>
 
                           <?php echo form_open() ?>
-                            <div class="col-sm-4">
-                              <div class="form-group">
-                                <label for="">Ingresar Nombre</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo set_value('nombre',$userInfo->nombre) ?>">
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="">Ingresar Nombre</label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo set_value('nombre',$userInfo->nombre) ?>">
+                                </div>
                               </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <div class="form-group">
-                                <label for="">Ingresar Apellido</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="apellido" value="<?php echo set_value('apellido',$userInfo->apellido) ?>">
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="">Ingresar Apellido</label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="apellido" value="<?php echo set_value('apellido',$userInfo->apellido) ?>">
+                                </div>
                               </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <div class="form-group">
-                                <label for="">Ingresar Nickname</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="nickname" value="<?php echo set_value('nickname',$userInfo->nickname) ?>">
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="">Ingresar Nickname</label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" name="nickname" value="<?php echo set_value('nickname',$userInfo->nickname) ?>">
+                                </div>
                               </div>
                             </div>
                             <?php foreach($redes as $red): ?>
