@@ -42,7 +42,7 @@
                             <?php foreach($redes as $red): ?>
                             <div class="form-group">
                               <label for="">Ingresar <?= $red->red_nombre ?></label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" name="red" value="<?php echo set_value('facebook',$red->red_user) ?>">
+                              <input type="text" class="form-control" id="exampleInputEmail1" name="<?=$red->red_nombre?>" value="<?php echo set_value($red->red_nombre,$red->red_user) ?>">
                             </div>
                             <?php endforeach ?>
                         </div>

@@ -41,8 +41,10 @@ class Profile extends CI_Controller
 		if ($this->form_validation->run() == TRUE) {
 			
 			$userInfo_data = $this->UserInfo_m->array_from_post(['nombre','apellido','nickname']);
+			$userRedes_data = $this->Redes_m->array_from_post(['twitter','instagram','facebook']);
             
-            $this->UserInfo_m->save($userInfo_data,$data['userInfo']->id_usuario);
+			$this->UserInfo_m->save($userInfo_data,$data['userInfo']->id_usuario);
+			$this->Redes_m->save($userRedes_data,$data['userInfo']->id_usuario);
 
             if($id){
                 $this->session->set_flashdata('msj','Se edito con exito.');
