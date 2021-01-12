@@ -72,7 +72,7 @@
 
                 <p class="text-muted">
                   <?php 
-                  echo $userInfo->nombre. " - " .$userInfo->apellido. " - " .$userInfo->email;
+                  echo $userInfo->nombre." - ".$userInfo->apellido." - ".$userInfo->email;
                   ?>
                 </p>
 
@@ -85,10 +85,11 @@
                 <hr>
 
                 <strong><i class="fas fa-share-alt mr-1"></i> Redes</strong>
+
                 <?php foreach($redes as $red): ?>
-                  <li><?php echo $red->red_nombre." - ".$red->red_user ?></li>
-                  <p class="text-muted">Acá van las redes.</p>
+                  <li><i class="fab fa-<?=$red->red_nombre?>"></i><?php echo $red->red_nombre." - ".$red->red_user ?></li>
                 <?php endforeach ?>
+
               </div>
               <!-- /.card-body -->
             </div>
