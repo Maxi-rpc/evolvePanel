@@ -19,15 +19,15 @@
                           <?php } ?>
 
                           <?php echo form_open() ?>
-                            <div class="form-group">
+                            <div class="form-group col-4">
                               <label for="">Ingresar Nombre</label>
                               <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo set_value('nombre',$userInfo->nombre) ?>">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-4">
                               <label for="">Ingresar Apellido</label>
                               <input type="text" class="form-control" id="exampleInputEmail1" name="apellido" value="<?php echo set_value('apellido',$userInfo->apellido) ?>">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-4">
                               <label for="">Ingresar Nickname</label>
                               <input type="text" class="form-control" id="exampleInputEmail1" name="nickname" value="<?php echo set_value('nickname',$userInfo->nickname) ?>">
                             </div>
