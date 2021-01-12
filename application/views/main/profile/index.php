@@ -85,8 +85,10 @@
                 <hr>
 
                 <strong><i class="fas fa-share-alt mr-1"></i> Redes</strong>
-
-                <p class="text-muted">Acá van las redes.</p>
+                <?php foreach($redes as $red): ?>
+                  <li><?php echo $red->red_nombre." - ".$red->red_user ?></li>
+                  <p class="text-muted">Acá van las redes.</p>
+                <?php endforeach ?>
               </div>
               <!-- /.card-body -->
             </div>

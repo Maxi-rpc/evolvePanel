@@ -8,7 +8,7 @@ class Profile extends CI_Controller
 		parent::__construct();
 		$this->load->library(['form_validation']);
 		$this->load->helper(['vistas']);
-		$this->load->model(['Users_m','UserInfo_m','Sector_m','Puesto_m']);
+		$this->load->model(['Users_m','UserInfo_m','Sector_m','Puesto_m','Redes_m']);
 	}
 
 	public $location = 'Profile'; // Locacion del controlador
@@ -22,6 +22,7 @@ class Profile extends CI_Controller
 
 		$data['sector'] = $this->Sector_m->get($data['userInfo']->sector);
 		$data['puesto'] = $this->Puesto_m->get($data['userInfo']->puesto);
+		$data['redes'] = $this->Redes_m->get_by([$data['userInfo']->id_usuario],FALSE);
 
 
 		$vista = $this->load->view('main/profile/index',$data,TRUE);
@@ -34,6 +35,7 @@ class Profile extends CI_Controller
 			$data['userInfo'] = $this->UserInfo_m->get($id);
 			$data['sectores'] = $this->Sector_m->get();
 			$data['puestos'] = $this->Puesto_m->get();
+			$data['redes'] = $this->Redes_m->get_by([$data['userInfo']->id_usuario],FALSE);
 		}
 
 		$rules = $this->UserInfo_m->rules;
