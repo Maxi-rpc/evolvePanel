@@ -1,33 +1,16 @@
-<?php
-if(!$this->session->userdata('is_logged')){
-    redirect('login');
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <link rel="icon" href="<?=base_url()?>assets/img/logo/evolveteamfavico512x512.png" type="image/png">
-    <title>Evolve | Panel</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="<?=base_url("assets/")?>images/evolveteamfavico512x512.png" type="image/png">
+  <title>Team Evolve</title>
 
-    <!-- Font Awesome Icons -->
-    <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-        crossorigin="anonymous"
-    />
-    <!-- DataTables -->
-    <link rel="stylesheet" href="<?=base_url()?>assets/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="<?=base_url()?>assets/css/adminlte.min.css" />
-    <!-- Google Font: Source Sans Pro -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
-        rel="stylesheet"
-    />
-    </head>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="<?=base_url("assets/")?>plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?=base_url("assets/")?>dist/css/adminlte.min.css">
+</head>
