@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = 'https://admin.teamevolve.gg/';
 
-// $config['base_url'] = 'http://localhost/proyectos/teamevolve-admin/';
+// $config['base_url'] = 'http://localhost/proyectos/evolvePanel/';
 
 /*
 |--------------------------------------------------------------------------

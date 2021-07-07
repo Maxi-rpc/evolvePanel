@@ -13,4 +13,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?=base_url("assets/")?>dist/css/adminlte.min.css">
+
+  <!-- DataTables -->
+<link rel="stylesheet" href="<?=base_url("assets/")?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="<?=base_url("assets/")?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" href="<?=base_url("assets/")?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
 </head>

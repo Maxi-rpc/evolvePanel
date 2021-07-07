@@ -2,7 +2,7 @@
 <div class="wrapper">
 <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="<?=base_url("assets/")?>images/evolve_logon-1000x1000-1.png" alt="AdminLTELogo" height="100" width="100">
+    <img class="animation__shake" src="<?=base_url("assets/")?>images/evolvelogo.png" alt="AdminLTELogo" height="100" width="100">
   </div>
 
   <!-- Navbar -->
