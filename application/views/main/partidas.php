@@ -307,7 +307,35 @@
           <!-- /.col -->
         </div>
         <!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h1 class="card-title">LFF</h1>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <img class="img-fluid" width="20%" src="<?=base_url("assets/")?>images/LOGOS_EQUIPOS/FFL/FURIOUS GAMING.png" alt="">
+                  </div>
+                  <div class="col">
+                    <h3>7-7-2021</h3>
+                    <h4>10:10:20</h4>
+                  </div>
+                  <div class="col">
+                    <h3>Match</h3>
+                      <button type="button" class="btn btn-success swalDefaultSuccess">
+                        Click Alert
+                      </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- /.container-fluid -->
 </section>
 <!-- /.content -->
+
+

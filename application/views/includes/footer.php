@@ -37,6 +37,9 @@
 <script src="<?=base_url("assets/")?>plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="<?=base_url("assets/")?>plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="<?=base_url("assets/")?>plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="<?=base_url("assets/")?>plugins/sweetalert2/sweetalert2.min.js"></script>
+
 <script>
   $(function () {
     $("#example1").DataTable({
@@ -44,6 +47,23 @@
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
   });
+</script>
+
+<script>
+    $(function() {
+    var Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    });
+
+    $('.swalDefaultSuccess').click(function() {
+      Toast.fire({
+        icon: 'success',
+        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+      })
+    });
 </script>
 </body>
 </html>
